@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>How To Use SPDX in Different Scenarios - SPDX v3 Specification</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/style.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "How To Use SPDX in Different Scenarios";
+        var mkdocs_page_input_path = "annexes/how-to-use.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SPDX v3 Specification
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Copyright</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../scope/">Scope</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../normative-references/">Normative references</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../terms-and-definitions/">Terms and definitions</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../conformance/">Conformance</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../bibliography/">Bibliography</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">model</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Core</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Core/Core/">Core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Agent/">Agent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Annotation/">Annotation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Artifact/">Artifact</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Bom/">Bom</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Bundle/">Bundle</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/CreationInfo/">CreationInfo</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/DictionaryEntry/">DictionaryEntry</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Element/">Element</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/ElementCollection/">ElementCollection</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/ExternalIdentifier/">ExternalIdentifier</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/ExternalMap/">ExternalMap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/ExternalRef/">ExternalRef</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Hash/">Hash</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/IntegrityMethod/">IntegrityMethod</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/LifecycleScopedRelationship/">LifecycleScopedRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/NamespaceMap/">NamespaceMap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Organization/">Organization</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Person/">Person</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/PositiveIntegerRange/">PositiveIntegerRange</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Relationship/">Relationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/SoftwareAgent/">SoftwareAgent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/SpdxDocument/">SpdxDocument</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Classes/Tool/">Tool</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/algorithm/">Algorithm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/annotationType/">annotationType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/begin/">Begin</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/builtTime/">builtTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/comment/">Comment</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/completeness/">Completeness</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/contentType/">contentType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/context/">Context</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/created/">Created</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/createdBy/">createdBy</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/createdUsing/">createdUsing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/creationInfo/">creationInfo</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/dataLicense/">dataLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/definingArtifact/">definingArtifact</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/description/">Description</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/element/">Element</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/end/">End</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/endTime/">endTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/extension/">Extension</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/externalIdentifier/">externalIdentifier</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/externalIdentifierType/">externalIdentifierType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/externalRef/">externalRef</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/externalRefType/">externalRefType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/externalSpdxId/">externalSpdxId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/from/">From</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/hashValue/">hashValue</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/identifier/">Identifier</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/identifierLocator/">identifierLocator</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/imports/">Imports</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/issuingAuthority/">issuingAuthority</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/key/">Key</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/locationHint/">locationHint</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/locator/">Locator</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/name/">Name</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/namespace/">Namespace</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/namespaceMap/">namespaceMap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/originatedBy/">originatedBy</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/prefix/">Prefix</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/profileConformance/">profileConformance</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/relationshipType/">relationshipType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/releaseTime/">releaseTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/rootElement/">rootElement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/scope/">Scope</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/spdxId/">spdxId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/specVersion/">specVersion</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/standard/">Standard</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/startTime/">startTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/statement/">Statement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/subject/">Subject</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/summary/">Summary</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/suppliedBy/">suppliedBy</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/to/">To</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/validUntilTime/">validUntilTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/value/">Value</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Properties/verifiedUsing/">verifiedUsing</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/AnnotationType/">AnnotationType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/ExternalIdentifierType/">ExternalIdentifierType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/ExternalRefType/">ExternalRefType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/HashAlgorithm/">HashAlgorithm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/LifecycleScopeType/">LifecycleScopeType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/PresenceType/">PresenceType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/ProfileIdentifierType/">ProfileIdentifierType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/RelationshipCompleteness/">RelationshipCompleteness</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Vocabularies/RelationshipType/">RelationshipType</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Datatypes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/DateTime/">DateTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/MediaType/">MediaType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/SemVer/">SemVer</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Software</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Software/Software/">Software</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Classes/File/">File</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Classes/Package/">Package</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Classes/Sbom/">Sbom</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Classes/Snippet/">Snippet</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Classes/SoftwareArtifact/">SoftwareArtifact</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/additionalPurpose/">additionalPurpose</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/attributionText/">attributionText</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/byteRange/">byteRange</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/contentIdentifier/">contentIdentifier</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/contentType/">contentType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/copyrightText/">copyrightText</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/downloadLocation/">downloadLocation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/homePage/">homePage</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/lineRange/">lineRange</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/packageUrl/">packageUrl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/packageVersion/">packageVersion</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/primaryPurpose/">primaryPurpose</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/sbomType/">sbomType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/snippetFromFile/">snippetFromFile</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Properties/sourceInfo/">sourceInfo</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Vocabularies/SbomType/">SbomType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Software/Vocabularies/SoftwarePurpose/">SoftwarePurpose</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Security</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Security/Security/">Security</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/CvssV2VulnAssessmentRelationship/">CvssV2VulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/CvssV3VulnAssessmentRelationship/">CvssV3VulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/CvssV4VulnAssessmentRelationship/">CvssV4VulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/EpssVulnAssessmentRelationship/">EpssVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/ExploitCatalogVulnAssessmentRelationship/">ExploitCatalogVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/SsvcVulnAssessmentRelationship/">SsvcVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VexAffectedVulnAssessmentRelationship/">VexAffectedVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VexFixedVulnAssessmentRelationship/">VexFixedVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VexNotAffectedVulnAssessmentRelationship/">VexNotAffectedVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VexUnderInvestigationVulnAssessmentRelationship/">VexUnderInvestigationVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VexVulnAssessmentRelationship/">VexVulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/VulnAssessmentRelationship/">VulnAssessmentRelationship</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Classes/Vulnerability/">Vulnerability</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/actionStatement/">actionStatement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/actionStatementTime/">actionStatementTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/assessedElement/">assessedElement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/catalogType/">catalogType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/decisionType/">decisionType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/exploited/">Exploited</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/impactStatement/">impactStatement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/impactStatementTime/">impactStatementTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/justificationType/">justificationType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/locator/">Locator</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/modifiedTime/">modifiedTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/percentile/">Percentile</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/probability/">Probability</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/publishedTime/">publishedTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/score/">Score</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/severity/">Severity</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/statusNotes/">statusNotes</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/vectorString/">vectorString</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/vexVersion/">vexVersion</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Properties/withdrawnTime/">withdrawnTime</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Vocabularies/CvssSeverityType/">CvssSeverityType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Vocabularies/ExploitCatalogType/">ExploitCatalogType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Vocabularies/SsvcDecisionType/">SsvcDecisionType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Security/Vocabularies/VexJustificationType/">VexJustificationType</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Licensing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Licensing/Licensing/">Licensing</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SimpleLicensing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/SimpleLicensing/SimpleLicensing/">SimpleLicensing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Classes/AnyLicenseInfo/">AnyLicenseInfo</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Classes/LicenseExpression/">LicenseExpression</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Classes/SimpleLicensingText/">SimpleLicensingText</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Properties/customIdToUri/">customIdToUri</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Properties/licenseExpression/">licenseExpression</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Properties/licenseListVersion/">licenseListVersion</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/SimpleLicensing/Properties/licenseText/">licenseText</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">ExpandedLicensing</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/ExpandedLicensing/ExpandedLicensing/">ExpandedLicensing</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/ConjunctiveLicenseSet/">ConjunctiveLicenseSet</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/CustomLicense/">CustomLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/CustomLicenseAddition/">CustomLicenseAddition</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/DisjunctiveLicenseSet/">DisjunctiveLicenseSet</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/ExtendableLicense/">ExtendableLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/License/">License</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/LicenseAddition/">LicenseAddition</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/ListedLicense/">ListedLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/ListedLicenseException/">ListedLicenseException</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/OrLaterOperator/">OrLaterOperator</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Classes/WithAdditionOperator/">WithAdditionOperator</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/additionComment/">additionComment</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/additionId/">additionId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/additionName/">additionName</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/additionText/">additionText</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/deprecatedVersion/">deprecatedVersion</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/isDeprecatedAdditionId/">isDeprecatedAdditionId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/isDeprecatedLicenseId/">isDeprecatedLicenseId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/isFsfLibre/">isFsfLibre</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/isOsiApproved/">isOsiApproved</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/licenseComment/">licenseComment</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/licenseId/">licenseId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/licenseName/">licenseName</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/licenseXml/">licenseXml</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/listVersionAdded/">listVersionAdded</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/member/">Member</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/obsoletedBy/">obsoletedBy</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/seeAlso/">seeAlso</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/standardAdditionTemplate/">standardAdditionTemplate</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/standardLicenseHeader/">standardLicenseHeader</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/standardLicenseTemplate/">standardLicenseTemplate</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/subjectAddition/">subjectAddition</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Properties/subjectLicense/">subjectLicense</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Individuals</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Individuals/NoAssertionLicense/">NoAssertionLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/ExpandedLicensing/Individuals/NoneLicense/">NoneLicense</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Dataset</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Dataset/Dataset/">Dataset</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Classes/Dataset/">Dataset</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/anonymizationMethodUsed/">anonymizationMethodUsed</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/confidentialityLevel/">confidentialityLevel</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/dataCollectionProcess/">dataCollectionProcess</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/dataPreprocessing/">dataPreprocessing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/datasetAvailability/">datasetAvailability</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/datasetNoise/">datasetNoise</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/datasetSize/">datasetSize</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/datasetType/">datasetType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/datasetUpdateMechanism/">datasetUpdateMechanism</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/intendedUse/">intendedUse</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/knownBias/">knownBias</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/sensitivePersonalInformation/">sensitivePersonalInformation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Properties/sensor/">Sensor</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Vocabularies/ConfidentialityLevelType/">ConfidentialityLevelType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Vocabularies/DatasetAvailabilityType/">DatasetAvailabilityType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Dataset/Vocabularies/DatasetType/">DatasetType</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">AI</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/AI/AI/">AI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Classes/AIPackage/">AIPackage</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/autonomyType/">autonomyType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/domain/">Domain</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/energyConsumption/">energyConsumption</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/hyperparameter/">Hyperparameter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/informationAboutApplication/">informationAboutApplication</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/informationAboutTraining/">informationAboutTraining</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/limitation/">Limitation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/metric/">Metric</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/metricDecisionThreshold/">metricDecisionThreshold</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/modelDataPreprocessing/">modelDataPreprocessing</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/modelExplainability/">modelExplainability</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/safetyRiskAssessment/">safetyRiskAssessment</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/sensitivePersonalInformation/">sensitivePersonalInformation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/standardCompliance/">standardCompliance</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Properties/typeOfModel/">typeOfModel</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/AI/Vocabularies/SafetyRiskAssessmentType/">SafetyRiskAssessmentType</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Build</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Build/Build/">Build</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Classes/Build/">Build</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/buildEndTime/">buildEndTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/buildId/">buildId</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/buildStartTime/">buildStartTime</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/buildType/">buildType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/configSourceDigest/">configSourceDigest</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/configSourceEntrypoint/">configSourceEntrypoint</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/configSourceUri/">configSourceUri</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/environment/">Environment</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Build/Properties/parameters/">Parameters</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Lite</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../model/Lite/Lite/">Lite</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">annexes</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../RDF-object-model-and-identifier-syntax/">RDF Object Model and Identifier Syntax</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../SPDX-license-expressions/">SPDX License Expressions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-short-identifiers-in-source-files/">Using SPDX short identifiers in Source Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../file-tags/">SPDX File Tags</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../external-repository-identifiers/">External Repository Identifiers</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-lite/">Using SPDX Lite</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">How To Use SPDX in Different Scenarios</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#k1-including-security-information-in-a-spdx-document">K.1 Including security information in a SPDX document</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#k11-linking-to-an-advisory">K.1.1 Linking to an advisory</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k12-linking-to-a-csaf">K.1.2 Linking to a CSAF</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k13-linking-to-a-cyclonedx">K.1.3 Linking to a CycloneDX</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k14-linking-to-an-osv">K.1.4 Linking to an OSV</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k15-linking-to-a-gitbom">K.1.5 Linking to a GitBOM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k16-linking-to-a-vulnerability-disclosure-document">K.1.6 Linking to a vulnerability disclosure document</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k17-linking-to-a-code-fix-for-a-security-issue">K.1.7 Linking to a code fix for a security issue</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k18-linking-to-any-security-related-document">K.1.8 Linking to any security related document</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k19-linking-to-an-sbom-vulnerability-report-for-a-software-product-per-nist-executive-order-14028">K.1.9 Linking to an SBOM vulnerability report for a Software Product (per NIST Executive Order 14028)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#k2-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx">K.2 Satisfying NTIA Minimum Elements for an SBOM using SPDX</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#k21-us-executive-order-14028-minimum-elements-for-an-sbom">K.2.1 US Executive Order 14028 Minimum Elements for an SBOM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k22-mapping-ntia-minimum-elements-to-spdx-fields">K.2.2 Mapping NTIA Minimum Elements to SPDX Fields</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#k3-verifying-spdx-packages">K.3 Verifying SPDX Packages</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#k31-general-guidance">K.3.1 General Guidance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#k32-examples">K.3.2 Examples</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#k321-spdx-package-and-spdx-document-both-contained-in-archive-file">K.3.2.1 SPDX Package and SPDX Document both contained in Archive File</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#k322-spdx-package-delivered-as-an-archive-file-separate-from-the-spdx-document">K.3.2.2 SPDX Package Delivered as an Archive File Separate from the SPDX Document</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#k323-a-single-file-represented-as-a-spdx-package">K.3.2.3 A Single File Represented as a SPDX Package</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#k324-directory-of-software-represented-as-a-spdx-package">K.3.2.4 Directory of Software Represented as a SPDX Package</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../diffs-from-previous-editions/">Differences from Earlier SPDX Versions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">licenses</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/cc-by-3.0-unported/">Creative Commons Attribution License 3.0 Unported</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/community-spec/">Community Spec License 1.0</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SPDX v3 Specification</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">annexes</li>
+      <li class="breadcrumb-item active">How To Use SPDX in Different Scenarios</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="annex-k-how-to-use-spdx-in-different-scenarios">Annex K: How To Use SPDX in Different Scenarios</h1>
+<p>TODO: re-write for SPDXv3</p>
+<h2 id="k1-including-security-information-in-a-spdx-document">K.1 Including security information in a SPDX document</h2>
+<p>SPDX 2.x has the concept of an External Reference for a Package to "reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package." </p>
+<p>The specification for External Reference identifiers (Annex F) has four defined categories:
+- Security: CPE, SWID tag identifier, or reference to security information 
+- Package-Manager: package identifier and locator
+- Persistent-id:  identifier which is guaranteed to remain stable (persistent) over time
+- Other: Use if none of the above match your use case</p>
+<p>This section provides usage scenarios of how to leverage the Security and Persistent-id category external references specified above to refer to external security information. A complete SPDX document using these can be found in the examples directory within the SPDX code repository. Multiple instances and types of external security information may be included within a SPDX document.</p>
+<p>Note that identifiers (e.g. CPE, GitBOM, SWID)  are spread throughout Annex F and sometimes locators refer to identifiers.</p>
+<h3 id="k11-linking-to-an-advisory">K.1.1 Linking to an advisory</h3>
+<p>Including a reference to a Common Vulnerabilities and Exposures (CVE) advisory applicable to a package is shown in the example below. A SPDX creator should include current publicly known vulnerabilities at the time of document creation. SPDX consumers should always assume vulnerabilities enumerated by a SPDX creator to be out-of-date.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+ &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+ &quot;referenceLocator&quot; : &quot;https://nvd.nist.gov/vuln/detail/CVE-2020-29573&quot;,
+ &quot;referenceType&quot; : &quot;advisory&quot;
+}, {
+ &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+ &quot;referenceLocator&quot; : &quot;https://nvd.nist.gov/vuln/detail/CVE-2020-6096&quot;,
+ &quot;referenceType&quot; : &quot;advisory&quot;
+}, {
+}, {
+ &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+ &quot;referenceLocator&quot; : &quot;https://nvd.nist.gov/vuln/detail/CVE-2020-3326&quot;,
+ &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h3 id="k12-linking-to-a-csaf">K.1.2 Linking to a CSAF</h3>
+<p>To learn how to reference to <a href="https://docs.oasis-open.org/csaf/csaf/v2.0/cs01/csaf-v2.0-cs01.html">CSAF</a> formatted security information
+applicable to a package see the example below, and additional examples here and here.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://github.com/oasis-tcs/csaf/blob/master/csaf_2.0/examples/csaf/csaf_vex/2022-evd-uc-01-a-001.json&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h3 id="k13-linking-to-a-cyclonedx">K.1.3 Linking to a CycloneDX</h3>
+<p>To reference to <a href="https://cyclonedx.org">CycloneDX</a> formatted security information applicable to a package see the example below.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://raw.githubusercontent.com/CycloneDX/bom-examples/ed522d1f051c364e045b87c20665003a0c4ea777/SBOM/laravel-7.12.0/bom.json&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h3 id="k14-linking-to-an-osv">K.1.4 Linking to an OSV</h3>
+<p>To learn how to include a reference to <a href="https://github.com/google/osv">Open Source Vulnerability</a> (OSV) formatted security information applicable to a package see the example below.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://github.com/github/advisory-database/tree/6b9d5bc96a62bb845ee71e4551a214eb1457e2c6/advisories/github-reviewed/2022/04/GHSA-2gwj-7jmv-h26r/GHSA-2gwj-7jmv-h26r.json&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h3 id="k15-linking-to-a-gitbom">K.1.5 Linking to a GitBOM</h3>
+<p>To reference to <a href="https://gitbom.dev">GitBOM</a> formatted security information applicable to a package see the example below.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;PERSISTENT-ID&quot;,
+  &quot;referenceLocator&quot; : &quot;gitoid:blob:sha1:d8bcd58df2b14818b8237bb70c979d62c7df5747&quot;,
+  &quot;referenceType&quot; : &quot;gitbom&quot;
+  &quot;referenceComment&quot; : &quot;GitBOM Object Id for the HeartBleed fix in ssl/d1_both.c&quot;
+} ,
+{
+  &quot;referenceCategory&quot; : &quot;PERSISTENT-ID&quot;,
+  &quot;referenceLocator&quot; : &quot;gitoid:blob:sha1:bcb99b819dadaebdf2c8f88d92ee9024c45f9df3&quot;,
+  &quot;referenceType&quot; : &quot;gitbom&quot;
+  &quot;referenceComment&quot; : &quot;GitBOM Object Id for the HeartBleed fix in ssl/t1_lib.c&quot;
+} ]
+</code></pre>
+
+<h3 id="k16-linking-to-a-vulnerability-disclosure-document">K.1.6 Linking to a vulnerability disclosure document</h3>
+<p>To express a reference to a vulnerability disclosure document for a package such Cisco’s response to Apache log4j vulnerability.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-apache-log4j-qRuKNEbd&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<p>To communicate that a package is not vulnerable to a specific vulnerability it is recommended to reference a web page indicating why given vulnerabilities are not applicable.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://example.com/product-x/security-info.html&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<p>To refer to a security disclosure feed, such as the security bulletins from <a href="https://cert.europa.eu">CERT-EU</a>.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://cert.europa.eu/cert/Data/newsletter/reviewlatest-SecurityBulletins.xml&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h3 id="k17-linking-to-a-code-fix-for-a-security-issue">K.1.7 Linking to a code fix for a security issue</h3>
+<p>To reference a code fix for a security issue applicable to a package see the example below.
+In this example, the link points to a specific code revision containing the fix for <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28498">CVE-2020-28498</a>.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://github.com/indutny/elliptic/commit/441b7428b0e8f6636c42118ad2aaa186d3c34c3f&quot;,
+  &quot;referenceType&quot; : &quot;fix&quot;
+} ]
+</code></pre>
+
+<p>A fix reference may point to a configuration change for example the patch file as one of the fixes for <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-26499">CVE-2022-26499</a>.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://downloads.digium.com/pub/security/AST-2022-002-16.diff&quot;,
+  &quot;referenceType&quot; : &quot;fix&quot;
+} ]
+</code></pre>
+
+<p>Alternatively, it may also link to a landing page with patches for a variety of products such as
+Oracle patch information for <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228">CVE-2021-44228</a>.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://www.oracle.com/security-alerts/cpujan2022.html&quot;,
+  &quot;referenceType&quot; : &quot;fix&quot;
+} ]
+</code></pre>
+
+<h3 id="k18-linking-to-any-security-related-document">K.1.8 Linking to any security related document</h3>
+<p>If you want to reference any security information related to a package but cannot or do not wish to specify its kind, use the <code>url</code> referenceType.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://github.com/christianlundkvist/blog/blob/aa3a69b5e4c06e4435070610c0c4a2b1e8731783/2020_05_26_secp256k1_twist_attacks/secp256k1_twist_attacks.md&quot;,
+  &quot;referenceType&quot; : &quot;url&quot;
+} ]
+</code></pre>
+
+<p>One can also use it to refer to guidance related to a vulnerability such as CISA guidance for Apache Log4j.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance&quot;,
+  &quot;referenceType&quot; : &quot;url&quot;
+} ]
+</code></pre>
+
+<h3 id="k19-linking-to-an-sbom-vulnerability-report-for-a-software-product-per-nist-executive-order-14028">K.1.9 Linking to an SBOM vulnerability report for a Software Product (per NIST Executive Order 14028)</h3>
+<p>The National Institute of Standards and Technology (NIST) describes the concept of correlating vulnerability and SBOM information for a software product at the component level in “<a href="https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-security-supply-chains-software-1">Software Security in Supply Chains: Software Bill of Materials (SBOM)</a>”. Use the ExternalRefs <code>SECURITY</code> category and <code>advisory</code> referenceType to report on vulnerabilities related to the components contained in a software product’s SBOM.</p>
+<p>This enables a software producer to articulate to software consumers the status of vulnerabilities contained in the software product, by means of reporting vulnerability information at either the SBOM document or component level.</p>
+<p>Providing a link to such data at the time the SBOM is published provides a pointer for where to find this relevant vulnerability information without promulgating vulnerability information inside the SBOM. This is advantageous because the vulnerability information has a short shelf-life (it will change frequently) while the SBOM component data isn’t likely to change if the software has not changed.</p>
+<pre class="codehilite"><code>&quot;externalRefs&quot; : [ {
+  &quot;referenceCategory&quot; : &quot;SECURITY&quot;,
+  &quot;referenceLocator&quot; : &quot;https://github.com/rjb4standards/REA-Products/blob/master/SBOM_and_VDRbaseline/sag-pm-118_VDR.json&quot;,
+  &quot;referenceType&quot; : &quot;advisory&quot;
+} ]
+</code></pre>
+
+<h2 id="k2-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx">K.2 Satisfying NTIA Minimum Elements for an SBOM using SPDX</h2>
+<h3 id="k21-us-executive-order-14028-minimum-elements-for-an-sbom">K.2.1 US Executive Order 14028 Minimum Elements for an SBOM</h3>
+<p>US Executive Order 14028 in conjunction with the National Telecommunications and Information Administration (NTIA) outlined minimum elements for an SBOM. The minimum elements are detailed in <a href="https://www.ntia.gov/files/ntia/publications/framingsbom_20191112.pdf">NTIA's Framing Software Component Transparency: Establishing a Common Software Bill of Maternials</a> and <a href="https://www.ntia.doc.gov/files/ntia/publications/sbom_minimum_elements_report.pdf">The Minimum Elements for a SBOM</a> documents and summarized below:</p>
+<table>
+<thead>
+<tr>
+<th>SBOM Minimum Field</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Author Name</td>
+<td style="text-align: left;">Author of the SBOM entry (this may not always be the supplier).</td>
+</tr>
+<tr>
+<td>Supplier Name</td>
+<td style="text-align: left;">Name or identity of the supplier of the component in the SBOM entry.</td>
+</tr>
+<tr>
+<td>Component Name</td>
+<td style="text-align: left;">Designation assigned to a unit of software defined by the original supplier.</td>
+</tr>
+<tr>
+<td>Version String</td>
+<td style="text-align: left;">Version used to identify a component.</td>
+</tr>
+<tr>
+<td>Component Hash</td>
+<td style="text-align: left;">A cryptographic hash to uniquely identify a component.</td>
+</tr>
+<tr>
+<td>Unique Identifier</td>
+<td style="text-align: left;">A unique identifier to help identify components or serve as a look-up key for relevant databases.</td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td style="text-align: left;">Characterizing the relationship that an upstream component X is included in software Y.</td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td style="text-align: left;">Record of the date and time of the SBOM data assembly.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="k22-mapping-ntia-minimum-elements-to-spdx-fields">K.2.2 Mapping NTIA Minimum Elements to SPDX Fields</h3>
+<p>The SPDX Specification contains fields able to address each of the NTIA minimum required data fields.</p>
+<table>
+<thead>
+<tr>
+<th>NTIA SBOM Minimum Field</th>
+<th style="text-align: left;">Satisfying SPDX field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Author Name</td>
+<td style="text-align: left;">(6.8) Creator</td>
+</tr>
+<tr>
+<td>Supplier Name</td>
+<td style="text-align: left;">(7.5) Package Supplier</td>
+</tr>
+<tr>
+<td>Component Name</td>
+<td style="text-align: left;">(7.1) Package Name</td>
+</tr>
+<tr>
+<td>Version String</td>
+<td style="text-align: left;">(7.3) Package Version</td>
+</tr>
+<tr>
+<td>Component Hash</td>
+<td style="text-align: left;">(7.10) Package Checksum</td>
+</tr>
+<tr>
+<td>Unique Identifier</td>
+<td style="text-align: left;">(7.2) Package SPDX Identifier <br>(6.5) SPDX Document Namespace</br></td>
+</tr>
+<tr>
+<td>Relationship</td>
+<td style="text-align: left;">(11.1) Relationship: <code>CONTAINS</code>, <code>DESCRIBES</code> <br>The document must <code>DESCRIBES</code> at least one package.</br></td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td style="text-align: left;">(6.9) Created</td>
+</tr>
+</tbody>
+</table>
+<h2 id="k3-verifying-spdx-packages">K.3 Verifying SPDX Packages</h2>
+<p>Several use cases for SPDX depend on the consumer being able to verify the provenance and integrity of their software. SPDX can support several different scenarios depending on what information is available to the producer, what information is available to the consumer, and how the SPDX document is delivered. These scenarios are described below along with recommended approaches to verifying the SPDX packages.</p>
+<h3 id="k31-general-guidance">K.3.1 General Guidance</h3>
+<p>If a Package can be represented as a single blob of bytes, such as a tar archive:
+  * <code>PackageChecksum</code> must be computed by applying one of the supported hashing algorithms to the package blob.
+  * <code>PackageDownloadLocation</code> should be a download locator that retrieves the package blob.
+  * A supplier can define a <code>PackageChecksum</code> in a Package without providing a <code>PackageDownloadLocation</code>. This lets consumers perform an offline verification of private blobs.</p>
+<p>If a Package represents an artifact that logically binds a number of single files together (such as a zip file or a directory):
+  * If the files bound by the Package are described in the document, <code>PackageVerificationCode</code> should be computed by using the files' <a href="https://www.rfc-editor.org/rfc/rfc3174">SHA1</a> checksums. Additionally, the <code>FilesAnalyzed</code> field in the Package <strong>MUST</strong> be set to <code>true</code>.
+  * If the SHA1 checksum of any files bound by the Package is not available or the File needs to be excluded from the computation, it MUST be marked so by appending <code>(excludes: FileName)</code> at the end of the package verification code value.</p>
+<h3 id="k32-examples">K.3.2 Examples</h3>
+<h4 id="k321-spdx-package-and-spdx-document-both-contained-in-archive-file">K.3.2.1 SPDX Package and SPDX Document both contained in Archive File</h4>
+<p>Examples include: tarball binding one or more files to a SPDX package, installation file which installs the package and extracts SPDX document in the same directory</p>
+<p>SPDX Field To Use: <a href="package-information.md#79-package-verification-code-field-">7.9 Package verification code</a></p>
+<p>Guidance:
+  * With the SPDX document included in the archive, it is not possible for the SPDX document to include a checksum for the archive itself. Generate a Package verification code and include the SPDX Document file name in the Excluded Files field.</p>
+<h4 id="k322-spdx-package-delivered-as-an-archive-file-separate-from-the-spdx-document">K.3.2.2 SPDX Package Delivered as an Archive File Separate from the SPDX Document</h4>
+<p>Examples include: tarball, installation file</p>
+<p>SPDX Field to Use: <a href="package-information.md#710-package-checksum-field-">7.10 Package checksum</a></p>
+<p>Guidance: 
+  * Generate a checksum for the archive file and include it in the SPDX Package checksum field. The archive file name should also be included in the <a href="package-information.md#74-package-file-name-field-">Package file name</a> field.
+  * If source files for the Package are included in the Package distribution archive, the Package verification code for that Package should also be included in the SPDX document and the <a href="package-information.md#78-files-analyzed-field-">Files analyzed</a> field should be set to <code>true</code>.</p>
+<h4 id="k323-a-single-file-represented-as-a-spdx-package">K.3.2.3 A Single File Represented as a SPDX Package</h4>
+<p>Examples include: tarball, binary image, single executable</p>
+<p>SPDX Field To Use: <a href="package-information.md#710-package-checksum-field-">7.10 Package checksum</a></p>
+<p>Guidance: 
+  * If a <a href="package-information.md#77-package-download-location-field-">Package download location</a> exists, the Package checksum should be the cryptographic hash of the Package blob at the Package download location specified.
+  * If the Package download location is not known, not available, or not accessible to the software consumer, the producer should include a Package checksum for the included Package file.</p>
+<h4 id="k324-directory-of-software-represented-as-a-spdx-package">K.3.2.4 Directory of Software Represented as a SPDX Package</h4>
+<p>Examples include: source code, containers</p>
+<p>SPDX Field To Use: <a href="package-information.md#79-package-verification-code-field-">7.9 Package verification code</a></p>
+<p>Guidance:
+  * Include <a href="file-information.md#81-file-name-field-">File name</a> field in the SPDX document for every file in the directory, include each file’s cryptographic hash as a <a href="file-information.md#84-file-checksum-field-">File checksum</a>, create a <a href="relationships-between-SPDX-elements.md#111-relationship-field-">CONTAINS relationship</a> between the Package and the files, and set <a href="package-information.md#78-files-analyzed-field-">Files analyzed</a> to <code>true</code> on the Package. <strong>Note</strong>: if Files analyzed is set to <code>false</code> you <strong>cannot</strong> provide a Package verification code.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../using-SPDX-lite/" class="btn btn-neutral float-left" title="Using SPDX Lite"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../diffs-from-previous-editions/" class="btn btn-neutral float-right" title="Differences from Earlier SPDX Versions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2010 - 2023 Linux Foundation and its Contributors.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../using-SPDX-lite/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../diffs-from-previous-editions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
