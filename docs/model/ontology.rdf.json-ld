@@ -1,0 +1,3694 @@
+[
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/subjectAddition",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A LicenseAddition participating in a 'with addition' model."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/datasetAvailability",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The field describes the availability of a dataset."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/member",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license expression participating in a license set."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/comment",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provide consumers with comments by the creator of the Element about the Element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/AIPackageShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Organization",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A group of people who work together in an organized way for a shared purpose."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/PositiveIntegerRangeShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/originatedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies from where or whom the Element originally came."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicense",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license that is listed on the SPDX License List."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/verifiedUsing",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an IntegrityMethod with which the integrity of an Element can be asserted."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/datasetSize",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Captures the size of the dataset."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/AnnotationShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperator",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Portion of an AnyLicenseInfo representing a License which has additional\ntext applied to it."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSet",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Portion of an AnyLicenseInfo representing a set of licensing information\nwhere only any one of the elements applies."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperator",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Portion of an AnyLicenseInfo representing this version, or any later version,\nof the indicated License."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/datasetType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes the type of the given dataset."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/standard",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The relevant standards that may apply to an artifact."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/context",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Gives information about the circumstances or unifying properties\nthat Elements of the bundle have been assembled under."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Relationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes a relationship between one or more elements."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/relationshipType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Information about the relationship between two Elements."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/licenseText",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full text of a License or Addition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/externalIdentifier",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a reference to a resource outside the scope of SPDX-3.0 content\nthat uniquely identifies an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VulnerabilityShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/externalSpdxId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies an external Element used within a Document but defined external to that Document."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/additionComment",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies general comments about the LicenseAddition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/namespace",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an unambiguous mechanism for conveying a URI fragment portion of an ElementID."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/rootElement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "This property is used to denote the root Element(s) of a tree of elements contained in an SBOM."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/modelExplainability",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes methods that can be used to explain the model."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/FileShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/informationAboutTraining",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes relevant information about different steps of the training process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Abstract ancestor class for all vulnerability assessments"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/subject",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An Element an annotator has made an assertion about."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/Sbom",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A collection of SPDX Elements describing a single package."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ArtifactShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/end",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the end of a range."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseTemplate",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full text of a License, in SPDX templating format."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/algorithm",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the algorithm used for calculating the hash value."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/File",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Refers to any object that stores content on a computer."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/PackageShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/locator",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides the location of an external reference."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingTextShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/Package",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Refers to any unit of content that can be associated with a distribution of software."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/SpdxDocument",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A collection of SPDX Elements that could potentially be serialized."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/hashValue",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The result of applying a hash algorithm to an Element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/DictionaryEntry",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A key with an associated value."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpression",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An SPDX Element containing an SPDX license expression string."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/knownBias",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records the biases that the dataset is known to encompass."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Asbtract ancestor class for all VEX relationships"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/autonomyType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "States if a human is involved in the decisions of the AI software."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/RelationshipType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Information about the relationship between two Elements."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/suppliedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies who or what supplied the artifact or VulnAssessmentRelationship referenced by the Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssSeverityType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the CVSS base, temporal, threat, or environmental severity type."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ExtendableLicense",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Abstract class representing a License or an OrLaterOperator."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/profileConformance",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes one a profile which the creator of this ElementCollection intends to conform to."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "https://rdf.spdx.org/v3/"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/Snippet",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes a certain part of a file."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalRef",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A reference to a resource outside the scope of SPDX-3.0 content."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/catalogType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/environment",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property describing the session in which a build is invoked."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/copyrightText",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the text of one or more copyright notices for a software Package,\nFile or Snippet, if any."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalRefShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/key",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A key used in a generic key-value pair."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseXml",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies all the text and metadata associated with a license in the license XML format."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseComment",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies general comments about the License."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/locationHint",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an indication of where to retrieve an external Element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/HashShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/configSourceEntrypoint",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property describes the invocation entrypoint of a build."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/ExploitCatalogType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the exploit catalog type."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/Build",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Class that describes a build instance of software/artifacts."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/anonymizationMethodUsed",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes the anonymization methods used."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexUnderInvestigationVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Designates elements as products where the impact of a vulnerability is being\ninvestigated."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/licenseExpression",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A string in the license expression format."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/creationInfo",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the creation of the Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/parameters",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property describing the parameters used in an instance of a build."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Artifact",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A distinct article or unit within the digital domain."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAddition",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Abstract class for additional text intended to be added to a License, but\nwhich is not itself a standalone License."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/publishedTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the time when a vulnerability was published."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/primaryPurpose",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the primary purpose of the software artifact."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/modelDataPreprocessing",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes all the preprocessing steps applied to the training data before the model training."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/statusNotes",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Tool",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An element of hardware and/or software utilized to carry out a particular function."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/HashAlgorithm",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A mathematical algorithm that maps data of arbitrary size to a bit string."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an SSVC assessment for a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedLicenseId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies whether a license or additional text identifier has been marked as\ndeprecated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/percentile",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The percentile of the current probability score."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/additionText",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full text of a LicenseAddition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/contentType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the content type of an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/created",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies when the Element was originally created."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalMap",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A map of Element identifiers that are used within a Document but defined external to that Document."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/licenseListVersion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "The version of the SPDX License List used in the license expression."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/LifecycleScopedRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/identifier",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Uniquely identifies an external element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/buildEndTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property that describes the time at which a build stops."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/additionId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a short, unique identifier to refer to a LicenseAddition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperatorShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SbomType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a set of values to be used to describe the common types of SBOMs that tools may create."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/contentIdentifier",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a place to record the canonical, unique, immutable identifier for each software artifact using the artifact's gitoid."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/IntegrityMethod",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an independently reproducible mechanism that permits verification of a specific Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/issuingAuthority",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an EPSS assessment for a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a CVSS version 4 assessment for a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a short, unique identifier to refer to a License."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/informationAboutApplication",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides relevant information about the AI software, not including the model description."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/configSourceDigest",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property that describes the digest of the build configuration file used to invoke a build."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/PositiveIntegerRange",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A tuple of two positive integers that define a range."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/createdBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies who or what created the Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/releaseTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the time an artifact was released."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/metric",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records the measurement of prediction quality of the AI model."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/buildId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A buildId is a locally unique identifier used by a builder to identify a unique instance of a build produced by it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/DatasetAvailabilityType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Availability of dataset"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/externalIdentifierType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the type of the external identifier."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/createdUsing",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the tooling that was used during the creation of the Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAdditionShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedAdditionId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies whether an additional text identifier has been marked as deprecated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/DatasetType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Enumeration of dataset types."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/validUntilTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies until when the artifact can be used before its usage needs to be reassessed."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/confidentialityLevel",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes the confidentiality level of the data points contained in the dataset."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/actionStatement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides advise on how to mitigate or remediate a vulnerability when a VEX product\nis affected by it."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/from",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References the Element on the left-hand side of a relationship."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/probability",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A probability score between 0 and 1 of a vulnerability being exploited."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/name",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the name of an Element as designated by the creator."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/element",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Refers to one or more Elements that are part of an ElementCollection."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/intendedUse",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes what the given dataset should be used for."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/justificationType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Impact justification label to be used when linking a vulnerability to an element\nrepresenting a VEX product with a VexNotAffectedVulnAssessmentRelationship\nrelationship."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Person",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An individual human being."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/sourceInfo",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records any relevant background information or additional comments\nabout the origin of the package."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/severity",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the CVSS qualitative severity rating of a vulnerability in relation to a piece of software."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/AnnotationType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the type of an annotation."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/description",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a detailed description of the Element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalIdentifierShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/dataLicense",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides the license under which the SPDX documentation of the Element can be used."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/LicenseShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSet",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Portion of an AnyLicenseInfo representing a set of licensing information\nwhere all elements apply."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicenseAddition",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license addition that is not listed on the SPDX Exceptions List."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/configSourceUri",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property that describes the URI of the build configuration source file."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/obsoletedBy",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the licenseId that is preferred to be used in place of a deprecated\nLicense or LicenseAddition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/summary",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A short description of an Element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/score",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a numerical (0-10) representation of the severity of a vulnerability."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/isOsiApproved",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies whether the License is listed as approved by the\n[Open Source Initiative (OSI)](https://opensource.org)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/hyperparameter",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records a hyperparameter used to build the AI model contained in the AI package."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalIdentifier",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A reference to a resource outside the scope of SPDX-3.0 content that uniquely identifies an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/standardCompliance",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Captures a standard that is being complied with."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/startTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the time from which an element is applicable / valid."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseHeader",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a License author's preferred text to indicate that a file is covered\nby the License."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/License",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Abstract class for the portion of an AnyLicenseInfo representing a license."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/datasetUpdateMechanism",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes a mechanism to update the dataset."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/snippetFromFile",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the original host file that the snippet information applies to."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/typeOfModel",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records the type of the model used in the AI software."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/ConfidentialityLevelType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Categories of confidentiality level."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/CreationInfo",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the creation of the Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/NamespaceMapShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/annotationType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes the type of annotation."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/energyConsumption",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates the amount of energy consumed to build the AI package."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/packageUrl",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a place for the SPDX data creator to record the package URL string (in accordance with the [package URL spec](https://github.com/package-url/purl-spec/blob/master/PURL-SPECIFICATION.rst)) for a software Package."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a CVSS version 2.0 assessment for a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/impactStatement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Explains why a VEX product is not affected by a vulnerability. It is an\nalternative in VexNotAffectedVulnAssessmentRelationship to the machine-readable\njustification label."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexJustificationType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the VEX justification type."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/IntegrityMethodShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ElementCollectionShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalRefType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the type of an external reference."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/datasetNoise",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes potentially noisy elements of the dataset."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/dataCollectionProcess",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes how the dataset was collected."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/DatasetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/additionName",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full name of a LicenseAddition."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ElementShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SoftwareArtifact",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A distinct article or unit related to Software."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/byteRange",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the byte range in the original host file that the snippet information applies to."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/dataPreprocessing",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes the preprocessing steps that were applied to the raw data to create the given dataset."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/specVersion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a reference number that can be used to understand how to parse and interpret an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Bom",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A container for a grouping of SPDX-3.0 content characterizing details\n(provenence, composition, licensing, etc.) about a product."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/scope",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/buildStartTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Property describing the start time of a build."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/decisionType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provide the enumeration of possible decisions in the Stakeholder-Specific Vulnerability Categorization (SSVC) decision tree [https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf](https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf)"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ProfileIdentifierType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Enumeration of the valid profiles."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/Vulnerability",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies a vulnerability and its associated information."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/subjectLicense",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A License participating in a 'with addition' or 'or later' model."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/modifiedTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies a time when a vulnerability assessment was modified"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseException",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license exception that is listed on the SPDX Exceptions list."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/SoftwareAgent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A software agent."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/externalRefType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the type of the external reference."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/buildType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A buildType is a hint that is used to indicate the toolchain, platform, or infrastructure that the build was invoked on."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/standardAdditionTemplate",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full text of a LicenseAddition, in SPDX templating format."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/imports",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an ExternalMap of Element identifiers."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/isFsfLibre",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies whether the License is listed as free by the\n[Free Software Foundation (FSF)](https://fsf.org)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/extension",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Agent",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Agent represents anything with the potential to act on a system."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/SafetyRiskAssessmentType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Categories of safety risk impact of the application."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Element",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Base domain class from which all other SPDX-3.0 domain classes derive."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SbomShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/externalRef",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Points to a resource outside the scope of the SPDX-3.0 content\nthat provides additional characteristics of an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/vexVersion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/listVersionAdded",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the SPDX License List version in which this ListedLicense or\nListedLicenseException identifier was first added."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/builtTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the time an artifact was built."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/AIPackage",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the fields in the AI package profile."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Hash",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A mathematically calculated representation of a grouping of data."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/exploited",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describe that a CVE is known to have an exploit because it's been listed in an exploit catalog."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/endTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the time from which an element is no longer applicable / valid."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/statement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Commentary on an assertion that an annotator has made."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/begin",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the beginning of a range."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#positiveInteger"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SnippetShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/downloadLocation",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the download Uniform Resource Identifier for the package at the time that the document was created."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/homePage",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A place for the SPDX document creator to record a website that serves as the package's home page."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Bundle",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A collection of Elements that have a shared context."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/seeAlso",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Contains a URL where the License or LicenseAddition can be found in use."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/AnyLicenseInfo",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Abstract class representing a license combination consisting of one or more\nlicenses (optionally including additional text), which may be combined\naccording to the SPDX license expression syntax."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/contentType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the media type of an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/customIdToUri",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Maps a LicenseRef or AdditionRef string for a Custom License or a Custom License Addition to its URI ID."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/packageVersion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identify the version of a package."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/prefix",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A substitute for a URI."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/DictionaryEntryShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/SsvcDecisionType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the SSVC decision type."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SoftwarePurpose",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the primary purpose of an Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/impactStatementTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseExceptionShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/SoftwareArtifactShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/withdrawnTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specified the time and date when a vulnerability was withdrawn."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/limitation",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Captures a limitation of the AI software."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/sensitivePersonalInformation",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes if any sensitive personal information is present in the dataset."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/attributionText",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a place for the SPDX data creator to record acknowledgement text for\na software Package, File or Snippet."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/sensitivePersonalInformation",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records if sensitive personal information is used during model training."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/deprecatedVersion",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the SPDX License List version in which this license or exception\nidentifier was deprecated."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/RelationshipCompleteness",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Indicates whether a relationship is known to be complete, incomplete, or if no assertion is made with respect to relationship completeness."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/to",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "References an Element on the right-hand side of a relationship."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/identifierLocator",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseName",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies the full name of a License."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Links a vulnerability and one or more elements designating the latter as products\nnot affected by the vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ExternalIdentifierType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the type of an external identifier."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/assessedElement",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies an element contained in a piece of software where a vulnerability was\nfound."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/LifecycleScopedRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Connects a vulnerability and an element designating the element as a product\naffected by the vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/metricDecisionThreshold",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Captures the threshold that was used for computation of a metric described in the metric field."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/LifecycleScopeType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "TODO"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/vectorString",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Specifies the CVSS vector string for a vulnerability."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/safetyRiskAssessment",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Categorizes safety risk impact of AI software."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/sensor",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Describes a sensor used for collecting the data."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Dataset/Dataset",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the fields in the Dataset profile."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/value",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A value used in a generic key-value pair."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/spdxId",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Identifies an Element to be referenced by other Elements."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/NamespaceMap",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A mapping between prefixes and namespace partial URIs."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a CVSS version 3 assessment for a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides an exploit assessment of a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/locator",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides the location of an exploit catalog."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/ElementCollection",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A collection of Elements, not necessarily with unifying context."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/additionalPurpose",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides additional purpose information of the software artifact."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Build/BuildShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/lineRange",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Defines the line range in the original host file that the snippet information applies to."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpressionShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/CreationInfoShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/Annotation",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "An assertion made in relation to one or more elements."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/definingArtifact",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Artifact representing a serialization instance of SPDX data containing the definition of a particular Element."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/actionStatementTime",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Records the time when a recommended action was communicated in a VEX statement \nto mitigate a vulnerability."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingText",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license or addition that is not listed on the SPDX License List."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/PresenceType",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Categories of presence or absence."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/SpdxDocumentShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/namespaceMap",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides a NamespaceMap of prefixes and associated namespace partial URIs applicable to an SpdxDocument and independent of any specific serialization format or instance."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/RelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperatorShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicense",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A license that is not listed on the SPDX License List."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/BundleShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Core/completeness",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the completeness of relationships."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/AI/domain",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Captures the domain in which the AI package can be used."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationshipShape",
+    "@type": [
+      "http://www.w3.org/ns/shacl#NodeShape"
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Software/sbomType",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Provides information about the type of an SBOM."
+      }
+    ]
+  },
+  {
+    "@id": "https://rdf.spdx.org/v3/Security/VexFixedVulnAssessmentRelationship",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Links a vulnerability and elements representing products (in the VEX sense) where\na fix has been applied and are no longer affected."
+      }
+    ]
+  }
+]
