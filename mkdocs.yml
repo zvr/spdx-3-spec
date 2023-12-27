@@ -1,5 +1,5 @@
 site_name: SPDX v3 Specification
-copyright: DRAFT version geenrated from 06ff92a (model) by 87bd88a (parser)
+copyright: DRAFT version geenrated from 06ff92a (model) by 6a7602d (parser)
 use_directory_urls: true
 theme: readthedocs
 extra_css:

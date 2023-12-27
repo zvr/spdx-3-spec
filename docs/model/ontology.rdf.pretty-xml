@@ -1,171 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:sh="http://www.w3.org/ns/shacl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:sh="http://www.w3.org/ns/shacl#"
 >
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperatorShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpressionShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/CreationInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides information about the creation of the Element.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/suppliedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Identifies who or what supplied the artifact or VulnAssessmentRelationship referenced by the Element.</rdfs:comment>
+  </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/publishedTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Specifies the time when a vulnerability was published.</rdfs:comment>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/severity">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/percentile">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the CVSS qualitative severity rating of a vulnerability in relation to a piece of software.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The percentile of the current probability score.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/createdUsing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the tooling that was used during the creation of the Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalRefType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the type of the external reference.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/to">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">References an Element on the right-hand side of a relationship.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/modifiedTime">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/deprecatedVersion">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies a time when a vulnerability assessment was modified</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies the SPDX License List version in which this license or exception
+identifier was deprecated.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/contentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides information about the content type of an Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/sourceInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Records any relevant background information or additional comments
+about the origin of the package.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A buildType is a hint that is used to indicate the toolchain, platform, or infrastructure that the build was invoked on.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides a CVSS version 3 assessment for a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/extension">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/standardCompliance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Captures a standard that is being complied with.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetNoise">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes potentially noisy elements of the dataset.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseComment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies general comments about the License.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/sbomType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Provides information about the type of an SBOM.</rdfs:comment>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/rootElement">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/additionalPurpose">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">This property is used to denote the root Element(s) of a tree of elements contained in an SBOM.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/hyperparameter">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Records a hyperparameter used to build the AI model contained in the AI package.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseXml">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies all the text and metadata associated with a license in the license XML format.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/key">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A key used in a generic key-value pair.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/spdxId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies an Element to be referenced by other Elements.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Bom">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A container for a grouping of SPDX-3.0 content characterizing details
-(provenence, composition, licensing, etc.) about a product.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/File">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Refers to any object that stores content on a computer.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Abstract ancestor class for all vulnerability assessments</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/byteRange">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Defines the byte range in the original host file that the snippet information applies to.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalIdentifierType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the type of the external identifier.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceEntrypoint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Property describes the invocation entrypoint of a build.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetUpdateMechanism">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes a mechanism to update the dataset.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpression">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An SPDX Element containing an SPDX license expression string.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/contentIdentifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a place to record the canonical, unique, immutable identifier for each software artifact using the artifact's gitoid.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/standard">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The relevant standards that may apply to an artifact.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Provides additional purpose information of the software artifact.</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/namespace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Provides an unambiguous mechanism for conveying a URI fragment portion of an ElementID.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/obsoletedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the licenseId that is preferred to be used in place of a deprecated
-License or LicenseAddition.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/impactStatement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Explains why a VEX product is not affected by a vulnerability. It is an
-alternative in VexNotAffectedVulnAssessmentRelationship to the machine-readable
-justification label.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/annotationType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Describes the type of annotation.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/energyConsumption">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Indicates the amount of energy consumed to build the AI package.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/Dataset">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Relationship">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides information about the fields in the Dataset profile.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes a relationship between one or more elements.</rdfs:comment>
   </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A reference to a resource outside the scope of SPDX-3.0 content that uniquely identifies an Element.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/snippetFromFile">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Defines the original host file that the snippet information applies to.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/creationInfo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides information about the creation of the Element.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalRefType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the type of an external reference.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/issuingAuthority">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/contentIdentifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/vectorString">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the CVSS vector string for a vulnerability.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingText">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A license or addition that is not listed on the SPDX License List.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceUri">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Property that describes the URI of the build configuration source file.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Provides a place to record the canonical, unique, immutable identifier for each software artifact using the artifact's gitoid.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionName">
@@ -173,44 +95,128 @@ justification label.</rdfs:comment>
     <rdfs:comment xml:lang="en">Identifies the full name of a LicenseAddition.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/typeOfModel">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/hashValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Records the type of the model used in the AI software.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The result of applying a hash algorithm to an Element.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Connects a vulnerability and an element designating the element as a product
+affected by the vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/energyConsumption">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Indicates the amount of energy consumed to build the AI package.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/identifierLocator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/dataPreprocessing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes the preprocessing steps that were applied to the raw data to create the given dataset.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexUnderInvestigationVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Designates elements as products where the impact of a vulnerability is being
+investigated.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedAdditionId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies whether an additional text identifier has been marked as deprecated.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/impactStatementTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseHeader">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a License author's preferred text to indicate that a file is covered
+by the License.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/decisionType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provide the enumeration of possible decisions in the Stakeholder-Specific Vulnerability Categorization (SSVC) decision tree [https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf](https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf)</rdfs:comment>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationshipShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/primaryPurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides information about the primary purpose of the software artifact.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/namespaceMap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides a NamespaceMap of prefixes and associated namespace partial URIs applicable to an SpdxDocument and independent of any specific serialization format or instance.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/Dataset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides information about the fields in the Dataset profile.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexFixedVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Links a vulnerability and elements representing products (in the VEX sense) where
+a fix has been applied and are no longer affected.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/environment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Property describing the session in which a build is invoked.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Bundle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A collection of Elements that have a shared context.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/originatedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Identifies from where or whom the Element originally came.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/releaseTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the time an artifact was released.</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/informationAboutTraining">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Describes relevant information about different steps of the training process.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseTemplate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the full text of a License, in SPDX templating format.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/createdUsing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the tooling that was used during the creation of the Element.</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionComment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Identifies general comments about the LicenseAddition.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/ConfidentialityLevelType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Categories of confidentiality level.</rdfs:comment>
+  </rdfs:Class>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/PositiveIntegerRange">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A tuple of two positive integers that define a range.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/parameters">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Element">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Base domain class from which all other SPDX-3.0 domain classes derive.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SoftwareArtifactShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/PositiveIntegerRangeShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies the exploit catalog type.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Tool">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An element of hardware and/or software utilized to carry out a particular function.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/catalogType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Property describing the parameters used in an instance of a build.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isFsfLibre">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies whether the License is listed as free by the
-[Free Software Foundation (FSF)](https://fsf.org).</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/actionStatementTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Records the time when a recommended action was communicated in a VEX statement 
-to mitigate a vulnerability.</rdfs:comment>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/attributionText">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -218,274 +224,572 @@ to mitigate a vulnerability.</rdfs:comment>
 a software Package, File or Snippet.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/vexVersion">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/lineRange">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:comment xml:lang="en">Defines the line range in the original host file that the snippet information applies to.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the full name of a License.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/DatasetType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Enumeration of dataset types.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopeType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A mathematically calculated representation of a grouping of data.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/modelDataPreprocessing">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/dataLicense">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes all the preprocessing steps applied to the training data before the model training.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Provides the license under which the SPDX documentation of the Element can be used.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/Vulnerability">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies a vulnerability and its associated information.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/knownBias">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isFsfLibre">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Records the biases that the dataset is known to encompass.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies whether the License is listed as free by the
+[Free Software Foundation (FSF)](https://fsf.org).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a detailed description of the Element.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/algorithm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the algorithm used for calculating the hash value.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ElementShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/subjectAddition">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">A LicenseAddition participating in a 'with addition' model.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/completeness">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides information about the completeness of relationships.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/limitation">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Captures a limitation of the AI software.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/subject">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">An Element an annotator has made an assertion about.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/RelationshipType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Information about the relationship between two Elements.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Asbtract ancestor class for all VEX relationships</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetAvailability">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The field describes the availability of a dataset.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/relationshipType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Information about the relationship between two Elements.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/modelExplainability">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes methods that can be used to explain the model.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/subjectLicense">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">A License participating in a 'with addition' or 'or later' model.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardAdditionTemplate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the full text of a LicenseAddition, in SPDX templating format.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Package">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Refers to any unit of content that can be associated with a distribution of software.</rdfs:comment>
-  </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopedRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/verifiedUsing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides an IntegrityMethod with which the integrity of an Element can be asserted.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/validUntilTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies until when the artifact can be used before its usage needs to be reassessed.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/RelationshipCompleteness">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Indicates whether a relationship is known to be complete, incomplete, or if no assertion is made with respect to relationship completeness.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A buildType is a hint that is used to indicate the toolchain, platform, or infrastructure that the build was invoked on.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Property that describes the URI of the build configuration source file.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides an exploit assessment of a vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/created">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetUpdateMechanism">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies when the Element was originally created.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/statusNotes">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes a mechanism to update the dataset.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicense">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Snippet">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A license that is not listed on the SPDX License List.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a short, unique identifier to refer to a LicenseAddition.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ElementCollection">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A collection of Elements, not necessarily with unifying context.</rdfs:comment>
-  </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationshipShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/PackageShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseException">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A license exception that is listed on the SPDX Exceptions list.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/prefix">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A substitute for a URI.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/NamespaceMap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A mapping between prefixes and namespace partial URIs.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/domain">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Captures the domain in which the AI package can be used.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/extension">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Sbom">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A collection of SPDX Elements describing a single package.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/confidentialityLevel">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Describes the confidentiality level of the data points contained in the dataset.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationshipShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAddition">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Abstract class for additional text intended to be added to a License, but
-which is not itself a standalone License.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Bundle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A collection of Elements that have a shared context.</rdfs:comment>
-  </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/RelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/withdrawnTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specified the time and date when a vulnerability was withdrawn.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SoftwareArtifactShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Annotation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An assertion made in relation to one or more elements.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Person">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An individual human being.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/PresenceType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Categories of presence or absence.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalMap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A map of Element identifiers that are used within a Document but defined external to that Document.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/contentType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the media type of an Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/additionalPurpose">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides additional purpose information of the software artifact.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationshipShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/element">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Refers to one or more Elements that are part of an ElementCollection.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides a CVSS version 3 assessment for a vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/definingArtifact">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Artifact representing a serialization instance of SPDX data containing the definition of a particular Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetSize">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Captures the size of the dataset.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/decisionType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provide the enumeration of possible decisions in the Stakeholder-Specific Vulnerability Categorization (SSVC) decision tree [https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf](https://www.cisa.gov/sites/default/files/publications/cisa-ssvc-guide%20508c.pdf)</rdfs:comment>
-  </rdf:Property>
-  <owl:Ontology rdf:about="https://rdf.spdx.org/v3/">
-    <owl:versionIRI rdf:resource="https://rdf.spdx.org/v3/"/>
-  </owl:Ontology>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/sensitivePersonalInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Records if sensitive personal information is used during model training.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/anonymizationMethodUsed">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes the anonymization methods used.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/SpdxDocument">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A collection of SPDX Elements that could potentially be serialized.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes a certain part of a file.</rdfs:comment>
   </rdfs:Class>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/SsvcDecisionType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Specifies the SSVC decision type.</rdfs:comment>
   </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/completeness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides information about the completeness of relationships.</rdfs:comment>
+  </rdf:Property>
   <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ExternalRefShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/seeAlso">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/informationAboutApplication">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Contains a URL where the License or LicenseAddition can be found in use.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Provides relevant information about the AI software, not including the model description.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildStartTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Property describing the start time of a build.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopedRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ElementShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/locationHint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides an indication of where to retrieve an external Element.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Property>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicense">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A license that is listed on the SPDX License List.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/standardCompliance">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/obsoletedBy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Captures a standard that is being complied with.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies the licenseId that is preferred to be used in place of a deprecated
+License or LicenseAddition.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isOsiApproved">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/statement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies whether the License is listed as approved by the
-[Open Source Initiative (OSI)](https://opensource.org).</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:comment xml:lang="en">Commentary on an assertion that an annotator has made.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/prefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A substitute for a URI.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/assessedElement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Specifies an element contained in a piece of software where a vulnerability was
+found.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/modifiedTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies a time when a vulnerability assessment was modified</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/DictionaryEntry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A key with an associated value.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseExpression">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A string in the license expression format.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/homePage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A place for the SPDX document creator to record a website that serves as the package's home page.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Annotation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An assertion made in relation to one or more elements.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/confidentialityLevel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Describes the confidentiality level of the data points contained in the dataset.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseException">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A license exception that is listed on the SPDX Exceptions list.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/createdBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Identifies who or what created the Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/downloadLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the download Uniform Resource Identifier for the package at the time that the document was created.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/metricDecisionThreshold">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Captures the threshold that was used for computation of a metric described in the metric field.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/AI/AIPackage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides information about the fields in the AI package profile.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Uniquely identifies an external element.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/comment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provide consumers with comments by the creator of the Element about the Element.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/specVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a reference number that can be used to understand how to parse and interpret an Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceEntrypoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Property describes the invocation entrypoint of a build.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A reference to a resource outside the scope of SPDX-3.0 content that uniquely identifies an Element.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/domain">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Captures the domain in which the AI package can be used.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides a CVSS version 2.0 assessment for a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseXml">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies all the text and metadata associated with a license in the license XML format.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/statusNotes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/verifiedUsing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides an IntegrityMethod with which the integrity of an Element can be asserted.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/algorithm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the algorithm used for calculating the hash value.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ProfileIdentifierType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Enumeration of the valid profiles.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/File">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Refers to any object that stores content on a computer.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAddition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Abstract class for additional text intended to be added to a License, but
+which is not itself a standalone License.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides an SSVC assessment for a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/impactStatement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Explains why a VEX product is not affected by a vulnerability. It is an
+alternative in VexNotAffectedVulnAssessmentRelationship to the machine-readable
+justification label.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/locator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides the location of an exploit catalog.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ElementCollection">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A collection of Elements, not necessarily with unifying context.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides an EPSS assessment for a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/element">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Refers to one or more Elements that are part of an ElementCollection.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A mathematically calculated representation of a grouping of data.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/probability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A probability score between 0 and 1 of a vulnerability being exploited.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/HashAlgorithm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A mathematical algorithm that maps data of arbitrary size to a bit string.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/key">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A key used in a generic key-value pair.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/hyperparameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Records a hyperparameter used to build the AI model contained in the AI package.</rdfs:comment>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSetShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a set of licensing information
+where all elements apply.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A license that is not listed on the SPDX License List.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/begin">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Defines the beginning of a range.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/modelDataPreprocessing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes all the preprocessing steps applied to the training data before the model training.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Artifact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A distinct article or unit within the digital domain.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationshipShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/byteRange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Defines the byte range in the original host file that the snippet information applies to.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Captures the size of the dataset.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/contentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the media type of an Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/vexVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A buildId is a locally unique identifier used by a builder to identify a unique instance of a build produced by it.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/packageUrl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a place for the SPDX data creator to record the package URL string (in accordance with the [package URL spec](https://github.com/package-url/purl-spec/blob/master/PURL-SPECIFICATION.rst)) for a software Package.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/IntegrityMethod">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides an independently reproducible mechanism that permits verification of a specific Element.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a short, unique identifier to refer to a LicenseAddition.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/to">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">References an Element on the right-hand side of a relationship.</rdfs:comment>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ElementCollectionShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifierShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/listVersionAdded">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the SPDX License List version in which this ListedLicense or
+ListedLicenseException identifier was first added.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the name of an Element as designated by the creator.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/spdxId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies an Element to be referenced by other Elements.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/AnnotationShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationshipShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/customIdToUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Maps a LicenseRef or AdditionRef string for a Custom License or a Custom License Addition to its URI ID.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/limitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Captures a limitation of the AI software.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/annotationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Describes the type of annotation.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/knownBias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Records the biases that the dataset is known to encompass.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/BundleShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the full text of a License, in SPDX templating format.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/metric">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Records the measurement of prediction quality of the AI model.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/autonomyType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">States if a human is involved in the decisions of the AI software.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/creationInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides information about the creation of the Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/definingArtifact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Artifact representing a serialization instance of SPDX data containing the definition of a particular Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/context">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Gives information about the circumstances or unifying properties
+that Elements of the bundle have been assembled under.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Asbtract ancestor class for all VEX relationships</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildEndTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Property that describes the time at which a build stops.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/DatasetType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Enumeration of dataset types.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationshipShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/issuingAuthority">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/validUntilTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies until when the artifact can be used before its usage needs to be reassessed.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/vectorString">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the CVSS vector string for a vulnerability.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/seeAlso">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Contains a URL where the License or LicenseAddition can be found in use.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/severity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the CVSS qualitative severity rating of a vulnerability in relation to a piece of software.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/SoftwareAgent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A software agent.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/modelExplainability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes methods that can be used to explain the model.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalRef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A reference to a resource outside the scope of SPDX-3.0 content.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/RelationshipType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Information about the relationship between two Elements.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/scope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/summary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A short description of an Element.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalRefType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the type of the external reference.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/builtTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the time an artifact was built.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/copyrightText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the text of one or more copyright notices for a software Package,
+File or Snippet, if any.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/SbomType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides a set of values to be used to describe the common types of SBOMs that tools may create.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalRefType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies the type of an external reference.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssSeverityType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies the CVSS base, temporal, threat, or environmental severity type.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the full text of a License or Addition.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceDigest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Property that describes the digest of the build configuration file used to invoke a build.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/subjectLicense">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A License participating in a 'with addition' or 'or later' model.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Abstract ancestor class for all vulnerability assessments</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides an exploit assessment of a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopeType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/value">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">A value used in a generic key-value pair.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/anonymizationMethodUsed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes the anonymization methods used.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/sensitivePersonalInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Records if sensitive personal information is used during model training.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalRef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Points to a resource outside the scope of the SPDX-3.0 content
+that provides additional characteristics of an Element.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/AI/SafetyRiskAssessmentType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Categories of safety risk impact of the application.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/packageVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identify the version of a package.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/subjectAddition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A LicenseAddition participating in a 'with addition' model.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/snippetFromFile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Defines the original host file that the snippet information applies to.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/score">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a numerical (0-10) representation of the severity of a vulnerability.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Provides a reference to a resource outside the scope of SPDX-3.0 content
+that uniquely identifies an Element.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies when the Element was originally created.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/typeOfModel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Records the type of the model used in the AI software.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/withdrawnTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specified the time and date when a vulnerability was withdrawn.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the full text of a LicenseAddition.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/AI/AIPackageShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Provides a short, unique identifier to refer to a License.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/justificationType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -494,224 +798,51 @@ representing a VEX product with a VexNotAffectedVulnAssessmentRelationship
 relationship.</rdfs:comment>
   </rdf:Property>
   <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/SpdxDocumentShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/dataLicense">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides the license under which the SPDX documentation of the Element can be used.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/NamespaceMapShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/member">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/imports">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">A license expression participating in a license set.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Provides an ExternalMap of Element identifiers.</rdfs:comment>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ExtendableLicense">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpression">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Abstract class representing a License or an OrLaterOperator.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An SPDX Element containing an SPDX license expression string.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/informationAboutApplication">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides relevant information about the AI software, not including the model description.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifierType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the type of an external identifier.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildEndTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Property that describes the time at which a build stops.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/sensitivePersonalInformation">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/profileConformance">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Describes if any sensitive personal information is present in the dataset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes one a profile which the creator of this ElementCollection intends to conform to.</rdfs:comment>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/exploited">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describe that a CVE is known to have an exploit because it's been listed in an exploit catalog.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseText">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the full text of a License or Addition.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/begin">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Defines the beginning of a range.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/packageUrl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a place for the SPDX data creator to record the package URL string (in accordance with the [package URL spec](https://github.com/package-url/purl-spec/blob/master/PURL-SPECIFICATION.rst)) for a software Package.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalRef">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingText">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A reference to a resource outside the scope of SPDX-3.0 content.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A license or addition that is not listed on the SPDX License List.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseComment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies general comments about the License.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/value">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A value used in a generic key-value pair.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/metricDecisionThreshold">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/parameters">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Captures the threshold that was used for computation of a metric described in the metric field.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Property describing the parameters used in an instance of a build.</rdfs:comment>
   </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAdditionShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Bom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A container for a grouping of SPDX-3.0 content characterizing details
+(provenence, composition, licensing, etc.) about a product.</rdfs:comment>
+  </rdfs:Class>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Organization">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A group of people who work together in an organized way for a shared purpose.</rdfs:comment>
   </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexFixedVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Links a vulnerability and elements representing products (in the VEX sense) where
-a fix has been applied and are no longer affected.</rdfs:comment>
-  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Dataset/DatasetShape"/>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/DatasetAvailabilityType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Availability of dataset</rdfs:comment>
   </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexJustificationType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the VEX justification type.</rdfs:comment>
-  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedLicenseId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies whether a license or additional text identifier has been marked as
+deprecated.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/IntegrityMethodShape"/>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/actionStatement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Provides advise on how to mitigate or remediate a vulnerability when a VEX product
 is affected by it.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/AnnotationType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the type of an annotation.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/suppliedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Identifies who or what supplied the artifact or VulnAssessmentRelationship referenced by the Element.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/AI/SafetyRiskAssessmentType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Categories of safety risk impact of the application.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/HashAlgorithm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A mathematical algorithm that maps data of arbitrary size to a bit string.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/deprecatedVersion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the SPDX License List version in which this license or exception
-identifier was deprecated.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Connects a vulnerability and an element designating the element as a product
-affected by the vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/SoftwareAgent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A software agent.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/catalogType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/startTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the time from which an element is applicable / valid.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/customIdToUri">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Maps a LicenseRef or AdditionRef string for a Custom License or a Custom License Addition to its URI ID.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/locationHint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides an indication of where to retrieve an external Element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/context">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Gives information about the circumstances or unifying properties
-that Elements of the bundle have been assembled under.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Relationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Describes a relationship between one or more elements.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/downloadLocation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the download Uniform Resource Identifier for the package at the time that the document was created.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/from">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">References the Element on the left-hand side of a relationship.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/createdBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Identifies who or what created the Element.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/listVersionAdded">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the SPDX License List version in which this ListedLicense or
-ListedLicenseException identifier was first added.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/identifierLocator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/namespaceMap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides a NamespaceMap of prefixes and associated namespace partial URIs applicable to an SpdxDocument and independent of any specific serialization format or instance.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SnippetShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/autonomyType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">States if a human is involved in the decisions of the AI software.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the exploit catalog type.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides an EPSS assessment for a vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Agent">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Agent represents anything with the potential to act on a system.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/DictionaryEntry">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A key with an associated value.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ProfileIdentifierType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Enumeration of the valid profiles.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/statement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Commentary on an assertion that an annotator has made.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides a CVSS version 2.0 assessment for a vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/sourceInfo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Records any relevant background information or additional comments
-about the origin of the package.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/locator">
@@ -719,374 +850,243 @@ about the origin of the package.</rdfs:comment>
     <rdfs:comment xml:lang="en">Provides the location of an external reference.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseName">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the full name of a License.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/probability">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A probability score between 0 and 1 of a vulnerability being exploited.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssSeverityType">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ExtendableLicense">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Specifies the CVSS base, temporal, threat, or environmental severity type.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Abstract class representing a License or an OrLaterOperator.</rdfs:comment>
   </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/IntegrityMethod">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides an independently reproducible mechanism that permits verification of a specific Element.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildId">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/exploited">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A buildId is a locally unique identifier used by a builder to identify a unique instance of a build produced by it.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describe that a CVE is known to have an exploit because it's been listed in an exploit catalog.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ArtifactShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ExternalMapShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardAdditionTemplate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Identifies the full text of a LicenseAddition, in SPDX templating format.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/builtTime">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/actionStatementTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the time an artifact was built.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/DictionaryEntryShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/CreationInfoShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Snippet">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Describes a certain part of a file.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/dataPreprocessing">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes the preprocessing steps that were applied to the raw data to create the given dataset.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseHeader">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a License author's preferred text to indicate that a file is covered
-by the License.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Dataset/ConfidentialityLevelType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Categories of confidentiality level.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/AI/AIPackage">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides information about the fields in the AI package profile.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/copyrightText">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the text of one or more copyright notices for a software Package,
-File or Snippet, if any.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpressionShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Element">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Base domain class from which all other SPDX-3.0 domain classes derive.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/dataCollectionProcess">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes how the dataset was collected.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicenseAddition">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A license addition that is not listed on the SPDX Exceptions List.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/sensor">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Describes a sensor used for collecting the data.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VulnAssessmentRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalIdentifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides a reference to a resource outside the scope of SPDX-3.0 content
-that uniquely identifies an Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/hashValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The result of applying a hash algorithm to an Element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/SoftwarePurpose">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides information about the primary purpose of an Element.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/imports">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides an ExternalMap of Element identifiers.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/environment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Property describing the session in which a build is invoked.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/identifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Uniquely identifies an external element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Build/BuildShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/summary">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A short description of an Element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/primaryPurpose">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Provides information about the primary purpose of the software artifact.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Records the time when a recommended action was communicated in a VEX statement 
+to mitigate a vulnerability.</rdfs:comment>
   </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/intendedUse">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Describes what the given dataset should be used for.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/impactStatementTime">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/PresenceType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Categories of presence or absence.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/standard">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperatorShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/IntegrityMethodShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the name of an Element as designated by the creator.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The relevant standards that may apply to an artifact.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetNoise">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes potentially noisy elements of the dataset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Describes the type of the given dataset.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/startTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the time from which an element is applicable / valid.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseListVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">The version of the SPDX License List used in the license expression.</rdfs:comment>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SbomShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/rootElement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">This property is used to denote the root Element(s) of a tree of elements contained in an SBOM.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/dataCollectionProcess">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Describes how the dataset was collected.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/comment">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provide consumers with comments by the creator of the Element about the Element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/end">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Defines the end of a range.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/packageVersion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identify the version of a package.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/contentType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides information about the content type of an Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedAdditionId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies whether an additional text identifier has been marked as deprecated.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/AnnotationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies the type of an annotation.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/CreationInfoShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a set of licensing information
+where only any one of the elements applies.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalIdentifierType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the type of the external identifier.</rdfs:comment>
   </rdf:Property>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/SoftwareArtifact">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">A distinct article or unit related to Software.</rdfs:comment>
   </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseExceptionShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">A license expression participating in a license set.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/sensor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Describes a sensor used for collecting the data.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/endTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:comment xml:lang="en">Specifies the time from which an element is no longer applicable / valid.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a License which has additional
+text applied to it.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalMap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A map of Element identifiers that are used within a Document but defined external to that Document.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicenseAddition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A license addition that is not listed on the SPDX Exceptions List.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Package">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Refers to any unit of content that can be associated with a distribution of software.</rdfs:comment>
+  </rdfs:Class>
+  <owl:Ontology rdf:about="https://rdf.spdx.org/v3/">
+    <owl:versionIRI rdf:resource="https://rdf.spdx.org/v3/"/>
+  </owl:Ontology>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperatorShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingTextShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Agent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Agent represents anything with the potential to act on a system.</rdfs:comment>
+  </rdfs:Class>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/AnyLicenseInfo">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Abstract class representing a license combination consisting of one or more
 licenses (optionally including additional text), which may be combined
 according to the SPDX license expression syntax.</rdfs:comment>
   </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationship">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/from">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">References the Element on the left-hand side of a relationship.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/subject">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">An Element an annotator has made an assertion about.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/sensitivePersonalInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Describes if any sensitive personal information is present in the dataset.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Build/Build">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides an SSVC assessment for a vulnerability.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Class that describes a build instance of software/artifacts.</rdfs:comment>
   </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAdditionShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/relationshipType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Information about the relationship between two Elements.</rdfs:comment>
+  </rdf:Property>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/SoftwarePurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides information about the primary purpose of an Element.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationshipShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VulnerabilityShape"/>
   <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationship">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Links a vulnerability and one or more elements designating the latter as products
 not affected by the vulnerability.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/assessedElement">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Specifies an element contained in a piece of software where a vulnerability was
-found.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Describes the type of the given dataset.</rdfs:comment>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SbomShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Tool">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An element of hardware and/or software utilized to carry out a particular function.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/License">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Abstract class for the portion of an AnyLicenseInfo representing a license.</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseListVersion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The version of the SPDX License List used in the license expression.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/metric">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Records the measurement of prediction quality of the AI model.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/licenseExpression">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A string in the license expression format.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/score">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a numerical (0-10) representation of the severity of a vulnerability.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/scope">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/profileConformance">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Describes one a profile which the creator of this ElementCollection intends to conform to.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/description">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a detailed description of the Element.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationshipShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/buildStartTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Property describing the start time of a build.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/endTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the time from which an element is no longer applicable / valid.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides a CVSS version 4 assessment for a vulnerability.</rdfs:comment>
-  </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ElementCollectionShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedLicenseId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies whether a license or additional text identifier has been marked as
-deprecated.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexUnderInvestigationVulnAssessmentRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Designates elements as products where the impact of a vulnerability is being
-investigated.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSet">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a set of licensing information
-where all elements apply.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/CreationInfo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides information about the creation of the Element.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Artifact">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A distinct article or unit within the digital domain.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing this version, or any later version,
-of the indicated License.</rdfs:comment>
-  </rdfs:Class>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Build/Build">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Class that describes a build instance of software/artifacts.</rdfs:comment>
-  </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/AnnotationShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/specVersion">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a reference number that can be used to understand how to parse and interpret an Element.</rdfs:comment>
-  </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopedRelationship">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">TODO</rdfs:comment>
-  </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Build/configSourceDigest">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Property that describes the digest of the build configuration file used to invoke a build.</rdfs:comment>
-  </rdf:Property>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalSpdxId">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Identifies an external Element used within a Document but defined external to that Document.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/percentile">
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationshipShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/end">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">The percentile of the current probability score.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment xml:lang="en">Defines the end of a range.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
   </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/FileShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperator">
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/SpdxDocument">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a License which has additional
-text applied to it.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A collection of SPDX Elements that could potentially be serialized.</rdfs:comment>
   </rdfs:Class>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/lineRange">
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Dataset/datasetAvailability">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Defines the line range in the original host file that the snippet information applies to.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The field describes the availability of a dataset.</rdfs:comment>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/externalRef">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Points to a resource outside the scope of the SPDX-3.0 content
-that provides additional characteristics of an Element.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/additionText">
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/HashShape"/>
+  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/isOsiApproved">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Identifies the full text of a LicenseAddition.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Specifies whether the License is listed as approved by the
+[Open Source Initiative (OSI)](https://opensource.org).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
   </rdf:Property>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/SbomType">
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationshipShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/RelationshipCompleteness">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Provides a set of values to be used to describe the common types of SBOMs that tools may create.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates whether a relationship is known to be complete, incomplete, or if no assertion is made with respect to relationship completeness.</rdfs:comment>
   </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/BundleShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/PackageShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Provides a CVSS version 4 assessment for a vulnerability.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/NamespaceMapShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/Vulnerability">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies a vulnerability and its associated information.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Security/VexJustificationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Specifies the VEX justification type.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/License">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Abstract class for the portion of an AnyLicenseInfo representing a license.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/NamespaceMap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A mapping between prefixes and namespace partial URIs.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Software/Sbom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A collection of SPDX Elements describing a single package.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationshipShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/RelationshipShape"/>
   <rdf:Property rdf:about="https://rdf.spdx.org/v3/AI/safetyRiskAssessment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Categorizes safety risk impact of AI software.</rdfs:comment>
   </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Security/locator">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides the location of an exploit catalog.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/licenseId">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Provides a short, unique identifier to refer to a License.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingTextShape"/>
-  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSet">
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/DictionaryEntryShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifierType">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing a set of licensing information
-where only any one of the elements applies.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies the type of an external identifier.</rdfs:comment>
   </rdfs:Class>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationshipShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ArtifactShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ExternalIdentifierShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/releaseTime">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">Specifies the time an artifact was released.</rdfs:comment>
-  </rdf:Property>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Software/homePage">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:comment xml:lang="en">A place for the SPDX document creator to record a website that serves as the package's home page.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-  </rdf:Property>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/AI/AIPackageShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VulnerabilityShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/HashShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationshipShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/LicenseShape"/>
   <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSetShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/PositiveIntegerRangeShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSetShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Dataset/DatasetShape"/>
-  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/ExternalMapShape"/>
-  <rdf:Property rdf:about="https://rdf.spdx.org/v3/Core/originatedBy">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Identifies from where or whom the Element originally came.</rdfs:comment>
-  </rdf:Property>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/Core/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">An individual human being.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseExceptionShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Build/BuildShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperatorShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/FileShape"/>
+  <rdfs:Class rdf:about="https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Portion of an AnyLicenseInfo representing this version, or any later version,
+of the indicated License.</rdfs:comment>
+  </rdfs:Class>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/VulnAssessmentRelationshipShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Software/SnippetShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Core/LifecycleScopedRelationshipShape"/>
+  <sh:NodeShape rdf:about="https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationshipShape"/>
 </rdf:RDF>
