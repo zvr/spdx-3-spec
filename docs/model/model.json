@@ -4,8 +4,8 @@
   "namespaces": [
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "Build/Build": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 2
@@ -78,9 +78,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/Build"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "Build/parameters": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -97,7 +97,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/parameters"
         },
-        {
+        "Build/buildStartTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -114,7 +114,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/buildStartTime"
         },
-        {
+        "Build/buildEndTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -131,7 +131,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/buildEndTime"
         },
-        {
+        "Build/configSourceDigest": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -148,7 +148,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/configSourceDigest"
         },
-        {
+        "Build/environment": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -165,7 +165,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/environment"
         },
-        {
+        "Build/configSourceUri": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -182,7 +182,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/configSourceUri"
         },
-        {
+        "Build/buildId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -199,7 +199,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/buildId"
         },
-        {
+        "Build/buildType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -216,7 +216,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/buildType"
         },
-        {
+        "Build/configSourceEntrypoint": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 2
@@ -233,10 +233,10 @@
           },
           "iri": "https://rdf.spdx.org/v3/Build/configSourceEntrypoint"
         }
-      ],
-      "vocabularies": [],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "vocabularies": {},
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Build",
       "summary": "The Build Profile defines the set of information required to describe an instance of a Software Build.",
@@ -249,11 +249,11 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [],
-      "properties": [],
-      "vocabularies": [],
-      "individuals": [],
-      "datatypes": [],
+      "classes": {},
+      "properties": {},
+      "vocabularies": {},
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Licensing",
       "summary": "The Licensing Profile defines a minimum set of license information to facilitate compliance with typical license use cases.",
@@ -266,8 +266,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "Software/Snippet": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 46
@@ -304,7 +304,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/Snippet"
         },
-        {
+        "Software/Package": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 46
@@ -353,7 +353,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/Package"
         },
-        {
+        "Software/SoftwareArtifact": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 46
@@ -402,7 +402,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/SoftwareArtifact"
         },
-        {
+        "Software/File": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 46
@@ -427,7 +427,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/File"
         },
-        {
+        "Software/Sbom": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 46
@@ -452,9 +452,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/Sbom"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "Software/downloadLocation": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -471,7 +471,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/downloadLocation"
         },
-        {
+        "Software/attributionText": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -488,7 +488,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/attributionText"
         },
-        {
+        "Software/sbomType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -505,7 +505,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/sbomType"
         },
-        {
+        "Software/primaryPurpose": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -522,7 +522,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/primaryPurpose"
         },
-        {
+        "Software/packageUrl": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -539,7 +539,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/packageUrl"
         },
-        {
+        "Software/contentIdentifier": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -556,7 +556,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/contentIdentifier"
         },
-        {
+        "Software/lineRange": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -573,7 +573,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/lineRange"
         },
-        {
+        "Software/packageVersion": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -590,7 +590,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/packageVersion"
         },
-        {
+        "Software/additionalPurpose": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -607,7 +607,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/additionalPurpose"
         },
-        {
+        "Software/sourceInfo": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -624,7 +624,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/sourceInfo"
         },
-        {
+        "Software/homePage": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -641,7 +641,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/homePage"
         },
-        {
+        "Software/contentType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -658,7 +658,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/contentType"
         },
-        {
+        "Software/snippetFromFile": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -675,7 +675,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/snippetFromFile"
         },
-        {
+        "Software/byteRange": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -692,7 +692,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/byteRange"
         },
-        {
+        "Software/copyrightText": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 46
@@ -709,9 +709,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/copyrightText"
         }
-      ],
-      "vocabularies": [
-        {
+      },
+      "vocabularies": {
+        "Software/SoftwarePurpose": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 46
@@ -757,7 +757,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/SoftwarePurpose"
         },
-        {
+        "Software/SbomType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 46
@@ -780,9 +780,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Software/SbomType"
         }
-      ],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Software",
       "summary": "Everything having to do with software.",
@@ -795,8 +795,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "ExpandedLicensing/DisjunctiveLicenseSet": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -821,7 +821,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/DisjunctiveLicenseSet"
         },
-        {
+        "ExpandedLicensing/License": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -894,7 +894,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/License"
         },
-        {
+        "ExpandedLicensing/ConjunctiveLicenseSet": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -919,7 +919,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/ConjunctiveLicenseSet"
         },
-        {
+        "ExpandedLicensing/CustomLicenseAddition": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -937,7 +937,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicenseAddition"
         },
-        {
+        "ExpandedLicensing/OrLaterOperator": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -962,7 +962,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/OrLaterOperator"
         },
-        {
+        "ExpandedLicensing/ExtendableLicense": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -980,7 +980,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/ExtendableLicense"
         },
-        {
+        "ExpandedLicensing/WithAdditionOperator": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -1011,7 +1011,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/WithAdditionOperator"
         },
-        {
+        "ExpandedLicensing/ListedLicenseException": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -1042,7 +1042,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicenseException"
         },
-        {
+        "ExpandedLicensing/CustomLicense": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -1060,7 +1060,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/CustomLicense"
         },
-        {
+        "ExpandedLicensing/ListedLicense": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -1091,7 +1091,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/ListedLicense"
         },
-        {
+        "ExpandedLicensing/LicenseAddition": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 119
@@ -1146,9 +1146,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/LicenseAddition"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "ExpandedLicensing/seeAlso": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1165,7 +1165,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/seeAlso"
         },
-        {
+        "ExpandedLicensing/subjectAddition": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1182,7 +1182,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/subjectAddition"
         },
-        {
+        "ExpandedLicensing/listVersionAdded": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1199,7 +1199,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/listVersionAdded"
         },
-        {
+        "ExpandedLicensing/isFsfLibre": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1216,7 +1216,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/isFsfLibre"
         },
-        {
+        "ExpandedLicensing/licenseComment": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1233,7 +1233,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseComment"
         },
-        {
+        "ExpandedLicensing/standardAdditionTemplate": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1250,7 +1250,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/standardAdditionTemplate"
         },
-        {
+        "ExpandedLicensing/standardLicenseHeader": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1267,7 +1267,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseHeader"
         },
-        {
+        "ExpandedLicensing/licenseXml": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1284,7 +1284,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseXml"
         },
-        {
+        "ExpandedLicensing/standardLicenseTemplate": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1301,7 +1301,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/standardLicenseTemplate"
         },
-        {
+        "ExpandedLicensing/additionText": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1318,7 +1318,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/additionText"
         },
-        {
+        "ExpandedLicensing/isDeprecatedAdditionId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1335,7 +1335,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedAdditionId"
         },
-        {
+        "ExpandedLicensing/member": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1352,7 +1352,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/member"
         },
-        {
+        "ExpandedLicensing/deprecatedVersion": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1369,7 +1369,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/deprecatedVersion"
         },
-        {
+        "ExpandedLicensing/isOsiApproved": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1386,7 +1386,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/isOsiApproved"
         },
-        {
+        "ExpandedLicensing/additionId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1403,7 +1403,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/additionId"
         },
-        {
+        "ExpandedLicensing/subjectLicense": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1420,7 +1420,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/subjectLicense"
         },
-        {
+        "ExpandedLicensing/isDeprecatedLicenseId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1437,7 +1437,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/isDeprecatedLicenseId"
         },
-        {
+        "ExpandedLicensing/additionComment": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1454,7 +1454,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/additionComment"
         },
-        {
+        "ExpandedLicensing/obsoletedBy": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1471,7 +1471,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/obsoletedBy"
         },
-        {
+        "ExpandedLicensing/additionName": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1488,7 +1488,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/additionName"
         },
-        {
+        "ExpandedLicensing/licenseName": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1505,7 +1505,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseName"
         },
-        {
+        "ExpandedLicensing/licenseId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 119
@@ -1522,10 +1522,10 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/licenseId"
         }
-      ],
-      "vocabularies": [],
-      "individuals": [
-        {
+      },
+      "vocabularies": {},
+      "individuals": {
+        "ExpandedLicensing/NoneLicense": {
           "py/object": "spec_parser.model.Individual",
           "ns": {
             "py/id": 119
@@ -1544,7 +1544,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/NoneLicense"
         },
-        {
+        "ExpandedLicensing/NoAssertionLicense": {
           "py/object": "spec_parser.model.Individual",
           "ns": {
             "py/id": 119
@@ -1563,8 +1563,8 @@
           },
           "iri": "https://rdf.spdx.org/v3/ExpandedLicensing/NoAssertionLicense"
         }
-      ],
-      "datatypes": [],
+      },
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "ExpandedLicensing",
       "summary": "Fully expanded license expressions.",
@@ -1577,11 +1577,11 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [],
-      "properties": [],
-      "vocabularies": [],
-      "individuals": [],
-      "datatypes": [],
+      "classes": {},
+      "properties": {},
+      "vocabularies": {},
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Lite",
       "summary": "The SPDX Lite profile defines a subset of the SPDX specification, from the point of view of use cases in some industries. SPDX Lite aims at the balance between the SPDX standard and actual workflows in some industries.",
@@ -1594,8 +1594,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "Core/CreationInfo": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1643,7 +1643,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/CreationInfo"
         },
-        {
+        "Core/Element": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1721,7 +1721,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Element"
         },
-        {
+        "Core/ExternalRef": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1763,7 +1763,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ExternalRef"
         },
-        {
+        "Core/Bom": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1781,7 +1781,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/Bom"
         },
-        {
+        "Core/IntegrityMethod": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1805,7 +1805,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/IntegrityMethod"
         },
-        {
+        "Core/PositiveIntegerRange": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1835,7 +1835,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/PositiveIntegerRange"
         },
-        {
+        "Core/NamespaceMap": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1865,7 +1865,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/NamespaceMap"
         },
-        {
+        "Core/Artifact": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1920,7 +1920,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Artifact"
         },
-        {
+        "Core/Organization": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1938,7 +1938,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/Organization"
         },
-        {
+        "Core/Tool": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1956,7 +1956,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/Tool"
         },
-        {
+        "Core/ElementCollection": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -1993,7 +1993,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ElementCollection"
         },
-        {
+        "Core/ExternalMap": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2035,7 +2035,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ExternalMap"
         },
-        {
+        "Core/Hash": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2066,7 +2066,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Hash"
         },
-        {
+        "Core/Annotation": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2109,7 +2109,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Annotation"
         },
-        {
+        "Core/DictionaryEntry": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2139,7 +2139,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/DictionaryEntry"
         },
-        {
+        "Core/Person": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2157,7 +2157,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/Person"
         },
-        {
+        "Core/Agent": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2175,7 +2175,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/Agent"
         },
-        {
+        "Core/ExternalIdentifier": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2223,7 +2223,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ExternalIdentifier"
         },
-        {
+        "Core/SpdxDocument": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2260,7 +2260,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/SpdxDocument"
         },
-        {
+        "Core/Relationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2315,7 +2315,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Relationship"
         },
-        {
+        "Core/SoftwareAgent": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2333,7 +2333,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Core/SoftwareAgent"
         },
-        {
+        "Core/LifecycleScopedRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2358,7 +2358,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/LifecycleScopedRelationship"
         },
-        {
+        "Core/Bundle": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 240
@@ -2383,9 +2383,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/Bundle"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "Core/annotationType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2402,7 +2402,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/annotationType"
         },
-        {
+        "Core/locationHint": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2419,7 +2419,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/locationHint"
         },
-        {
+        "Core/end": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2436,7 +2436,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/end"
         },
-        {
+        "Core/context": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2453,7 +2453,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/context"
         },
-        {
+        "Core/hashValue": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2470,7 +2470,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/hashValue"
         },
-        {
+        "Core/originatedBy": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2487,7 +2487,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/originatedBy"
         },
-        {
+        "Core/startTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2504,7 +2504,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/startTime"
         },
-        {
+        "Core/profileConformance": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2521,7 +2521,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/profileConformance"
         },
-        {
+        "Core/identifier": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2538,7 +2538,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/identifier"
         },
-        {
+        "Core/from": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2555,7 +2555,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/from"
         },
-        {
+        "Core/relationshipType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2572,7 +2572,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/relationshipType"
         },
-        {
+        "Core/issuingAuthority": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2589,7 +2589,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/issuingAuthority"
         },
-        {
+        "Core/createdBy": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2606,7 +2606,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/createdBy"
         },
-        {
+        "Core/definingArtifact": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2623,7 +2623,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/definingArtifact"
         },
-        {
+        "Core/name": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2640,7 +2640,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/name"
         },
-        {
+        "Core/builtTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2657,7 +2657,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/builtTime"
         },
-        {
+        "Core/completeness": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2674,7 +2674,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/completeness"
         },
-        {
+        "Core/specVersion": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2691,7 +2691,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/specVersion"
         },
-        {
+        "Core/identifierLocator": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2708,7 +2708,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/identifierLocator"
         },
-        {
+        "Core/locator": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2725,7 +2725,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/locator"
         },
-        {
+        "Core/key": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2742,7 +2742,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/key"
         },
-        {
+        "Core/validUntilTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2759,7 +2759,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/validUntilTime"
         },
-        {
+        "Core/to": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2776,7 +2776,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/to"
         },
-        {
+        "Core/comment": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2793,7 +2793,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/comment"
         },
-        {
+        "Core/externalIdentifier": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2810,7 +2810,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/externalIdentifier"
         },
-        {
+        "Core/namespace": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2827,7 +2827,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/namespace"
         },
-        {
+        "Core/externalRef": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2844,7 +2844,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/externalRef"
         },
-        {
+        "Core/statement": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2861,7 +2861,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/statement"
         },
-        {
+        "Core/imports": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2878,7 +2878,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/imports"
         },
-        {
+        "Core/releaseTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2895,7 +2895,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/releaseTime"
         },
-        {
+        "Core/externalSpdxId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2912,7 +2912,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/externalSpdxId"
         },
-        {
+        "Core/scope": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2929,7 +2929,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/scope"
         },
-        {
+        "Core/extension": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2946,7 +2946,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/extension"
         },
-        {
+        "Core/value": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2963,7 +2963,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/value"
         },
-        {
+        "Core/verifiedUsing": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2980,7 +2980,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/verifiedUsing"
         },
-        {
+        "Core/rootElement": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -2997,7 +2997,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/rootElement"
         },
-        {
+        "Core/namespaceMap": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3014,7 +3014,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/namespaceMap"
         },
-        {
+        "Core/algorithm": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3031,7 +3031,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/algorithm"
         },
-        {
+        "Core/subject": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3048,7 +3048,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/subject"
         },
-        {
+        "Core/contentType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3065,7 +3065,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/contentType"
         },
-        {
+        "Core/creationInfo": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3082,7 +3082,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/creationInfo"
         },
-        {
+        "Core/externalIdentifierType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3099,7 +3099,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/externalIdentifierType"
         },
-        {
+        "Core/endTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3116,7 +3116,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/endTime"
         },
-        {
+        "Core/begin": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3133,7 +3133,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/begin"
         },
-        {
+        "Core/dataLicense": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3150,7 +3150,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/dataLicense"
         },
-        {
+        "Core/prefix": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3167,7 +3167,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/prefix"
         },
-        {
+        "Core/createdUsing": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3184,7 +3184,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/createdUsing"
         },
-        {
+        "Core/externalRefType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3201,7 +3201,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/externalRefType"
         },
-        {
+        "Core/created": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3218,7 +3218,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/created"
         },
-        {
+        "Core/spdxId": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3235,7 +3235,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/spdxId"
         },
-        {
+        "Core/summary": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3252,7 +3252,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/summary"
         },
-        {
+        "Core/standard": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3269,7 +3269,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/standard"
         },
-        {
+        "Core/suppliedBy": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3286,7 +3286,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/suppliedBy"
         },
-        {
+        "Core/element": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3303,7 +3303,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/element"
         },
-        {
+        "Core/description": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 240
@@ -3320,9 +3320,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/description"
         }
-      ],
-      "vocabularies": [
-        {
+      },
+      "vocabularies": {
+        "Core/HashAlgorithm": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3363,7 +3363,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/HashAlgorithm"
         },
-        {
+        "Core/ProfileIdentifierType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3390,7 +3390,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ProfileIdentifierType"
         },
-        {
+        "Core/ExternalIdentifierType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3418,7 +3418,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ExternalIdentifierType"
         },
-        {
+        "Core/AnnotationType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3437,7 +3437,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/AnnotationType"
         },
-        {
+        "Core/RelationshipType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3513,7 +3513,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/RelationshipType"
         },
-        {
+        "Core/RelationshipCompleteness": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3533,7 +3533,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/RelationshipCompleteness"
         },
-        {
+        "Core/PresenceType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3553,7 +3553,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/PresenceType"
         },
-        {
+        "Core/ExternalRefType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3615,7 +3615,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/ExternalRefType"
         },
-        {
+        "Core/LifecycleScopeType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 240
@@ -3638,10 +3638,10 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/LifecycleScopeType"
         }
-      ],
-      "individuals": [],
-      "datatypes": [
-        {
+      },
+      "individuals": {},
+      "datatypes": {
+        "Core/SemVer": {
           "py/object": "spec_parser.model.Datatype",
           "ns": {
             "py/id": 240
@@ -3660,7 +3660,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/SemVer"
         },
-        {
+        "Core/MediaType": {
           "py/object": "spec_parser.model.Datatype",
           "ns": {
             "py/id": 240
@@ -3679,7 +3679,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/MediaType"
         },
-        {
+        "Core/DateTime": {
           "py/object": "spec_parser.model.Datatype",
           "ns": {
             "py/id": 240
@@ -3698,7 +3698,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Core/DateTime"
         }
-      ],
+      },
       "license": "Community-Spec-1.0",
       "name": "Core",
       "summary": "The basis for all SPDX profiles.",
@@ -3711,8 +3711,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "SimpleLicensing/LicenseExpression": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 523
@@ -3749,7 +3749,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/LicenseExpression"
         },
-        {
+        "SimpleLicensing/AnyLicenseInfo": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 523
@@ -3767,7 +3767,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/AnyLicenseInfo"
         },
-        {
+        "SimpleLicensing/SimpleLicensingText": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 523
@@ -3792,9 +3792,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/SimpleLicensingText"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "SimpleLicensing/licenseListVersion": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 523
@@ -3811,7 +3811,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/licenseListVersion"
         },
-        {
+        "SimpleLicensing/licenseText": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 523
@@ -3828,7 +3828,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/licenseText"
         },
-        {
+        "SimpleLicensing/customIdToUri": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 523
@@ -3845,7 +3845,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/customIdToUri"
         },
-        {
+        "SimpleLicensing/licenseExpression": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 523
@@ -3862,10 +3862,10 @@
           },
           "iri": "https://rdf.spdx.org/v3/SimpleLicensing/licenseExpression"
         }
-      ],
-      "vocabularies": [],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "vocabularies": {},
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "SimpleLicensing",
       "summary": "Additional metadata relating to software licensing.",
@@ -3878,8 +3878,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "Dataset/Dataset": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 551
@@ -3976,9 +3976,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/Dataset"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "Dataset/anonymizationMethodUsed": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -3995,7 +3995,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/anonymizationMethodUsed"
         },
-        {
+        "Dataset/datasetSize": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4012,7 +4012,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/datasetSize"
         },
-        {
+        "Dataset/sensitivePersonalInformation": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4029,7 +4029,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/sensitivePersonalInformation"
         },
-        {
+        "Dataset/intendedUse": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4046,7 +4046,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/intendedUse"
         },
-        {
+        "Dataset/datasetType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4063,7 +4063,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/datasetType"
         },
-        {
+        "Dataset/dataPreprocessing": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4080,7 +4080,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/dataPreprocessing"
         },
-        {
+        "Dataset/knownBias": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4097,7 +4097,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/knownBias"
         },
-        {
+        "Dataset/datasetAvailability": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4114,7 +4114,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/datasetAvailability"
         },
-        {
+        "Dataset/datasetNoise": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4131,7 +4131,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/datasetNoise"
         },
-        {
+        "Dataset/sensor": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4148,7 +4148,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/sensor"
         },
-        {
+        "Dataset/datasetUpdateMechanism": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4165,7 +4165,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/datasetUpdateMechanism"
         },
-        {
+        "Dataset/dataCollectionProcess": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4182,7 +4182,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/dataCollectionProcess"
         },
-        {
+        "Dataset/confidentialityLevel": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 551
@@ -4199,9 +4199,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/confidentialityLevel"
         }
-      ],
-      "vocabularies": [
-        {
+      },
+      "vocabularies": {
+        "Dataset/ConfidentialityLevelType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 551
@@ -4222,7 +4222,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/ConfidentialityLevelType"
         },
-        {
+        "Dataset/DatasetType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 551
@@ -4253,7 +4253,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/DatasetType"
         },
-        {
+        "Dataset/DatasetAvailabilityType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 551
@@ -4275,9 +4275,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Dataset/DatasetAvailabilityType"
         }
-      ],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Dataset",
       "summary": "Everything having to do with datasets.",
@@ -4290,8 +4290,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "AI/AIPackage": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 609
@@ -4400,9 +4400,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/AIPackage"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "AI/modelDataPreprocessing": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4419,7 +4419,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/modelDataPreprocessing"
         },
-        {
+        "AI/limitation": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4436,7 +4436,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/limitation"
         },
-        {
+        "AI/metricDecisionThreshold": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4453,7 +4453,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/metricDecisionThreshold"
         },
-        {
+        "AI/sensitivePersonalInformation": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4470,7 +4470,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/sensitivePersonalInformation"
         },
-        {
+        "AI/safetyRiskAssessment": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4487,7 +4487,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/safetyRiskAssessment"
         },
-        {
+        "AI/modelExplainability": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4504,7 +4504,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/modelExplainability"
         },
-        {
+        "AI/autonomyType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4521,7 +4521,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/autonomyType"
         },
-        {
+        "AI/energyConsumption": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4538,7 +4538,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/energyConsumption"
         },
-        {
+        "AI/informationAboutApplication": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4555,7 +4555,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/informationAboutApplication"
         },
-        {
+        "AI/domain": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4572,7 +4572,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/domain"
         },
-        {
+        "AI/typeOfModel": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4589,7 +4589,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/typeOfModel"
         },
-        {
+        "AI/hyperparameter": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4606,7 +4606,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/hyperparameter"
         },
-        {
+        "AI/standardCompliance": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4623,7 +4623,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/standardCompliance"
         },
-        {
+        "AI/informationAboutTraining": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4640,7 +4640,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/informationAboutTraining"
         },
-        {
+        "AI/metric": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 609
@@ -4657,9 +4657,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/metric"
         }
-      ],
-      "vocabularies": [
-        {
+      },
+      "vocabularies": {
+        "AI/SafetyRiskAssessmentType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 609
@@ -4680,9 +4680,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/AI/SafetyRiskAssessmentType"
         }
-      ],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "AI",
       "summary": "Additional metadata based on software profile, that is useful for ai applications and models.",
@@ -4695,8 +4695,8 @@
     },
     {
       "py/object": "spec_parser.model.Namespace",
-      "classes": [
-        {
+      "classes": {
+        "Security/CvssV2VulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4727,7 +4727,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/CvssV2VulnAssessmentRelationship"
         },
-        {
+        "Security/VexAffectedVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4758,7 +4758,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/VexAffectedVulnAssessmentRelationship"
         },
-        {
+        "Security/SsvcVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4783,7 +4783,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/SsvcVulnAssessmentRelationship"
         },
-        {
+        "Security/Vulnerability": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4820,7 +4820,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/Vulnerability"
         },
-        {
+        "Security/EpssVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4857,7 +4857,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/EpssVulnAssessmentRelationship"
         },
-        {
+        "Security/VulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4906,7 +4906,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/VulnAssessmentRelationship"
         },
-        {
+        "Security/VexFixedVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4924,7 +4924,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Security/VexFixedVulnAssessmentRelationship"
         },
-        {
+        "Security/ExploitCatalogVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4961,7 +4961,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/ExploitCatalogVulnAssessmentRelationship"
         },
-        {
+        "Security/VexUnderInvestigationVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -4979,7 +4979,7 @@
           "properties": {},
           "iri": "https://rdf.spdx.org/v3/Security/VexUnderInvestigationVulnAssessmentRelationship"
         },
-        {
+        "Security/CvssV4VulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -5016,7 +5016,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/CvssV4VulnAssessmentRelationship"
         },
-        {
+        "Security/VexNotAffectedVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -5053,7 +5053,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/VexNotAffectedVulnAssessmentRelationship"
         },
-        {
+        "Security/VexVulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -5084,7 +5084,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/VexVulnAssessmentRelationship"
         },
-        {
+        "Security/CvssV3VulnAssessmentRelationship": {
           "py/object": "spec_parser.model.Class",
           "ns": {
             "py/id": 667
@@ -5121,9 +5121,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/CvssV3VulnAssessmentRelationship"
         }
-      ],
-      "properties": [
-        {
+      },
+      "properties": {
+        "Security/assessedElement": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5140,7 +5140,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/assessedElement"
         },
-        {
+        "Security/actionStatementTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5157,7 +5157,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/actionStatementTime"
         },
-        {
+        "Security/decisionType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5174,7 +5174,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/decisionType"
         },
-        {
+        "Security/severity": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5191,7 +5191,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/severity"
         },
-        {
+        "Security/statusNotes": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5208,7 +5208,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/statusNotes"
         },
-        {
+        "Security/withdrawnTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5225,7 +5225,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/withdrawnTime"
         },
-        {
+        "Security/probability": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5242,7 +5242,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/probability"
         },
-        {
+        "Security/locator": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5259,7 +5259,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/locator"
         },
-        {
+        "Security/modifiedTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5276,7 +5276,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/modifiedTime"
         },
-        {
+        "Security/vexVersion": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5293,7 +5293,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/vexVersion"
         },
-        {
+        "Security/impactStatementTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5310,7 +5310,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/impactStatementTime"
         },
-        {
+        "Security/exploited": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5327,7 +5327,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/exploited"
         },
-        {
+        "Security/score": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5344,7 +5344,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/score"
         },
-        {
+        "Security/publishedTime": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5361,7 +5361,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/publishedTime"
         },
-        {
+        "Security/catalogType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5378,7 +5378,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/catalogType"
         },
-        {
+        "Security/actionStatement": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5395,7 +5395,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/actionStatement"
         },
-        {
+        "Security/justificationType": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5412,7 +5412,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/justificationType"
         },
-        {
+        "Security/impactStatement": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5429,7 +5429,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/impactStatement"
         },
-        {
+        "Security/percentile": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5446,7 +5446,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/percentile"
         },
-        {
+        "Security/vectorString": {
           "py/object": "spec_parser.model.Property",
           "ns": {
             "py/id": 667
@@ -5463,9 +5463,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/vectorString"
         }
-      ],
-      "vocabularies": [
-        {
+      },
+      "vocabularies": {
+        "Security/SsvcDecisionType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 667
@@ -5486,7 +5486,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/SsvcDecisionType"
         },
-        {
+        "Security/ExploitCatalogType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 667
@@ -5505,7 +5505,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/ExploitCatalogType"
         },
-        {
+        "Security/VexJustificationType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 667
@@ -5527,7 +5527,7 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/VexJustificationType"
         },
-        {
+        "Security/CvssSeverityType": {
           "py/object": "spec_parser.model.Vocabulary",
           "ns": {
             "py/id": 667
@@ -5549,9 +5549,9 @@
           },
           "iri": "https://rdf.spdx.org/v3/Security/CvssSeverityType"
         }
-      ],
-      "individuals": [],
-      "datatypes": [],
+      },
+      "individuals": {},
+      "datatypes": {},
       "license": "Community-Spec-1.0",
       "name": "Security",
       "summary": "The Security Profile captures security related information.",
@@ -5563,721 +5563,721 @@
       "iri": "https://rdf.spdx.org/v3/Security"
     }
   ],
-  "classes": [
-    {
+  "classes": {
+    "Build/Build": {
       "py/id": 4
     },
-    {
+    "Software/Snippet": {
       "py/id": 48
     },
-    {
+    "Software/Package": {
       "py/id": 54
     },
-    {
+    "Software/SoftwareArtifact": {
       "py/id": 62
     },
-    {
+    "Software/File": {
       "py/id": 70
     },
-    {
+    "Software/Sbom": {
       "py/id": 74
     },
-    {
+    "ExpandedLicensing/DisjunctiveLicenseSet": {
       "py/id": 121
     },
-    {
+    "ExpandedLicensing/License": {
       "py/id": 125
     },
-    {
+    "ExpandedLicensing/ConjunctiveLicenseSet": {
       "py/id": 137
     },
-    {
+    "ExpandedLicensing/CustomLicenseAddition": {
       "py/id": 141
     },
-    {
+    "ExpandedLicensing/OrLaterOperator": {
       "py/id": 144
     },
-    {
+    "ExpandedLicensing/ExtendableLicense": {
       "py/id": 148
     },
-    {
+    "ExpandedLicensing/WithAdditionOperator": {
       "py/id": 151
     },
-    {
+    "ExpandedLicensing/ListedLicenseException": {
       "py/id": 156
     },
-    {
+    "ExpandedLicensing/CustomLicense": {
       "py/id": 161
     },
-    {
+    "ExpandedLicensing/ListedLicense": {
       "py/id": 164
     },
-    {
+    "ExpandedLicensing/LicenseAddition": {
       "py/id": 169
     },
-    {
+    "Core/CreationInfo": {
       "py/id": 242
     },
-    {
+    "Core/Element": {
       "py/id": 250
     },
-    {
+    "Core/ExternalRef": {
       "py/id": 263
     },
-    {
+    "Core/Bom": {
       "py/id": 270
     },
-    {
+    "Core/IntegrityMethod": {
       "py/id": 273
     },
-    {
+    "Core/PositiveIntegerRange": {
       "py/id": 277
     },
-    {
+    "Core/NamespaceMap": {
       "py/id": 282
     },
-    {
+    "Core/Artifact": {
       "py/id": 287
     },
-    {
+    "Core/Organization": {
       "py/id": 296
     },
-    {
+    "Core/Tool": {
       "py/id": 299
     },
-    {
+    "Core/ElementCollection": {
       "py/id": 302
     },
-    {
+    "Core/ExternalMap": {
       "py/id": 308
     },
-    {
+    "Core/Hash": {
       "py/id": 315
     },
-    {
+    "Core/Annotation": {
       "py/id": 320
     },
-    {
+    "Core/DictionaryEntry": {
       "py/id": 327
     },
-    {
+    "Core/Person": {
       "py/id": 332
     },
-    {
+    "Core/Agent": {
       "py/id": 335
     },
-    {
+    "Core/ExternalIdentifier": {
       "py/id": 338
     },
-    {
+    "Core/SpdxDocument": {
       "py/id": 346
     },
-    {
+    "Core/Relationship": {
       "py/id": 352
     },
-    {
+    "Core/SoftwareAgent": {
       "py/id": 361
     },
-    {
+    "Core/LifecycleScopedRelationship": {
       "py/id": 364
     },
-    {
+    "Core/Bundle": {
       "py/id": 368
     },
-    {
+    "SimpleLicensing/LicenseExpression": {
       "py/id": 525
     },
-    {
+    "SimpleLicensing/AnyLicenseInfo": {
       "py/id": 531
     },
-    {
+    "SimpleLicensing/SimpleLicensingText": {
       "py/id": 534
     },
-    {
+    "Dataset/Dataset": {
       "py/id": 553
     },
-    {
+    "AI/AIPackage": {
       "py/id": 611
     },
-    {
+    "Security/CvssV2VulnAssessmentRelationship": {
       "py/id": 669
     },
-    {
+    "Security/VexAffectedVulnAssessmentRelationship": {
       "py/id": 674
     },
-    {
+    "Security/SsvcVulnAssessmentRelationship": {
       "py/id": 679
     },
-    {
+    "Security/Vulnerability": {
       "py/id": 683
     },
-    {
+    "Security/EpssVulnAssessmentRelationship": {
       "py/id": 689
     },
-    {
+    "Security/VulnAssessmentRelationship": {
       "py/id": 695
     },
-    {
+    "Security/VexFixedVulnAssessmentRelationship": {
       "py/id": 703
     },
-    {
+    "Security/ExploitCatalogVulnAssessmentRelationship": {
       "py/id": 706
     },
-    {
+    "Security/VexUnderInvestigationVulnAssessmentRelationship": {
       "py/id": 712
     },
-    {
+    "Security/CvssV4VulnAssessmentRelationship": {
       "py/id": 715
     },
-    {
+    "Security/VexNotAffectedVulnAssessmentRelationship": {
       "py/id": 721
     },
-    {
+    "Security/VexVulnAssessmentRelationship": {
       "py/id": 727
     },
-    {
+    "Security/CvssV3VulnAssessmentRelationship": {
       "py/id": 732
     }
-  ],
-  "properties": [
-    {
+  },
+  "properties": {
+    "Build/parameters": {
       "py/id": 17
     },
-    {
+    "Build/buildStartTime": {
       "py/id": 19
     },
-    {
+    "Build/buildEndTime": {
       "py/id": 21
     },
-    {
+    "Build/configSourceDigest": {
       "py/id": 23
     },
-    {
+    "Build/environment": {
       "py/id": 25
     },
-    {
+    "Build/configSourceUri": {
       "py/id": 27
     },
-    {
+    "Build/buildId": {
       "py/id": 29
     },
-    {
+    "Build/buildType": {
       "py/id": 31
     },
-    {
+    "Build/configSourceEntrypoint": {
       "py/id": 33
     },
-    {
+    "Software/downloadLocation": {
       "py/id": 79
     },
-    {
+    "Software/attributionText": {
       "py/id": 81
     },
-    {
+    "Software/sbomType": {
       "py/id": 83
     },
-    {
+    "Software/primaryPurpose": {
       "py/id": 85
     },
-    {
+    "Software/packageUrl": {
       "py/id": 87
     },
-    {
+    "Software/contentIdentifier": {
       "py/id": 89
     },
-    {
+    "Software/lineRange": {
       "py/id": 91
     },
-    {
+    "Software/packageVersion": {
       "py/id": 93
     },
-    {
+    "Software/additionalPurpose": {
       "py/id": 95
     },
-    {
+    "Software/sourceInfo": {
       "py/id": 97
     },
-    {
+    "Software/homePage": {
       "py/id": 99
     },
-    {
+    "Software/contentType": {
       "py/id": 101
     },
-    {
+    "Software/snippetFromFile": {
       "py/id": 103
     },
-    {
+    "Software/byteRange": {
       "py/id": 105
     },
-    {
+    "Software/copyrightText": {
       "py/id": 107
     },
-    {
+    "ExpandedLicensing/seeAlso": {
       "py/id": 179
     },
-    {
+    "ExpandedLicensing/subjectAddition": {
       "py/id": 181
     },
-    {
+    "ExpandedLicensing/listVersionAdded": {
       "py/id": 183
     },
-    {
+    "ExpandedLicensing/isFsfLibre": {
       "py/id": 185
     },
-    {
+    "ExpandedLicensing/licenseComment": {
       "py/id": 187
     },
-    {
+    "ExpandedLicensing/standardAdditionTemplate": {
       "py/id": 189
     },
-    {
+    "ExpandedLicensing/standardLicenseHeader": {
       "py/id": 191
     },
-    {
+    "ExpandedLicensing/licenseXml": {
       "py/id": 193
     },
-    {
+    "ExpandedLicensing/standardLicenseTemplate": {
       "py/id": 195
     },
-    {
+    "ExpandedLicensing/additionText": {
       "py/id": 197
     },
-    {
+    "ExpandedLicensing/isDeprecatedAdditionId": {
       "py/id": 199
     },
-    {
+    "ExpandedLicensing/member": {
       "py/id": 201
     },
-    {
+    "ExpandedLicensing/deprecatedVersion": {
       "py/id": 203
     },
-    {
+    "ExpandedLicensing/isOsiApproved": {
       "py/id": 205
     },
-    {
+    "ExpandedLicensing/additionId": {
       "py/id": 207
     },
-    {
+    "ExpandedLicensing/subjectLicense": {
       "py/id": 209
     },
-    {
+    "ExpandedLicensing/isDeprecatedLicenseId": {
       "py/id": 211
     },
-    {
+    "ExpandedLicensing/additionComment": {
       "py/id": 213
     },
-    {
+    "ExpandedLicensing/obsoletedBy": {
       "py/id": 215
     },
-    {
+    "ExpandedLicensing/additionName": {
       "py/id": 217
     },
-    {
+    "ExpandedLicensing/licenseName": {
       "py/id": 219
     },
-    {
+    "ExpandedLicensing/licenseId": {
       "py/id": 221
     },
-    {
+    "Core/annotationType": {
       "py/id": 373
     },
-    {
+    "Core/locationHint": {
       "py/id": 375
     },
-    {
+    "Core/end": {
       "py/id": 377
     },
-    {
+    "Core/context": {
       "py/id": 379
     },
-    {
+    "Core/hashValue": {
       "py/id": 381
     },
-    {
+    "Core/originatedBy": {
       "py/id": 383
     },
-    {
+    "Core/startTime": {
       "py/id": 385
     },
-    {
+    "Core/profileConformance": {
       "py/id": 387
     },
-    {
+    "Core/identifier": {
       "py/id": 389
     },
-    {
+    "Core/from": {
       "py/id": 391
     },
-    {
+    "Core/relationshipType": {
       "py/id": 393
     },
-    {
+    "Core/issuingAuthority": {
       "py/id": 395
     },
-    {
+    "Core/createdBy": {
       "py/id": 397
     },
-    {
+    "Core/definingArtifact": {
       "py/id": 399
     },
-    {
+    "Core/name": {
       "py/id": 401
     },
-    {
+    "Core/builtTime": {
       "py/id": 403
     },
-    {
+    "Core/completeness": {
       "py/id": 405
     },
-    {
+    "Core/specVersion": {
       "py/id": 407
     },
-    {
+    "Core/identifierLocator": {
       "py/id": 409
     },
-    {
+    "Core/locator": {
       "py/id": 411
     },
-    {
+    "Core/key": {
       "py/id": 413
     },
-    {
+    "Core/validUntilTime": {
       "py/id": 415
     },
-    {
+    "Core/to": {
       "py/id": 417
     },
-    {
+    "Core/comment": {
       "py/id": 419
     },
-    {
+    "Core/externalIdentifier": {
       "py/id": 421
     },
-    {
+    "Core/namespace": {
       "py/id": 423
     },
-    {
+    "Core/externalRef": {
       "py/id": 425
     },
-    {
+    "Core/statement": {
       "py/id": 427
     },
-    {
+    "Core/imports": {
       "py/id": 429
     },
-    {
+    "Core/releaseTime": {
       "py/id": 431
     },
-    {
+    "Core/externalSpdxId": {
       "py/id": 433
     },
-    {
+    "Core/scope": {
       "py/id": 435
     },
-    {
+    "Core/extension": {
       "py/id": 437
     },
-    {
+    "Core/value": {
       "py/id": 439
     },
-    {
+    "Core/verifiedUsing": {
       "py/id": 441
     },
-    {
+    "Core/rootElement": {
       "py/id": 443
     },
-    {
+    "Core/namespaceMap": {
       "py/id": 445
     },
-    {
+    "Core/algorithm": {
       "py/id": 447
     },
-    {
+    "Core/subject": {
       "py/id": 449
     },
-    {
+    "Core/contentType": {
       "py/id": 451
     },
-    {
+    "Core/creationInfo": {
       "py/id": 453
     },
-    {
+    "Core/externalIdentifierType": {
       "py/id": 455
     },
-    {
+    "Core/endTime": {
       "py/id": 457
     },
-    {
+    "Core/begin": {
       "py/id": 459
     },
-    {
+    "Core/dataLicense": {
       "py/id": 461
     },
-    {
+    "Core/prefix": {
       "py/id": 463
     },
-    {
+    "Core/createdUsing": {
       "py/id": 465
     },
-    {
+    "Core/externalRefType": {
       "py/id": 467
     },
-    {
+    "Core/created": {
       "py/id": 469
     },
-    {
+    "Core/spdxId": {
       "py/id": 471
     },
-    {
+    "Core/summary": {
       "py/id": 473
     },
-    {
+    "Core/standard": {
       "py/id": 475
     },
-    {
+    "Core/suppliedBy": {
       "py/id": 477
     },
-    {
+    "Core/element": {
       "py/id": 479
     },
-    {
+    "Core/description": {
       "py/id": 481
     },
-    {
+    "SimpleLicensing/licenseListVersion": {
       "py/id": 539
     },
-    {
+    "SimpleLicensing/licenseText": {
       "py/id": 541
     },
-    {
+    "SimpleLicensing/customIdToUri": {
       "py/id": 543
     },
-    {
+    "SimpleLicensing/licenseExpression": {
       "py/id": 545
     },
-    {
+    "Dataset/anonymizationMethodUsed": {
       "py/id": 570
     },
-    {
+    "Dataset/datasetSize": {
       "py/id": 572
     },
-    {
+    "Dataset/sensitivePersonalInformation": {
       "py/id": 574
     },
-    {
+    "Dataset/intendedUse": {
       "py/id": 576
     },
-    {
+    "Dataset/datasetType": {
       "py/id": 578
     },
-    {
+    "Dataset/dataPreprocessing": {
       "py/id": 580
     },
-    {
+    "Dataset/knownBias": {
       "py/id": 582
     },
-    {
+    "Dataset/datasetAvailability": {
       "py/id": 584
     },
-    {
+    "Dataset/datasetNoise": {
       "py/id": 586
     },
-    {
+    "Dataset/sensor": {
       "py/id": 588
     },
-    {
+    "Dataset/datasetUpdateMechanism": {
       "py/id": 590
     },
-    {
+    "Dataset/dataCollectionProcess": {
       "py/id": 592
     },
-    {
+    "Dataset/confidentialityLevel": {
       "py/id": 594
     },
-    {
+    "AI/modelDataPreprocessing": {
       "py/id": 630
     },
-    {
+    "AI/limitation": {
       "py/id": 632
     },
-    {
+    "AI/metricDecisionThreshold": {
       "py/id": 634
     },
-    {
+    "AI/sensitivePersonalInformation": {
       "py/id": 636
     },
-    {
+    "AI/safetyRiskAssessment": {
       "py/id": 638
     },
-    {
+    "AI/modelExplainability": {
       "py/id": 640
     },
-    {
+    "AI/autonomyType": {
       "py/id": 642
     },
-    {
+    "AI/energyConsumption": {
       "py/id": 644
     },
-    {
+    "AI/informationAboutApplication": {
       "py/id": 646
     },
-    {
+    "AI/domain": {
       "py/id": 648
     },
-    {
+    "AI/typeOfModel": {
       "py/id": 650
     },
-    {
+    "AI/hyperparameter": {
       "py/id": 652
     },
-    {
+    "AI/standardCompliance": {
       "py/id": 654
     },
-    {
+    "AI/informationAboutTraining": {
       "py/id": 656
     },
-    {
+    "AI/metric": {
       "py/id": 658
     },
-    {
+    "Security/assessedElement": {
       "py/id": 739
     },
-    {
+    "Security/actionStatementTime": {
       "py/id": 741
     },
-    {
+    "Security/decisionType": {
       "py/id": 743
     },
-    {
+    "Security/severity": {
       "py/id": 745
     },
-    {
+    "Security/statusNotes": {
       "py/id": 747
     },
-    {
+    "Security/withdrawnTime": {
       "py/id": 749
     },
-    {
+    "Security/probability": {
       "py/id": 751
     },
-    {
+    "Security/locator": {
       "py/id": 753
     },
-    {
+    "Security/modifiedTime": {
       "py/id": 755
     },
-    {
+    "Security/vexVersion": {
       "py/id": 757
     },
-    {
+    "Security/impactStatementTime": {
       "py/id": 759
     },
-    {
+    "Security/exploited": {
       "py/id": 761
     },
-    {
+    "Security/score": {
       "py/id": 763
     },
-    {
+    "Security/publishedTime": {
       "py/id": 765
     },
-    {
+    "Security/catalogType": {
       "py/id": 767
     },
-    {
+    "Security/actionStatement": {
       "py/id": 769
     },
-    {
+    "Security/justificationType": {
       "py/id": 771
     },
-    {
+    "Security/impactStatement": {
       "py/id": 773
     },
-    {
+    "Security/percentile": {
       "py/id": 775
     },
-    {
+    "Security/vectorString": {
       "py/id": 777
     }
-  ],
-  "vocabularies": [
-    {
+  },
+  "vocabularies": {
+    "Software/SoftwarePurpose": {
       "py/id": 110
     },
-    {
+    "Software/SbomType": {
       "py/id": 113
     },
-    {
+    "Core/HashAlgorithm": {
       "py/id": 484
     },
-    {
+    "Core/ProfileIdentifierType": {
       "py/id": 487
     },
-    {
+    "Core/ExternalIdentifierType": {
       "py/id": 490
     },
-    {
+    "Core/AnnotationType": {
       "py/id": 493
     },
-    {
+    "Core/RelationshipType": {
       "py/id": 496
     },
-    {
+    "Core/RelationshipCompleteness": {
       "py/id": 499
     },
-    {
+    "Core/PresenceType": {
       "py/id": 502
     },
-    {
+    "Core/ExternalRefType": {
       "py/id": 505
     },
-    {
+    "Core/LifecycleScopeType": {
       "py/id": 508
     },
-    {
+    "Dataset/ConfidentialityLevelType": {
       "py/id": 597
     },
-    {
+    "Dataset/DatasetType": {
       "py/id": 600
     },
-    {
+    "Dataset/DatasetAvailabilityType": {
       "py/id": 603
     },
-    {
+    "AI/SafetyRiskAssessmentType": {
       "py/id": 661
     },
-    {
+    "Security/SsvcDecisionType": {
       "py/id": 780
     },
-    {
+    "Security/ExploitCatalogType": {
       "py/id": 783
     },
-    {
+    "Security/VexJustificationType": {
       "py/id": 786
     },
-    {
+    "Security/CvssSeverityType": {
       "py/id": 789
     }
-  ],
-  "individuals": [
-    {
+  },
+  "individuals": {
+    "ExpandedLicensing/NoneLicense": {
       "py/id": 225
     },
-    {
+    "ExpandedLicensing/NoAssertionLicense": {
       "py/id": 228
     }
-  ],
-  "datatypes": [
-    {
+  },
+  "datatypes": {
+    "Core/SemVer": {
       "py/id": 513
     },
-    {
+    "Core/MediaType": {
       "py/id": 516
     },
-    {
+    "Core/DateTime": {
       "py/id": 519
     }
-  ],
+  },
   "toplevel": {
     "py/reduce": [
       {
@@ -6285,11 +6285,7 @@
       },
       {
         "py/tuple": [
-          "/",
-          "home",
-          "zvr",
-          "github",
-          "spdx",
+          "..",
           "spdx-3-model",
           "model"
         ]
