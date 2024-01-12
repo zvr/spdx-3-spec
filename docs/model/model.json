@@ -2075,7 +2075,7 @@
           "name": "Annotation",
           "fqname": "Core/Annotation",
           "summary": "An assertion made in relation to one or more elements.",
-          "description": "An Annotation is an assertion made in relation to one or more elements.",
+          "description": "An Annotation is an assertion made in relation to one or more elements. The `contentType` property describes the format of the `statement` property.",
           "metadata": {
             "name": "Annotation",
             "SubclassOf": "Element",
@@ -2252,7 +2252,7 @@
               "maxCount": "*"
             },
             "dataLicense": {
-              "type": "AnyLicenseInfo",
+              "type": "/SimpleLicensing/AnyLicenseInfo",
               "fqname": "/Core/dataLicense",
               "minCount": 0,
               "maxCount": "*"
@@ -2580,8 +2580,8 @@
           "license": "Community-Spec-1.0",
           "name": "issuingAuthority",
           "fqname": "Core/issuingAuthority",
-          "summary": "TODO",
-          "description": "A issuingAuthority is TODO",
+          "summary": "An entity that is authorized to issue identification credentials.",
+          "description": "An issuingAuthority is an entity that is authorized to issue identification credentials.\n\nThe entity may be a government, non-profit, educational institution, or commercial enterprise.  The URI provides a unique identifier for the issuing authority.",
           "metadata": {
             "name": "issuingAuthority",
             "Nature": "DataProperty",
@@ -3056,8 +3056,8 @@
           "license": "Community-Spec-1.0",
           "name": "contentType",
           "fqname": "Core/contentType",
-          "summary": "Specifies the media type of an Element.",
-          "description": "ContentType specifies the media type of an Element.",
+          "summary": "Specifies the media type of an Element or Property.",
+          "description": "ContentType specifies the media type of an Element or Property.",
           "metadata": {
             "name": "contentType",
             "Nature": "DataProperty",
@@ -3145,8 +3145,8 @@
           "description": "The data license provides the license under which the SPDX documentation of the Element can be used.\nThis is to alleviate any concern that content (the data or database) in an SPDX file\nis subject to any form of intellectual property right that could restrict the re-use\nof the information or the creation of another SPDX file for the same project(s).\nThis approach avoids intellectual property and related restrictions over the SPDX file,\nhowever individuals can still contract with each other to restrict release\nof specific collections of SPDX files (which map to software bill of materials)\nand the identification of the supplier of SPDX files.\nCompliance with this document includes populating the SPDX fields therein\nwith data related to such fields (\"SPDX-Metadata\"). \nThis document contains numerous fields where an SPDX file creator may provide\nrelevant explanatory text in SPDX-Metadata. Without opining on the lawfulness\nof \"database rights\" (in jurisdictions where applicable),\nsuch explanatory text is copyrightable subject matter in most Berne Convention countries.\nBy using the SPDX specification, or any portion hereof,\nyou hereby agree that any copyright rights (as determined by your jurisdiction)\nin any SPDX-Metadata, including without limitation explanatory text,\nshall be subject to the terms of the Creative Commons CC0 1.0 Universal license. \nFor SPDX-Metadata not containing any copyright rights, \nyou hereby agree and acknowledge that the SPDX-Metadata is provided to you \"as-is\"\nand without any representations or warranties of any kind concerning the SPDX-Metadata,\nexpress, implied, statutory or otherwise, including without limitation warranties\nof title, merchantability, fitness for a particular purpose, non-infringement,\nor the absence of latent or other defects, accuracy, or the presence or absence of errors,\nwhether or not discoverable, all to the greatest extent permissible under applicable law.",
           "metadata": {
             "name": "dataLicense",
-            "Nature": "DataProperty",
-            "Range": "xsd:string"
+            "Nature": "ObjectProperty",
+            "Range": "/SimpleLicensing/AnyLicenseInfo"
           },
           "iri": "https://rdf.spdx.org/v3/Core/dataLicense"
         },
@@ -3658,7 +3658,7 @@
           "format": {
             "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
           },
-          "iri": "https://rdf.spdx.org/v3/Core/SemVer"
+          "iri": "https://rdf.spdx.org/v3/Core/Core/SemVer"
         },
         "Core/MediaType": {
           "py/object": "spec_parser.model.Datatype",
@@ -3677,7 +3677,7 @@
           "format": {
             "pattern": "^([a-zA-Z0-9][-a-zA-Z0-9!#$&^_.+]{0,126})\\/([a-zA-Z0-9][-a-zA-Z0-9!#$&^_.+]{0,126})(;.+)?$"
           },
-          "iri": "https://rdf.spdx.org/v3/Core/MediaType"
+          "iri": "https://rdf.spdx.org/v3/Core/Core/MediaType"
         },
         "Core/DateTime": {
           "py/object": "spec_parser.model.Datatype",
@@ -3696,7 +3696,7 @@
           "format": {
             "pattern": "^\\d\\d\\d\\d-\\d\\d-\\d\\dT\\d\\d:\\d\\d:\\d\\dZ$"
           },
-          "iri": "https://rdf.spdx.org/v3/Core/DateTime"
+          "iri": "https://rdf.spdx.org/v3/Core/Core/DateTime"
         }
       },
       "license": "Community-Spec-1.0",
@@ -3869,7 +3869,7 @@
       "license": "Community-Spec-1.0",
       "name": "SimpleLicensing",
       "summary": "Additional metadata relating to software licensing.",
-      "description": "TODO: This text has to be reworked to reflect the new licensing structure \"Simple <-> Expanded\".\n\nThe Licensing namespace defines metadata fields applicable to software\nlicensing. It also defines the classes and properties that comprise the\nSPDX License Expression syntax and that relate to the SPDX License List.",
+      "description": "The SimpleLicensing profile provides classes and properties to express licenses as a license expression string.\nIt also provides the base abstract class, AnyLicenseInfo, used for references to license information.\nThe SimpleLicensingText class provides a place to record any license text found that does not match a license\non the SPDX license list.\n\nThe ExpandingLicensing profile can be used to represent the complete parsed license expressions.",
       "metadata": {
         "id": "https://rdf.spdx.org/v3/SimpleLicensing",
         "name": "SimpleLicensing"
