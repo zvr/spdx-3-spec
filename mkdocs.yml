@@ -1,5 +1,5 @@
 site_name: SPDX v3 Specification
-copyright: DRAFT version generated from d25ae89 (model) by 85e8d65 (parser)
+copyright: DRAFT version generated from 3a34e99 (model) by b892fcc (parser)
 use_directory_urls: true
 theme: readthedocs
 extra_css:
@@ -294,6 +294,10 @@ nav:
       - model/Build/Properties/parameters.md
   - Lite:
     - model/Lite/Lite.md
+  - Extension:
+    - model/Extension/Extension.md
+    - Classes:
+      - model/Extension/Classes/Extension.md
 - annexes:
   - 'RDF Object Model and Identifier Syntax': annexes/RDF-object-model-and-identifier-syntax.md
   - 'SPDX License Expressions': annexes/SPDX-license-expressions.md
