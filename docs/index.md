@@ -1,21 +1,25 @@
-# The Software Package Data Exchange® (SPDX®) Specification Version 3.0-DRAFT
+# The System Package Data Exchange® (SPDX®) Specification Version 3.0
 
-Copyright © 2010-2023 Linux Foundation and its Contributors.
+Copyright © 2010-2024 Linux Foundation and its Contributors.
 
 This work is licensed under the
-Creative Commons Attribution License 3.0 Unported (CC-BY-3.0)
-and the Community specification License 1.0,
-both reproduced in their entirety in annexes herein.
+Community Specification License 1.0 (Community-Spec-1.0).
+Pre-existing portions of this work from copyright holders who have not subsequently contributed under the Community-Spec-1.0 are provided under Creative Commons Attribution License 3.0 Unported (CC-BY-3.0).
+Copies of these licenses are reproduced in their entirety herein.
 
 With thanks to
 Adam Cohn,
+Adolfo García Veytia,
 Alan Tse,
 Alexios Zavras,
 Andrew Back,
 Ann Thornton,
+Armin Tänzer,
+Arthit Suriyawongkul,
 Basil Peace,
 Bill Schineller,
 Bradlee Edmondson,
+Brandon Lum,
 Bruno Cornec,
 Ciaran Farrell,
 Daniel German,
@@ -30,18 +34,23 @@ Eran Strod,
 Eric Thomas,
 Esteban Rockett,
 Gary O'Neall,
+Gopi Krishnan Rajbahadur,
 Guillaume Rousseau,
 Hassib Khanafer,
 Henk Birkholz,
 Hiroyuki Fukuchi,
+Itaru Hosomi,
 Jack Manbeck,
 Jaime Garcia,
+Jeff Licquia,
 Jeff Luszcz,
 Jeff Schutt,
 Jilayne Lovejoy,
 John Ellis,
 Jonas Oberg,
+Joshua Watt,
 Kamsang Salima,
+Karen Bennet,
 Karen Copenhaver,
 Kate Stewart,
 Kevin Mitchell,
@@ -59,8 +68,10 @@ Mark Atwood,
 Matija Šuklje,
 Matt Germonprez,
 Maximilian Huber,
+Meret Behrens,
 Michael J. Herzog,
 Michel Ruffin,
+Nicole Pappler,
 Nisha Kumar,
 Norio Kobota,
 Nuno Brito,
@@ -87,6 +98,7 @@ Shane Coughlan,
 Steve Cropper,
 Steve Winslow,
 Stuart Hughes,
+Takashi Ninjouji,
 Thomas F. Incorvia,
 Thomas Steenbergen,
 Tom Callaway,
