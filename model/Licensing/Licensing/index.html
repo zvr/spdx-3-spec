@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../../img/favicon.ico" />
-    <title>Licensing - SPDX v3 Specification</title>
+    <title>Description - SPDX v3 Specification</title>
     <link rel="stylesheet" href="../../../css/theme.css" />
     <link rel="stylesheet" href="../../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Licensing";
+        var mkdocs_page_name = "Description";
         var mkdocs_page_input_path = "model/Licensing/Licensing.md";
         var mkdocs_page_url = null;
       </script>
@@ -70,11 +70,11 @@
               </ul>
               <p class="caption"><span class="caption-text">model</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="#">Core</a>
+                  <li class="toctree-l1"><a class="reference internal" >Core</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Core/Core/">Core</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Core/Core/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Classes/Agent/">Agent</a>
                 </li>
@@ -110,6 +110,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Classes/Organization/">Organization</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Classes/PackageVerificationCode/">PackageVerificationCode</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Classes/Person/">Person</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Classes/PositiveIntegerRange/">PositiveIntegerRange</a>
@@ -124,13 +126,13 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/algorithm/">Algorithm</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/annotationType/">annotationType</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/begin/">Begin</a>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/beginIntegerRange/">beginIntegerRange</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/builtTime/">builtTime</a>
                 </li>
@@ -158,7 +160,7 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/element/">Element</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/end/">End</a>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/endIntegerRange/">endIntegerRange</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/endTime/">endTime</a>
                 </li>
@@ -200,6 +202,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/originatedBy/">originatedBy</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/packageVerificationCodeExcludedFile/">packageVerificationCodeExcludedFile</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/prefix/">Prefix</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/profileConformance/">profileConformance</a>
@@ -216,7 +220,7 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/specVersion/">specVersion</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/standard/">Standard</a>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/standardName/">standardName</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/startTime/">startTime</a>
                 </li>
@@ -228,6 +232,8 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/suppliedBy/">suppliedBy</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/supportLevel/">supportLevel</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/to/">To</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Properties/validUntilTime/">validUntilTime</a>
@@ -238,7 +244,7 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+                <li class="toctree-l2"><a class="reference internal" >Vocabularies</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Vocabularies/AnnotationType/">AnnotationType</a>
                 </li>
@@ -258,9 +264,19 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Vocabularies/RelationshipType/">RelationshipType</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Vocabularies/SupportType/">SupportType</a>
+                </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Datatypes</a>
+                <li class="toctree-l2"><a class="reference internal" >Individuals</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Individuals/NoAssertionElement/">NoAssertionElement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Core/Individuals/NoneElement/">NoneElement</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Datatypes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Core/Datatypes/DateTime/">DateTime</a>
                 </li>
@@ -272,12 +288,14 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Software</a>
+                  <li class="toctree-l1"><a class="reference internal" >Software</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Software/Software/">Software</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Software/Software/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Classes/ContentIdentifier/">ContentIdentifier</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Classes/File/">File</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Classes/Package/">Package</a>
@@ -290,7 +308,7 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/additionalPurpose/">additionalPurpose</a>
                 </li>
@@ -300,11 +318,17 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/contentIdentifier/">contentIdentifier</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/contentIdentifierType/">contentIdentifierType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/contentIdentifierValue/">contentIdentifierValue</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/contentType/">contentType</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/copyrightText/">copyrightText</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/downloadLocation/">downloadLocation</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/fileKind/">fileKind</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Properties/homePage/">homePage</a>
                 </li>
@@ -324,8 +348,12 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+                <li class="toctree-l2"><a class="reference internal" >Vocabularies</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Vocabularies/ContentIdentifierType/">ContentIdentifierType</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Software/Vocabularies/FileKindType/">FileKindType</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Vocabularies/SbomType/">SbomType</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Software/Vocabularies/SoftwarePurpose/">SoftwarePurpose</a>
@@ -334,11 +362,11 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Security</a>
+                  <li class="toctree-l1"><a class="reference internal" >Security</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Security/Security/">Security</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Security/Security/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Security/Classes/CvssV2VulnAssessmentRelationship/">CvssV2VulnAssessmentRelationship</a>
                 </li>
@@ -368,7 +396,7 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Security/Properties/actionStatement/">actionStatement</a>
                 </li>
@@ -412,7 +440,7 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+                <li class="toctree-l2"><a class="reference internal" >Vocabularies</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Security/Vocabularies/CvssSeverityType/">CvssSeverityType</a>
                 </li>
@@ -426,9 +454,9 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Licensing</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Licensing</a>
     <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Licensing</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Description</a>
     <ul class="current">
     <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
     </li>
@@ -436,15 +464,17 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#profile-conformance">Profile conformance</a>
+    </li>
     </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">SimpleLicensing</a>
+                  <li class="toctree-l1"><a class="reference internal" >SimpleLicensing</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../SimpleLicensing/SimpleLicensing/">SimpleLicensing</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../SimpleLicensing/SimpleLicensing/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../SimpleLicensing/Classes/AnyLicenseInfo/">AnyLicenseInfo</a>
                 </li>
@@ -454,7 +484,7 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../SimpleLicensing/Properties/customIdToUri/">customIdToUri</a>
                 </li>
@@ -468,11 +498,11 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">ExpandedLicensing</a>
+                  <li class="toctree-l1"><a class="reference internal" >ExpandedLicensing</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../ExpandedLicensing/ExpandedLicensing/">ExpandedLicensing</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../ExpandedLicensing/ExpandedLicensing/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Classes/ConjunctiveLicenseSet/">ConjunctiveLicenseSet</a>
                 </li>
@@ -483,6 +513,8 @@
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Classes/DisjunctiveLicenseSet/">DisjunctiveLicenseSet</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Classes/ExtendableLicense/">ExtendableLicense</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Classes/IndividualLicensingInfo/">IndividualLicensingInfo</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Classes/License/">License</a>
                 </li>
@@ -498,14 +530,8 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/additionComment.md">None</a>
-                </li>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/additionId.md">None</a>
-                </li>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/additionName.md">None</a>
-                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/additionText/">additionText</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/deprecatedVersion/">deprecatedVersion</a>
@@ -517,12 +543,6 @@
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/isFsfLibre/">isFsfLibre</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/isOsiApproved/">isOsiApproved</a>
-                </li>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/licenseComment.md">None</a>
-                </li>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/licenseId.md">None</a>
-                </li>
-                <li class="toctree-l3"><a class="" href="../../ExpandedLicensing/Properties/licenseName.md">None</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/licenseXml/">licenseXml</a>
                 </li>
@@ -542,11 +562,13 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/subjectAddition/">subjectAddition</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/subjectExtendableLicense/">subjectExtendableLicense</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Properties/subjectLicense/">subjectLicense</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Individuals</a>
+                <li class="toctree-l2"><a class="reference internal" >Individuals</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../ExpandedLicensing/Individuals/NoAssertionLicense/">NoAssertionLicense</a>
                 </li>
@@ -556,17 +578,17 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Dataset</a>
+                  <li class="toctree-l1"><a class="reference internal" >Dataset</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Dataset/Dataset/">Dataset</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Dataset/Dataset/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Classes/Dataset/">Dataset</a>
+                <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Classes/DatasetPackage/">DatasetPackage</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/anonymizationMethodUsed/">anonymizationMethodUsed</a>
                 </li>
@@ -586,17 +608,17 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/datasetUpdateMechanism/">datasetUpdateMechanism</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/hasSensitivePersonalInformation/">hasSensitivePersonalInformation</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/intendedUse/">intendedUse</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/knownBias/">knownBias</a>
-                </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/sensitivePersonalInformation/">sensitivePersonalInformation</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Properties/sensor/">Sensor</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+                <li class="toctree-l2"><a class="reference internal" >Vocabularies</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Dataset/Vocabularies/ConfidentialityLevelType/">ConfidentialityLevelType</a>
                 </li>
@@ -608,17 +630,21 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">AI</a>
+                  <li class="toctree-l1"><a class="reference internal" >AI</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../AI/AI/">AI</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../AI/AI/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Classes/AIPackage/">AIPackage</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Classes/EnergyConsumption/">EnergyConsumption</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Classes/EnergyConsumptionDescription/">EnergyConsumptionDescription</a>
+                </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/autonomyType/">autonomyType</a>
                 </li>
@@ -626,7 +652,15 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/energyConsumption/">energyConsumption</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/energyQuantity/">energyQuantity</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/energyUnit/">energyUnit</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/finetuningEnergyConsumption/">finetuningEnergyConsumption</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/hyperparameter/">Hyperparameter</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/inferenceEnergyConsumption/">inferenceEnergyConsumption</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/informationAboutApplication/">informationAboutApplication</a>
                 </li>
@@ -644,33 +678,37 @@
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/safetyRiskAssessment/">safetyRiskAssessment</a>
                 </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/sensitivePersonalInformation/">sensitivePersonalInformation</a>
-                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/standardCompliance/">standardCompliance</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/trainingEnergyConsumption/">trainingEnergyConsumption</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/typeOfModel/">typeOfModel</a>
                 </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Properties/useSensitivePersonalInformation/">useSensitivePersonalInformation</a>
+                </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Vocabularies</a>
+                <li class="toctree-l2"><a class="reference internal" >Vocabularies</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../AI/Vocabularies/EnergyUnitType/">EnergyUnitType</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../AI/Vocabularies/SafetyRiskAssessmentType/">SafetyRiskAssessmentType</a>
                 </li>
     </ul>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Build</a>
+                  <li class="toctree-l1"><a class="reference internal" >Build</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Build/Build/">Build</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Build/Build/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Build/Classes/Build/">Build</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Properties</a>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../Build/Properties/buildEndTime/">buildEndTime</a>
                 </li>
@@ -694,19 +732,33 @@
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Lite</a>
+                  <li class="toctree-l1"><a class="reference internal" >Lite</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Lite/Lite/">Lite</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Lite/Lite/">Description</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="#">Extension</a>
+                  <li class="toctree-l1"><a class="reference internal" >Extension</a>
     <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../Extension/Extension/">Extension</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Extension/Extension/">Description</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="#">Classes</a>
+                <li class="toctree-l2"><a class="reference internal" >Classes</a>
     <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Extension/Classes/CdxPropertiesExtension/">CdxPropertiesExtension</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Extension/Classes/CdxPropertyEntry/">CdxPropertyEntry</a>
+                </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../Extension/Classes/Extension/">Extension</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Properties</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Extension/Properties/cdxPropName/">cdxPropName</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Extension/Properties/cdxPropValue/">cdxPropValue</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../Extension/Properties/cdxProperty/">cdxProperty</a>
                 </li>
     </ul>
                 </li>
@@ -755,7 +807,7 @@
     <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">model</li>
           <li class="breadcrumb-item">Licensing</li>
-      <li class="breadcrumb-item active">Licensing</li>
+      <li class="breadcrumb-item active">Description</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -764,86 +816,101 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <!-- Automatically generated by spec-parser v2.0.0 on 2024-01-26T22:18:46.241893+00:00 -->
+                <!-- Automatically generated by spec-parser v2.1.0 on 2024-06-17T10:36:57.838737+00:00 -->
 <!-- SPDX-License-Identifier: Community-Spec-1.0 -->
 
 <h1 id="licensing">Licensing</h1>
 <h2 id="summary">Summary</h2>
-<p>The Licensing Profile defines a minimum set of license information to facilitate compliance with typical license use cases.</p>
+<p>The Licensing Profile defines a minimum set of license information to
+facilitate compliance with typical license use cases.</p>
 <h2 id="description">Description</h2>
-<p>The Licensing profile only contains the additional requirement that any Software Artifact must have a concludedLicense Relationship.</p>
+<p>The Licensing profile only contains the additional requirement that any
+Software Artifact must have a Relationship of type hasConcludedLicense.</p>
 <p>Classes and Property restrictions are defined in the SimpleLicensingProfile
-(Classes and Properties associated with string license expressions) and in the ExpandedLicensingProfile (Classes and Properties used for a
-fully parsed syntax tree of license expressions).</p>
-<p>There are 2 relationship types related to licensing - declaredLicense and concludedLicense.</p>
-<p>A declaredLicense identifies the license information actually found in the Software Artifact,
-for example as detected by use of automated tooling.</p>
+(Classes and Properties associated with string license expressions) and in the
+ExpandedLicensingProfile (Classes and Properties used for a fully parsed syntax
+tree of license expressions).</p>
+<p>There are 2 relationship types related to licensing - <code>hasDeclaredLicense</code> and
+<code>hasConcludedLicense</code>.</p>
+<p><strong><em>hasDeclaredLicense</em></strong></p>
+<p>A hasDeclaredLicense identifies the license information actually found in the
+Software Artifact, for example as detected by use of automated tooling.</p>
 <p>This field is not intended to capture license information obtained from an
 external source, such as a package's website. Such information can be
-included, as needed, in the concludedLicense field.</p>
-<p>A declaredLicense may be expressed differently in practice for different
+included, as needed, in the hasConcludedLicense field.</p>
+<p>A hasDeclaredLicense may be expressed differently in practice for different
 types of Software Artifacts. For example:</p>
+<p>for Packages:</p>
 <ul>
-<li>for Packages:</li>
 <li>would include license info for the Package as a
-    whole, found in the Package itself (e.g., LICENSE file,
-    README file, metadata in the Package, etc.)</li>
+  whole, found in the Package itself (e.g., LICENSE file,
+  README file, metadata in the Package, etc.)</li>
 <li>would not include any license information that is not in the Package
-    itself (e.g., license information from the project’s website or from a
-    third party repository or website)</li>
-<li>for Files:</li>
-<li>would include license info found in the File itself (e.g., license
-    header or notice, comments indicating the license, SPDX-License-Identifier expression)</li>
-<li>would not include license info found in a different file (e.g., LICENSE
-    file in the top directory of a repository)</li>
-<li>for Snippets:</li>
-<li>would include license info found in the Snippet itself (e.g., license
-    notice, comments, SPDX-License-Identifier expression)</li>
-<li>would not include license info found elsewhere in the File or in a
-    different File (e.g., comment at top of File if it is not within the
-    Snippet, LICENSE file in the top directory of a repository)</li>
+  itself (e.g., license information from the project's website or from a
+  third party repository or website)</li>
 </ul>
-<p>A declaredLicense relationship to NoneLicense indicates that the
+<p>for Files:</p>
+<ul>
+<li>would include license info found in the File itself (e.g., license
+  header or notice, comments indicating the license, SPDX-License-Identifier
+  expression)</li>
+<li>would not include license info found in a different file (e.g., LICENSE
+  file in the top directory of a repository)</li>
+</ul>
+<p>for Snippets:</p>
+<ul>
+<li>would include license info found in the Snippet itself (e.g., license
+  notice, comments, SPDX-License-Identifier expression)</li>
+<li>would not include license info found elsewhere in the File or in a
+  different File (e.g., comment at top of File if it is not within the
+  Snippet, LICENSE file in the top directory of a repository)</li>
+</ul>
+<p>A hasDeclaredLicense relationship to NoneLicense indicates that the
 corresponding Package, File or Snippet contains no license information
 whatsoever.</p>
-<p>A declaredLicense relationship to NoAssertionLicense 
-indicates that one of the following applies:
-* the SPDX data creator has attempted to but cannot reach a reasonable
-  objective determination;
-* the SPDX data creator has made no attempt to determine this field; or
-* the SPDX data creator has intentionally provided no information (no meaning
-  should be implied by doing so).</p>
-<p>If a declaredLicense relationship is not present, no assumptions can be made
-about whether or not a declaredLicense exists.
-Note that a missing declaredLicense is not the same as a relationship to NoAssertionLicense
-since the latter is a "known unknown" whereas no assumptions can be made
-from a missing declaredLicense relationship.</p>
-<p>A concludedLicense is the license identified by the SPDX data creator,
+<p>A hasDeclaredLicense relationship to NoAssertionLicense
+indicates that one of the following applies:</p>
+<ul>
+<li>the SPDX data creator has attempted to but cannot reach a reasonable
+  objective determination;</li>
+<li>the SPDX data creator has made no attempt to determine this field; or</li>
+<li>the SPDX data creator has intentionally provided no information (no meaning
+  should be implied by doing so).</li>
+</ul>
+<p>If a hasDeclaredLicense relationship is not present, no assumptions can be made
+about whether or not a hasDeclaredLicense exists.</p>
+<p>Note that a missing hasDeclaredLicense is not the same as a relationship to
+NoAssertionLicense since the latter is a "known unknown" whereas no assumptions
+can be made from a missing hasDeclaredLicense relationship.</p>
+<p><strong><em>hasConcludedLicense</em></strong></p>
+<p>A hasConcludedLicense is the license identified by the SPDX data creator,
 based on analyzing the license information in the Software Artifact
 and other information to arrive at a reasonably objective
 conclusion as to what license governs the Software Artifact.</p>
-<p>A concludedLicense relationship to NoneLicense indicates that the
+<p>A hasConcludedLicense relationship to NoneLicense indicates that the
 SPDX data creator has looked and did not find any license information for this
 Software Artifact.</p>
-<p>A concludedLicense relationship to NoAssertionLicense
-indicates that one of the following applies:
-* the SPDX data creator has attempted to but cannot reach a reasonable
-  objective determination;
-* the SPDX data creator has made no attempt to determine this field; or
-* the SPDX data creator has intentionally provided no information (no
-  meaning should be implied by doing so).</p>
-<p>If a concludedLicense is not present, no assumptions can be made
-about whether or not a concludedLicense exists.
-Note that a missing concludedLicense is not the same as a relationship to a NoAssertionLicense
-since the latter is a "known unknown" whereas no assumptions can be made
-from a missing concludedLicense relationship.</p>
+<p>A hasConcludedLicense relationship to NoAssertionLicense
+indicates that one of the following applies:</p>
+<ul>
+<li>the SPDX data creator has attempted to but cannot reach a reasonable
+  objective determination;</li>
+<li>the SPDX data creator has made no attempt to determine this field; or</li>
+<li>the SPDX data creator has intentionally provided no information (no
+  meaning should be implied by doing so).</li>
+</ul>
+<p>If a hasConcludedLicense is not present, no assumptions can be made
+about whether or not a hasConcludedLicense exists.</p>
+<p>Note that a missing hasConcludedLicense is not the same as a relationship to a
+NoAssertionLicense since the latter is a "known unknown" whereas no assumptions
+can be made from a missing hasConcludedLicense relationship.</p>
 <p>A written explanation of a relationship to a NoAssertionLicense MAY be
 provided in the comment field for the relationship.</p>
-<p>If the concludedLicense for a Software Artifact is not the
-same as its declaredLicense, a written explanation SHOULD be provided in
-the concludedLicense relationship comment field.</p>
+<p>If the hasConcludedLicense for a Software Artifact is not the
+same as its hasDeclaredLicense, a written explanation SHOULD be provided in
+the hasConcludedLicense relationship comment field.</p>
 <h2 id="metadata">Metadata</h2>
-<p><code>https://rdf.spdx.org/v3/Licensing</code></p>
+<p><code>https://spdx.org/rdf/3.0.0/terms/Licensing</code></p>
 <table>
 <thead>
 <tr>
@@ -858,19 +925,28 @@ the concludedLicense relationship comment field.</p>
 </tr>
 </tbody>
 </table>
+<h2 id="profile-conformance">Profile conformance</h2>
+<p>For an element collection to be conformant with this profile,
+the following has to hold:</p>
+<ol>
+<li>for every <code>/Software/SoftwareArtifact</code> there MUST exist exactly one
+   <code>/Core/Relationship</code> of type <code>hasConcludedLicense</code> having that element as
+   its <code>from</code> property and an <code>/SimpleLicensing/AnyLicenseInfo</code> as its <code>to</code>
+   property.</li>
+</ol>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../../Security/Vocabularies/VexJustificationType/" class="btn btn-neutral float-left" title="VexJustificationType"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../SimpleLicensing/SimpleLicensing/" class="btn btn-neutral float-right" title="SimpleLicensing">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../SimpleLicensing/SimpleLicensing/" class="btn btn-neutral float-right" title="Description">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>DRAFT version generated from 3a34e99 (model) by b892fcc (parser)</p>
+      <p>DRAFT version generated on 2024-06-17 from 47f98d2 (model) by d2adcc9 (parser)</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
