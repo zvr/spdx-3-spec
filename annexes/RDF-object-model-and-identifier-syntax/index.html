@@ -61,7 +61,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="" href="../../serializations.md">Model and serializations</a>
+                <li class="toctree-l1"><a class="reference internal" href="../../serializations/">Model and serializations</a>
                 </li>
               </ul>
               <ul>
@@ -759,13 +759,11 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../diffs-from-previous-editions/">Diffs from Previous Editions</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../getting-started.md">Getting started with SPDX 3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting started with SPDX 3</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">RDF Object Model and Identifier Syntax</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#c1-introduction">C.1 Introduction </a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#c2-agent-and-tool-identifiers">C.2 Agent and tool identifiers </a>
     </li>
     </ul>
                   </li>
@@ -773,20 +771,20 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-short-identifiers-in-source-files/">Using SPDX short identifiers in Source Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../using-SPDX-to-comply-with-industry-guidance.md">Using SPDX to comply with norms, standards and regulation</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-to-comply-with-industry-guidance/">Using SPDX to comply with norms, standards and regulation</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../including-security-information-in-SPDX.md">Including Security Information in SPDX</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../including-security-information-in-SPDX/">Including Security Information in SPDX</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../SPDX-Lite.md">SPDX Lite</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../SPDX-Lite/">SPDX Lite</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../cross-reference.md">Cross-referencing in SPDX 3</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../cross-reference/">Cross-referencing in SPDX 3</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">licenses</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../../licenses/CC-BY-3.0.md">Creative Commons Attribution License 3.0 Unported</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/CC-BY-3.0/">Creative Commons Attribution License 3.0 Unported</a>
                   </li>
-                  <li class="toctree-l1"><a class="" href="../../licenses/Community-Spec-1.0.md">Community Specification License 1.0</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/Community-Spec-1.0/">Community Specification License 1.0</a>
                   </li>
               </ul>
       </div>
@@ -813,70 +811,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="annex-c-rdf-object-model-and-identifier-syntax-normative">Annex C RDF object model and identifier syntax (Normative)</h1>
+                <h1 id="annex-c-rdf-object-model-and-identifier-syntax-normative">Annex C: RDF object model and identifier syntax (Normative)</h1>
 <p>TODO: update for SPDXv3</p>
 <h2 id="c1-introduction">C.1 Introduction <a name="C.1"></a></h2>
 <p>SPDX ® Vocabulary Specification</p>
-<p>See: <a href="http://spdx.org/rdf/ontology/spdx-2-3">http://spdx.org/rdf/ontology/spdx-2-3</a></p>
-<p>Version: 2.3</p>
-<p><img alt="SPDX 2.3 RDF Ontology" src="../ontology/SPDX-2.3-simplified.png" /></p>
-<p><strong>Figure C.1 — SPDX ontology</strong></p>
-<p>This figure is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a>.</p>
-<h2 id="c2-agent-and-tool-identifiers">C.2 Agent and tool identifiers <a name="C.2"></a></h2>
-<p>Fields that identify entities that have acted in relation to the SPDX document are single line of text which name the agent or
-tool and, optionally, provide contact information. For example, "Person: Jane Doe (jane.doe@example.com)",
-"Organization: ExampleCodeInspect (contact@example.com)" and "Tool: LicenseFind - 1.0". The exact syntax of agent and tool identifications is described below in <a href="http://tools.ietf.org/html/rfc5234">ABNF</a>.</p>
-<div class="codehilite"><pre><span></span><code>agent            = person / organization
-
-tool             = &quot;Tool: &quot; name 0*1( &quot; &quot; DASH &quot; &quot; version)
-
-person           = &quot;Person: &quot; name 0*1contact-info
-
-organization     = &quot;Organization: &quot; name 0*1contact-info
-
-name             = 1*( UNRESERVED ) / U+0022 1*( VCHAR-SANS-QUOTE ) U+0022
-
-contact-info     = &quot; (&quot; email-addr &quot;)&quot;
-
-email-addr       = local-name-atom *( &quot;.&quot; local-name-atom ) &quot;@&quot; domain-name-atom 1*( &quot;.&quot; domain-name-atom )
-
-version          = 1*VCHAR-SANS-QUOTE
-
-local-name-atom  = 1*( ALPHA / DIGIT /    ; Printable US-ASCII
-                       &quot;!&quot; / &quot;#&quot; /        ;  characters not including
-                       &quot;$&quot; / &quot;%&quot; /        ;  specials.
-                       &quot;&amp;&quot; / &quot;&#39;&quot; /
-                       &quot;*&quot; / &quot;+&quot; /
-                       &quot;-&quot; / &quot;/&quot; /
-                       &quot;=&quot; / &quot;?&quot; /
-                       &quot;^&quot; / &quot;_&quot; /
-                       &quot;`&quot; / &quot;{&quot; /
-                       &quot;|&quot; / &quot;}&quot; /
-                       &quot;~&quot; )
-
-domain-name-atom = 1*( ALPHA / DIGIT / &quot;-&quot; )
-
-DASH             = U+2010 / U+2212 /   ; hyphen, minus, em dash and
-                   U+2013 / U+2014     ;  en dash
-
-
-UNRESERVED       = U+0020-U+0027 /     ; visible unicode characters
-                   U+0029-U+0080 /     ;  except &#39;(&#39; and dashes
-                   U+00A0-U+200F /
-                   U+2011-U+2027 /
-                   U+202A-U+2211 /
-                   U+2213-U+E01EF
-
-
-VCHAR-SANS-QUOTE = U+0020-U+0021 /  ; visible unicode characters
-                   U+0023-U+0080 /  ;  except quotation mark
-                   U+00a0-U+E01EF
-</code></pre></div>
+<p><a href="https://spdx.github.io/spdx-3-model/model.ttl">SPDX 3.0 Model SHACL</a></p>
+<p>Version: 3.0</p>
+<p><img alt="SPDX 3.0 Core+Software Model Diagram" src="../../images/model%20Core%2BSoftware.png" /></p>
+<p><img alt="SPDX 3.0 Dataset Model Diagram" src="../../images/model%20Dataset.png" /></p>
+<p><img alt="SPDX 3.0 AI Model Diagram" src="../../images/model%20AI.png" /></p>
+<p><img alt="SPDX 3.0 Build Model Diagram" src="../../images/model%20Build.png" /></p>
+<p><img alt="SPDX 3.0 model Licensing Model Diagram" src="../../images/model%20Licensing.png" /></p>
+<p><img alt="SPDX 3.0 Security Model Diagram" src="../../images/model%20Security.png" /></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../diffs-from-previous-editions/" class="btn btn-neutral float-left" title="Diffs from Previous Editions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../getting-started/" class="btn btn-neutral float-left" title="Getting started with SPDX 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../SPDX-license-expressions/" class="btn btn-neutral float-right" title="SPDX License Expressions">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
@@ -901,7 +852,7 @@ VCHAR-SANS-QUOTE = U+0020-U+0021 /  ; visible unicode characters
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../diffs-from-previous-editions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../getting-started/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
       <span><a href="../SPDX-license-expressions/" style="color: #fcfcfc">Next &raquo;</a></span>
