@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>How To Use SPDX in Different Scenarios - SPDX v3 Specification</title>
+    <title>Annex K: How To Use SPDX in Different Scenarios - SPDX v3 Specification</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "How To Use SPDX in Different Scenarios";
+        var mkdocs_page_name = "Annex K: How To Use SPDX in Different Scenarios";
         var mkdocs_page_input_path = "annexes/how-to-use.md";
         var mkdocs_page_url = null;
       </script>
@@ -61,7 +61,7 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../conformance/">Conformance</a>
+                <li class="toctree-l1"><a class="" href="../../serializations.md">Model and serializations</a>
                 </li>
               </ul>
               <ul>
@@ -268,14 +268,6 @@
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" >Individuals</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Individuals/NoAssertionElement/">NoAssertionElement</a>
-                </li>
-                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Individuals/NoneElement/">NoneElement</a>
-                </li>
-    </ul>
-                </li>
                 <li class="toctree-l2"><a class="reference internal" >Datatypes</a>
     <ul>
                 <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/DateTime/">DateTime</a>
@@ -283,6 +275,14 @@
                 <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/MediaType/">MediaType</a>
                 </li>
                 <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Datatypes/SemVer/">SemVer</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >Individuals</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Individuals/NoAssertionElement/">NoAssertionElement</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../model/Core/Individuals/NoneElement/">NoneElement</a>
                 </li>
     </ul>
                 </li>
@@ -756,79 +756,31 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">annexes</span></p>
-              <ul class="current">
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../diffs-from-previous-editions/">Diffs from Previous Editions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../getting-started.md">Getting started with SPDX 3</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../RDF-object-model-and-identifier-syntax/">RDF Object Model and Identifier Syntax</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../SPDX-license-expressions/">SPDX License Expressions</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-short-identifiers-in-source-files/">Using SPDX short identifiers in Source Files</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../file-tags/">SPDX File Tags</a>
+                  <li class="toctree-l1"><a class="" href="../using-SPDX-to-comply-with-industry-guidance.md">Using SPDX to comply with norms, standards and regulation</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../external-repository-identifiers/">External Repository Identifiers</a>
+                  <li class="toctree-l1"><a class="" href="../including-security-information-in-SPDX.md">Including Security Information in SPDX</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../using-SPDX-lite/">Using SPDX Lite</a>
+                  <li class="toctree-l1"><a class="" href="../SPDX-Lite.md">SPDX Lite</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">How To Use SPDX in Different Scenarios</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#k1-including-security-information-in-a-spdx-document">K.1 Including security information in a SPDX document</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#k11-linking-to-an-advisory">K.1.1 Linking to an advisory</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k12-linking-to-a-csaf">K.1.2 Linking to a CSAF</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k13-linking-to-a-cyclonedx">K.1.3 Linking to a CycloneDX</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k14-linking-to-an-osv">K.1.4 Linking to an OSV</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k15-linking-to-a-gitbom">K.1.5 Linking to a GitBOM</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k16-linking-to-a-vulnerability-disclosure-document">K.1.6 Linking to a vulnerability disclosure document</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k17-linking-to-a-code-fix-for-a-security-issue">K.1.7 Linking to a code fix for a security issue</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k18-linking-to-any-security-related-document">K.1.8 Linking to any security related document</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k19-linking-to-an-sbom-vulnerability-report-for-a-software-product-per-nist-executive-order-14028">K.1.9 Linking to an SBOM vulnerability report for a Software Product (per NIST Executive Order 14028)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#k2-satisfying-ntia-minimum-elements-for-an-sbom-using-spdx">K.2 Satisfying NTIA Minimum Elements for an SBOM using SPDX</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#k21-us-executive-order-14028-minimum-elements-for-an-sbom">K.2.1 US Executive Order 14028 Minimum Elements for an SBOM</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k22-mapping-ntia-minimum-elements-to-spdx-fields">K.2.2 Mapping NTIA Minimum Elements to SPDX Fields</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#k3-verifying-spdx-packages">K.3 Verifying SPDX Packages</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#k31-general-guidance">K.3.1 General Guidance</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#k32-examples">K.3.2 Examples</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#k321-spdx-package-and-spdx-document-both-contained-in-archive-file">K.3.2.1 SPDX Package and SPDX Document both contained in Archive File</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#k322-spdx-package-delivered-as-an-archive-file-separate-from-the-spdx-document">K.3.2.2 SPDX Package Delivered as an Archive File Separate from the SPDX Document</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#k323-a-single-file-represented-as-a-spdx-package">K.3.2.3 A Single File Represented as a SPDX Package</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#k324-directory-of-software-represented-as-a-spdx-package">K.3.2.4 Directory of Software Represented as a SPDX Package</a>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../diffs-from-previous-editions/">Differences from Earlier SPDX Versions</a>
+                  <li class="toctree-l1"><a class="" href="../cross-reference.md">Cross-referencing in SPDX 3</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">licenses</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/cc-by-3.0-unported/">Creative Commons Attribution License 3.0 Unported</a>
+                  <li class="toctree-l1"><a class="" href="../../licenses/CC-BY-3.0.md">Creative Commons Attribution License 3.0 Unported</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../licenses/community-spec/">Community Spec License 1.0</a>
+                  <li class="toctree-l1"><a class="" href="../../licenses/Community-Spec-1.0.md">Community Specification License 1.0</a>
                   </li>
               </ul>
       </div>
@@ -845,8 +797,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">annexes</li>
-      <li class="breadcrumb-item active">How To Use SPDX in Different Scenarios</li>
+      <li class="breadcrumb-item active">Annex K: How To Use SPDX in Different Scenarios</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -1133,10 +1084,6 @@ Oracle patch information for <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../using-SPDX-lite/" class="btn btn-neutral float-left" title="Using SPDX Lite"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../diffs-from-previous-editions/" class="btn btn-neutral float-right" title="Differences from Earlier SPDX Versions">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
 
   <hr/>
 
@@ -1159,10 +1106,6 @@ Oracle patch information for <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../using-SPDX-lite/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../diffs-from-previous-editions/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
