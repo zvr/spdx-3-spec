@@ -1,5 +1,5 @@
 site_name: SPDX v3 Specification
-copyright: DRAFT version generated on 2024-06-17 from 47f98d2 (model) by e0732fc (parser)
+copyright: DRAFT version generated on 2024-07-09 by spec-parser 2.3.0
 use_directory_urls: true
 theme: readthedocs
 plugins:
@@ -114,13 +114,13 @@ nav:
       - model/Core/Vocabularies/RelationshipCompleteness.md
       - model/Core/Vocabularies/RelationshipType.md
       - model/Core/Vocabularies/SupportType.md
+    - Individuals:
+      - model/Core/Individuals/NoAssertionElement.md
+      - model/Core/Individuals/NoneElement.md
     - Datatypes:
       - model/Core/Datatypes/DateTime.md
       - model/Core/Datatypes/MediaType.md
       - model/Core/Datatypes/SemVer.md
-    - Individuals:
-      - model/Core/Individuals/NoAssertionElement.md
-      - model/Core/Individuals/NoneElement.md
   - Software:
     - 'Description': model/Software/Software.md
     - Classes:
