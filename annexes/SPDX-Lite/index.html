@@ -767,9 +767,9 @@
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">F: SPDX Lite</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#f1-definition-of-the-lite-profile">F.1 Definition of the Lite profile </a>
+    <li class="toctree-l2"><a class="reference internal" href="#h1-definition-of-the-lite-profile">H.1 Definition of the Lite profile </a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#f2-table-of-the-lite-profile-elements">F.2 Table of the Lite profile elements </a>
+    <li class="toctree-l2"><a class="reference internal" href="#h2-table-of-the-lite-profile-elements">H.2 Table of the Lite profile elements </a>
     </li>
     </ul>
                   </li>
@@ -805,15 +805,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="annex-f-spdx-lite">Annex F SPDX Lite</h1>
-<h2 id="f1-definition-of-the-lite-profile">F.1 Definition of the Lite profile <a name="F.1"></a></h2>
+                <h1 id="annex-h-spdx-lite">Annex H: SPDX Lite</h1>
+<h2 id="h1-definition-of-the-lite-profile">H.1 Definition of the Lite profile <a name="H.1"></a></h2>
 <p>The Lite profile is designed to make it quick and easy to start a Software Bill of Materials in situations where a company may have limited capacity for introducing new items into its process.<br />
 The Lite profile captures the minimum set of information required for license compliance in the software supply chain. It contains information about the creation of the SBOM, package lists with licensing and other related items, and their relationships.  </p>
 <p>All elements in Lite profile are essential for complying with licenses. It is easy to use a SPDX document with the Lite profile for anyone who does not have enough knowledge about licensing information and easy to import license information from former versions of SPDX Lite format files.<br />
 The Lite profile offers the flexibility to be used either alone or in combination with other SPDX profiles as a SPDX document in the software supply chain.  </p>
-<h2 id="f2-table-of-the-lite-profile-elements">F.2 Table of the Lite profile elements <a name="F.2"></a></h2>
-<p>A SPDX document with the Lite profile must include properties for each class listed in <strong>Table F.1</strong>. And <code>Cardinality 1..1</code> means a <strong>REQUIRED</strong> element, and the others <strong>SHOULD</strong> be filled in as much as possible if necessary.  </p>
-<p><strong>Table F.1 — the Lite profile elements</strong>  </p>
+<h2 id="h2-table-of-the-lite-profile-elements">H.2 Table of the Lite profile elements <a name="H.2"></a></h2>
+<p>A SPDX document with the Lite profile must include properties for each class listed in <strong>Table H.1</strong>. And <code>Cardinality 1..</code> means a <strong>REQUIRED</strong> element, and the others <strong>SHOULD</strong> be filled in as much as possible if necessary.  </p>
+<p><strong>Table H.1 — the Lite profile elements</strong>  </p>
 <ol>
 <li>For a /Core/SpdxDocument to be conformant with this profile, the following has to hold:  </li>
 </ol>
@@ -854,20 +854,20 @@ The Lite profile offers the flexibility to be used either alone or in combinatio
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">/Core/SpdxDocument/verifiedUsing</td>
-<td style="text-align: left;">0..1</td>
-<td style="text-align: left;">This should be an object of /Core/Hash</td>
+<td style="text-align: left;">0..*</td>
+<td style="text-align: left;">This should be objects of /Core/Hash</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">/Core/SpdxDocument/element</td>
 <td style="text-align: left;">1..*</td>
-<td style="text-align: left;">MUST have at least one element</td>
+<td style="text-align: left;">MUST have at least one /Core/Sbom object</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
 <td style="text-align: left;">/Core/SpdxDocument/rootElement</td>
-<td style="text-align: left;">1..1</td>
-<td style="text-align: left;">This should be an object of /Core/Sbom</td>
+<td style="text-align: left;">1..*</td>
+<td style="text-align: left;">This should be objects of /Core/Sbom</td>
 </tr>
 <tr>
 <td style="text-align: center;">8</td>
@@ -939,18 +939,18 @@ The Lite profile offers the flexibility to be used either alone or in combinatio
 <td style="text-align: center;">3</td>
 <td style="text-align: left;">/Software/Sbom/element</td>
 <td style="text-align: left;">1..*</td>
-<td style="text-align: left;">MUST have at least one element</td>
+<td style="text-align: left;">MUST have at least one /Software/Package object</td>
 </tr>
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">/Software/Sbom/rootElement</td>
-<td style="text-align: left;">1..1</td>
-<td style="text-align: left;">This should be an object of /Software/Package</td>
+<td style="text-align: left;">1..*</td>
+<td style="text-align: left;">This should be objects of /Software/Package</td>
 </tr>
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">/Software/Sbom/sbomType</td>
-<td style="text-align: left;">0..1</td>
+<td style="text-align: left;">0..*</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -972,7 +972,7 @@ The Lite profile offers the flexibility to be used either alone or in combinatio
 <td style="text-align: center;">1</td>
 <td style="text-align: left;">/Core/CreationInfo/specVersion</td>
 <td style="text-align: left;">1..1</td>
-<td style="text-align: left;">This should be a fixed string, “3.0”.</td>
+<td style="text-align: left;">This should be a fixed string, “3.0.0”.</td>
 </tr>
 <tr>
 <td style="text-align: center;">2</td>
@@ -989,8 +989,8 @@ The Lite profile offers the flexibility to be used either alone or in combinatio
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">/Core/CreationInfo/createdBy</td>
-<td style="text-align: left;">1..1</td>
-<td style="text-align: left;">This should be an object of /Core/Agent</td>
+<td style="text-align: left;">1..*</td>
+<td style="text-align: left;">This should be objects of /Core/Agent</td>
 </tr>
 </tbody>
 </table>
@@ -1028,7 +1028,7 @@ The Lite profile offers the flexibility to be used either alone or in combinatio
 <tr>
 <td style="text-align: center;">4</td>
 <td style="text-align: left;">/Core/Agent/externalIdentifier</td>
-<td style="text-align: left;">0..1</td>
+<td style="text-align: left;">0..*</td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -1101,14 +1101,14 @@ And all /Software/Package objects MUST have “downloadLocation” OR “package
 <tr>
 <td style="text-align: center;">5</td>
 <td style="text-align: left;">/Software/Package/verifiedUsing</td>
-<td style="text-align: left;">0..1</td>
-<td style="text-align: left;">This should be an object of /Core/Hash</td>
+<td style="text-align: left;">0..*</td>
+<td style="text-align: left;">This should be objects of /Core/Hash</td>
 </tr>
 <tr>
 <td style="text-align: center;">6</td>
 <td style="text-align: left;">/Software/Package/originatedBy</td>
 <td style="text-align: left;">0..*</td>
-<td style="text-align: left;">This should be an object of /Core/Agent</td>
+<td style="text-align: left;">This should be objects of /Core/Agent</td>
 </tr>
 <tr>
 <td style="text-align: center;">7</td>
@@ -1137,7 +1137,7 @@ And all /Software/Package objects MUST have “downloadLocation” OR “package
 <tr>
 <td style="text-align: center;">11</td>
 <td style="text-align: left;">/Software/Package/supportLevel</td>
-<td style="text-align: left;">0..1</td>
+<td style="text-align: left;">0..*</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -1149,7 +1149,7 @@ And all /Software/Package objects MUST have “downloadLocation” OR “package
 <tr>
 <td style="text-align: center;">13</td>
 <td style="text-align: left;">/Software/Package/attributionText</td>
-<td style="text-align: left;">0..1</td>
+<td style="text-align: left;">0..*</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr>
@@ -1354,7 +1354,7 @@ And all /Software/Package objects MUST have “downloadLocation” OR “package
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-      <p>DRAFT version generated on 2024-07-16 by spec-parser 2.3.0</p>
+      <p>DRAFT version generated on 2024-07-29 by spec-parser 2.3.0</p>
   </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.

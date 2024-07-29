@@ -444,7 +444,7 @@
       "license": "Community-Spec-1.0",
       "name": "Licensing",
       "summary": "The Licensing Profile defines a minimum set of license information to\nfacilitate compliance with typical license use cases.",
-      "description": "The Licensing profile only contains the additional requirement that any\nSoftware Artifact must have a Relationship of type hasConcludedLicense.\n\nClasses and Property restrictions are defined in the SimpleLicensingProfile\n(Classes and Properties associated with string license expressions) and in the\nExpandedLicensingProfile (Classes and Properties used for a fully parsed syntax\ntree of license expressions).\n\nThere are 2 relationship types related to licensing - `hasDeclaredLicense` and\n`hasConcludedLicense`.\n\n***hasDeclaredLicense***\n\nA hasDeclaredLicense identifies the license information actually found in the\nSoftware Artifact, for example as detected by use of automated tooling.\n\nThis field is not intended to capture license information obtained from an\nexternal source, such as a package's website. Such information can be\nincluded, as needed, in the hasConcludedLicense field.\n\nA hasDeclaredLicense may be expressed differently in practice for different\ntypes of Software Artifacts. For example:\n\nfor Packages:\n\n- would include license info for the Package as a\n  whole, found in the Package itself (e.g., LICENSE file,\n  README file, metadata in the Package, etc.)\n- would not include any license information that is not in the Package\n  itself (e.g., license information from the project's website or from a\n  third party repository or website)\n  \nfor Files:\n\n- would include license info found in the File itself (e.g., license\n  header or notice, comments indicating the license, SPDX-License-Identifier\n  expression)\n- would not include license info found in a different file (e.g., LICENSE\n  file in the top directory of a repository)\n  \nfor Snippets:\n\n- would include license info found in the Snippet itself (e.g., license\n  notice, comments, SPDX-License-Identifier expression)\n- would not include license info found elsewhere in the File or in a\n  different File (e.g., comment at top of File if it is not within the\n  Snippet, LICENSE file in the top directory of a repository)\n\nA hasDeclaredLicense relationship to NoneLicense indicates that the\ncorresponding Package, File or Snippet contains no license information\nwhatsoever.\n\nA hasDeclaredLicense relationship to NoAssertionLicense\nindicates that one of the following applies:\n\n- the SPDX data creator has attempted to but cannot reach a reasonable\n  objective determination;\n- the SPDX data creator has made no attempt to determine this field; or\n- the SPDX data creator has intentionally provided no information (no meaning\n  should be implied by doing so).\n  \nIf a hasDeclaredLicense relationship is not present, no assumptions can be made\nabout whether or not a hasDeclaredLicense exists.\n\nNote that a missing hasDeclaredLicense is not the same as a relationship to\nNoAssertionLicense since the latter is a \"known unknown\" whereas no assumptions\ncan be made from a missing hasDeclaredLicense relationship.\n\n***hasConcludedLicense***\n\nA hasConcludedLicense is the license identified by the SPDX data creator,\nbased on analyzing the license information in the Software Artifact\nand other information to arrive at a reasonably objective\nconclusion as to what license governs the Software Artifact.\n\nA hasConcludedLicense relationship to NoneLicense indicates that the\nSPDX data creator has looked and did not find any license information for this\nSoftware Artifact.\n\nA hasConcludedLicense relationship to NoAssertionLicense\nindicates that one of the following applies:\n\n- the SPDX data creator has attempted to but cannot reach a reasonable\n  objective determination;\n- the SPDX data creator has made no attempt to determine this field; or\n- the SPDX data creator has intentionally provided no information (no\n  meaning should be implied by doing so).\n\nIf a hasConcludedLicense is not present, no assumptions can be made\nabout whether or not a hasConcludedLicense exists.\n\nNote that a missing hasConcludedLicense is not the same as a relationship to a\nNoAssertionLicense since the latter is a \"known unknown\" whereas no assumptions\ncan be made from a missing hasConcludedLicense relationship.\n\nA written explanation of a relationship to a NoAssertionLicense MAY be\nprovided in the comment field for the relationship.\n\nIf the hasConcludedLicense for a Software Artifact is not the\nsame as its hasDeclaredLicense, a written explanation SHOULD be provided in\nthe hasConcludedLicense relationship comment field.",
+      "description": "The Licensing profile only contains the additional requirement that any\nSoftware Artifact must have a `Relationship` of type `hasConcludedLicense`.\n\nClasses and Property restrictions are defined in the `SimpleLicensingProfile`\n(Classes and Properties associated with\n[license expression strings](../../annexes/SPDX-license-expressions.md))\nand in the `ExpandedLicensingProfile` (Classes and Properties used for a\nfully parsed syntax tree of license expressions).\n\nThere are 2 relationship types related to licensing - `hasDeclaredLicense` and\n`hasConcludedLicense`.\n\nIf the `hasConcludedLicense` for a Software Artifact is not the same as its\n`hasDeclaredLicense`, a written explanation SHOULD be provided in the\n`hasConcludedLicense` relationship `comment` field.\n\nA written explanation of a relationship to a `NoAssertionLicense` MAY be\nprovided in the `comment` field for the relationship.\n\n***hasDeclaredLicense***\n\nA hasDeclaredLicense identifies the license information actually found in the\nSoftware Artifact, for example as detected by use of automated tooling.\n\nThis field is not intended to capture license information obtained from an\nexternal source, such as a package's website. Such information can be\nincluded, as needed, in the hasConcludedLicense field.\n\nA hasDeclaredLicense may be expressed differently in practice for different\ntypes of Software Artifacts. For example:\n\nfor Packages:\n\n- would include license info for the Package as a\n  whole, found in the Package itself (e.g., LICENSE file,\n  README file, metadata in the Package, etc.)\n- would not include any license information that is not in the Package\n  itself (e.g., license information from the project's website or from a\n  third party repository or website)\n\nfor Files:\n\n- would include license info found in the File itself (e.g., license\n  header or notice, comments indicating the license, SPDX-License-Identifier\n  expression)\n- would not include license info found in a different file (e.g., LICENSE\n  file in the top directory of a repository)\n\nfor Snippets:\n\n- would include license info found in the Snippet itself (e.g., license\n  notice, comments, SPDX-License-Identifier expression)\n- would not include license info found elsewhere in the File or in a\n  different File (e.g., comment at top of File if it is not within the\n  Snippet, LICENSE file in the top directory of a repository)\n\nA hasDeclaredLicense relationship to NoneLicense indicates that the\ncorresponding Package, File or Snippet contains no license information\nwhatsoever.\n\nA hasDeclaredLicense relationship to NoAssertionLicense\nindicates that one of the following applies:\n\n- the SPDX data creator has attempted to but cannot reach a reasonable\n  objective determination;\n- the SPDX data creator has made no attempt to determine this field; or\n- the SPDX data creator has intentionally provided no information (no meaning\n  should be implied by doing so).\n  \nIf a hasDeclaredLicense relationship is not present, no assumptions can be made\nabout whether or not a hasDeclaredLicense exists.\n\nNote that a missing hasDeclaredLicense is not the same as a relationship to\nNoAssertionLicense since the latter is a \"known unknown\" whereas no assumptions\ncan be made from a missing hasDeclaredLicense relationship.\n\n***hasConcludedLicense***\n\nA hasConcludedLicense is the license identified by the SPDX data creator,\nbased on analyzing the license information in the Software Artifact\nand other information to arrive at a reasonably objective\nconclusion as to what license governs the Software Artifact.\n\nA hasConcludedLicense relationship to NoneLicense indicates that the\nSPDX data creator has looked and did not find any license information for this\nSoftware Artifact.\n\nA hasConcludedLicense relationship to NoAssertionLicense\nindicates that one of the following applies:\n\n- the SPDX data creator has attempted to but cannot reach a reasonable\n  objective determination;\n- the SPDX data creator has made no attempt to determine this field; or\n- the SPDX data creator has intentionally provided no information (no\n  meaning should be implied by doing so).\n\nIf a hasConcludedLicense is not present, no assumptions can be made\nabout whether or not a hasConcludedLicense exists.\n\nNote that a missing hasConcludedLicense is not the same as a relationship to a\nNoAssertionLicense since the latter is a \"known unknown\" whereas no assumptions\ncan be made from a missing hasConcludedLicense relationship.",
       "metadata": {
         "id": "https://spdx.org/rdf/3.0.0/terms/Licensing",
         "name": "Licensing"
@@ -2263,7 +2263,7 @@
           "name": "License",
           "fqname": "/ExpandedLicensing/License",
           "summary": "Abstract class for the portion of an AnyLicenseInfo representing a license.",
-          "description": "A License represents a license text, whether listed on the SPDX License List\n(ListedLicense) or defined by an SPDX data creator (CustomLicense).",
+          "description": "A License represents a license text, whether listed on the\n[SPDX License List](https://spdx.org/licenses/)\n(ListedLicense) or defined by an SPDX data creator (CustomLicense).",
           "metadata": {
             "name": "License",
             "SubclassOf": "ExtendableLicense",
@@ -2497,7 +2497,7 @@
           "name": "ConjunctiveLicenseSet",
           "fqname": "/ExpandedLicensing/ConjunctiveLicenseSet",
           "summary": "Portion of an AnyLicenseInfo representing a set of licensing information\nwhere all elements apply.",
-          "description": "A ConjunctiveLicenseSet indicates that _each_ of its subsidiary\nAnyLicenseInfos apply. In other words, a ConjunctiveLicenseSet of two or\nmore licenses represents a licensing situation where _all_ of the specified\nlicenses are to be complied with. It is represented in the SPDX License\nExpression Syntax by the `AND` operator.\n\nIt is syntactically correct to specify a ConjunctiveLicenseSet where the\nsubsidiary AnyLicenseInfos may be \"incompatible\" according to a particular\ninterpretation of the corresponding Licenses. The SPDX License Expression\nSyntax does not take into account interpretation of license texts, which is\nleft to the consumer of SPDX data to determine for themselves.",
+          "description": "A ConjunctiveLicenseSet indicates that _each_ of its subsidiary\nAnyLicenseInfos apply. In other words, a ConjunctiveLicenseSet of two or\nmore licenses represents a licensing situation where _all_ of the specified\nlicenses are to be complied with. It is represented in the SPDX License\nExpression Syntax by the `AND` operator.\n\nIt is syntactically correct to specify a ConjunctiveLicenseSet where the\nsubsidiary AnyLicenseInfos may be \"incompatible\" according to a particular\ninterpretation of the corresponding Licenses.\nThe\n[SPDX License Expression Syntax](../../../annexes/SPDX-license-expressions.md)\ndoes not take into account interpretation of license texts, which is\nleft to the consumer of SPDX data to determine for themselves.",
           "metadata": {
             "name": "ConjunctiveLicenseSet",
             "SubclassOf": "/SimpleLicensing/AnyLicenseInfo",
@@ -2618,7 +2618,7 @@
           "name": "CustomLicenseAddition",
           "fqname": "/ExpandedLicensing/CustomLicenseAddition",
           "summary": "A license addition that is not listed on the SPDX Exceptions List.",
-          "description": "A CustomLicenseAddition represents an addition to a License that is not listed\non the SPDX Exceptions List at https://spdx.org/licenses/exceptions-index.html,\nand is therefore defined by an SPDX data creator.\n\nIt is intended to represent additional language which is meant to be added to\na License, but which is not itself a standalone License.",
+          "description": "A CustomLicenseAddition represents an addition to a License that is not listed\non the SPDX Exceptions List at\n<https://spdx.org/licenses/exceptions-index.html>,\nand is therefore defined by an SPDX data creator.\n\nIt is intended to represent additional language which is meant to be added to\na License, but which is not itself a standalone License.",
           "metadata": {
             "name": "CustomLicenseAddition",
             "SubclassOf": "LicenseAddition",
@@ -3000,7 +3000,7 @@
           "name": "WithAdditionOperator",
           "fqname": "/ExpandedLicensing/WithAdditionOperator",
           "summary": "Portion of an AnyLicenseInfo representing a License which has additional\ntext applied to it.",
-          "description": "A WithAdditionOperator indicates that the designated License is subject to the\ndesignated LicenseAddition, which might be a license exception on the SPDX\nExceptions List (ListedLicenseException) or may be other additional text\n(CustomLicenseAddition). It is represented in the SPDX License Expression\nSyntax by the `WITH` operator.",
+          "description": "A WithAdditionOperator indicates that the designated License is subject to the\ndesignated LicenseAddition, which might be a license exception on the\n[SPDX\nExceptions List](https://spdx.org/licenses/exceptions-index.html)\n(ListedLicenseException) or may be other additional text\n(CustomLicenseAddition). It is represented in the SPDX License Expression\nSyntax by the `WITH` operator.",
           "metadata": {
             "name": "WithAdditionOperator",
             "SubclassOf": "/SimpleLicensing/AnyLicenseInfo",
@@ -3241,7 +3241,7 @@
           "name": "ListedLicenseException",
           "fqname": "/ExpandedLicensing/ListedLicenseException",
           "summary": "A license exception that is listed on the SPDX Exceptions list.",
-          "description": "A ListedLicenseException represents an exception to a License (in other words,\nan exception to a license condition or an additional permission beyond those\ngranted in a License) which is listed on the SPDX Exceptions List at\nhttps://spdx.org/licenses/exceptions-index.html.",
+          "description": "A ListedLicenseException represents an exception to a License (in other words,\nan exception to a license condition or an additional permission beyond those\ngranted in a License) which is listed on the SPDX Exceptions List at\n<https://spdx.org/licenses/exceptions-index.html>.",
           "metadata": {
             "name": "ListedLicenseException",
             "SubclassOf": "LicenseAddition",
@@ -3424,7 +3424,7 @@
           "name": "CustomLicense",
           "fqname": "/ExpandedLicensing/CustomLicense",
           "summary": "A license that is not listed on the SPDX License List.",
-          "description": "A CustomLicense represents a License that is not listed on the SPDX License\nList at https://spdx.org/licenses, and is therefore defined by an SPDX data\ncreator.",
+          "description": "A CustomLicense represents a License that is not listed on the SPDX License\nList at <https://spdx.org/licenses>, and is therefore defined by an SPDX data\ncreator.",
           "metadata": {
             "name": "CustomLicense",
             "SubclassOf": "License",
@@ -3604,7 +3604,7 @@
           "name": "ListedLicense",
           "fqname": "/ExpandedLicensing/ListedLicense",
           "summary": "A license that is listed on the SPDX License List.",
-          "description": "A ListedLicense represents a License that is listed on the SPDX License List\nat https://spdx.org/licenses.",
+          "description": "A ListedLicense represents a License that is listed on the SPDX License List\nat <https://spdx.org/licenses>.",
           "metadata": {
             "name": "ListedLicense",
             "SubclassOf": "License",
@@ -3813,7 +3813,7 @@
           "name": "LicenseAddition",
           "fqname": "/ExpandedLicensing/LicenseAddition",
           "summary": "Abstract class for additional text intended to be added to a License, but\nwhich is not itself a standalone License.",
-          "description": "A LicenseAddition represents text which is intended to be added to a License\nas additional text, but which is not itself intended to be a standalone\nLicense.\n\nIt may be an exception which is listed on the SPDX Exceptions List\n(ListedLicenseException), or may be any other additional text (as an exception\nor otherwise) which is defined by an SPDX data creator (CustomLicenseAddition).",
+          "description": "A LicenseAddition represents text which is intended to be added to a License\nas additional text, but which is not itself intended to be a standalone\nLicense.\n\nIt may be an exception which is listed on the\n[SPDX Exceptions List](https://spdx.org/licenses/exceptions-index.html)\n(ListedLicenseException), or may be any other additional text (as an exception\nor otherwise) which is defined by an SPDX data creator (CustomLicenseAddition).",
           "metadata": {
             "name": "LicenseAddition",
             "SubclassOf": "/Core/Element",
@@ -4046,7 +4046,7 @@
           "name": "listVersionAdded",
           "fqname": "/ExpandedLicensing/listVersionAdded",
           "summary": "Specifies the SPDX License List version in which this ListedLicense or\nListedLicenseException identifier was first added.",
-          "description": "A listVersionAdded for a ListedLicense or ListedLicenseException on the SPDX\nLicense List specifies which version release of the License List was the first\none in which it was included.",
+          "description": "A listVersionAdded for a ListedLicense or ListedLicenseException on the\n[SPDX License List](https://spdx.org/licenses/)\nspecifies which version release of the License List was the first\none in which it was included.",
           "metadata": {
             "name": "listVersionAdded",
             "Nature": "DataProperty",
@@ -4067,7 +4067,7 @@
           "name": "isFsfLibre",
           "fqname": "/ExpandedLicensing/isFsfLibre",
           "summary": "Specifies whether the License is listed as free by the\n[Free Software Foundation (FSF)](https://fsf.org).",
-          "description": "isFsfLibre specifies whether the\n[Free Software Foundation FSF](https://fsf.org)\nhas listed this License as \"free\" in their commentary on licenses, located at\nthe time of this writing at https://www.gnu.org/licenses/license-list.en.html.\n\nA value of \"true\" indicates that the license is in the list of licenses that\nFSF publishes as libre.\n\nA value of \"false\" indicates that the license is explicitly not in the\ncorresponding list of FSF libre licenses (e.g., FSF has the license on a\nnon-free list).\n\nIf the isFsfLibre field is not specified, the SPDX data creator makes no\nassertions about whether the License is listed in the FSF's commentary.",
+          "description": "isFsfLibre specifies whether the\n[Free Software Foundation FSF](https://fsf.org)\nhas listed this License as \"free\" in their commentary on licenses, located at\nthe time of this writing at\n<https://www.gnu.org/licenses/license-list.en.html>.\n\nA value of \"true\" indicates that the license is in the list of licenses that\nFSF publishes as libre.\n\nA value of \"false\" indicates that the license is explicitly not in the\ncorresponding list of FSF libre licenses (e.g., FSF has the license on a\nnon-free list).\n\nIf the isFsfLibre field is not specified, the SPDX data creator makes no\nassertions about whether the License is listed in the FSF's commentary.",
           "metadata": {
             "name": "isFsfLibre",
             "Nature": "DataProperty",
@@ -4127,7 +4127,7 @@
           "name": "licenseXml",
           "fqname": "/ExpandedLicensing/licenseXml",
           "summary": "Identifies all the text and metadata associated with a license in the license\nXML format.",
-          "description": "The license XML format is defined and used by the SPDX legal team.\n\nSee the XML fields defined at\n[https://github.com/spdx/license-list-XML/blob/main/DOCS/xml-fields.md](https://github.com/spdx/license-list-XML/blob/main/DOCS/xml-fields.md)\nfor a text description.\n\nThere is also an XML schema available at\n[https://github.com/spdx/license-list-XML/blob/main/schema/ListedLicense.xsd](https://github.com/spdx/license-list-XML/blob/main/schema/ListedLicense.xsd).",
+          "description": "The license XML format is defined and used by the SPDX legal team.\n\nSee the XML fields defined at\n<https://github.com/spdx/license-list-XML/blob/main/DOCS/xml-fields.md>\nfor a text description.\n\nThere is also an XML schema available at\n<https://github.com/spdx/license-list-XML/blob/main/schema/ListedLicense.xsd>.",
           "metadata": {
             "name": "licenseXml",
             "Nature": "DataProperty",
@@ -4188,7 +4188,7 @@
           "name": "isDeprecatedAdditionId",
           "fqname": "/ExpandedLicensing/isDeprecatedAdditionId",
           "summary": "Specifies whether an additional text identifier has been marked as deprecated.",
-          "description": "The isDeprecatedAdditionId property specifies whether an identifier for a\nLicenseAddition has been marked as deprecated. If the property is not defined,\nthen it is presumed to be false (i.e., not deprecated).\n\nIf the LicenseAddition is included on the SPDX Exceptions List, then\nthe `deprecatedVersion` property indicates on which version release of the\nExceptions List it was first marked as deprecated.\n\n\"Deprecated\" in this context refers to deprecating the use of the\n_identifier_, not the underlying license addition. In other words, even if a\nLicenseAddition's author or steward has stated that a particular\nLicenseAddition generally should not be used, that would _not_ mean that the\nLicenseAddition's identifier is \"deprecated.\" Rather, a LicenseAddition\noperator is typically marked as \"deprecated\" when it is determined that use of\nanother identifier is preferable.",
+          "description": "The isDeprecatedAdditionId property specifies whether an identifier for a\nLicenseAddition has been marked as deprecated. If the property is not defined,\nthen it is presumed to be false (i.e., not deprecated).\n\nIf the LicenseAddition is included on the\n[SPDX Exceptions List](https://spdx.org/licenses/exceptions-index.html), then\nthe `deprecatedVersion` property indicates on which version release of the\nExceptions List it was first marked as deprecated.\n\n\"Deprecated\" in this context refers to deprecating the use of the\n_identifier_, not the underlying license addition. In other words, even if a\nLicenseAddition's author or steward has stated that a particular\nLicenseAddition generally should not be used, that would _not_ mean that the\nLicenseAddition's identifier is \"deprecated.\" Rather, a LicenseAddition\noperator is typically marked as \"deprecated\" when it is determined that use of\nanother identifier is preferable.",
           "metadata": {
             "name": "isDeprecatedAdditionId",
             "Nature": "DataProperty",
@@ -4229,7 +4229,7 @@
           "name": "deprecatedVersion",
           "fqname": "/ExpandedLicensing/deprecatedVersion",
           "summary": "Specifies the SPDX License List version in which this license or exception\nidentifier was deprecated.",
-          "description": "A deprecatedVersion for a ListedLicense or ListedLicenseException on the SPDX\nLicense List specifies which version release of the License List was the first\none in which it was marked as deprecated.",
+          "description": "A deprecatedVersion, for a ListedLicense on the\n[SPDX License List](https://spdx.org/licenses/)\nor a ListedLicenseException on the\n[SPDX Exceptions List](https://spdx.org/licenses/exceptions-index.html),\nspecifies which version release of the License List was the first\none in which it was marked as deprecated.",
           "metadata": {
             "name": "deprecatedVersion",
             "Nature": "DataProperty",
@@ -4250,7 +4250,7 @@
           "name": "isOsiApproved",
           "fqname": "/ExpandedLicensing/isOsiApproved",
           "summary": "Specifies whether the License is listed as approved by the\n[Open Source Initiative (OSI)](https://opensource.org).",
-          "description": "isOsiApproved specifies whether the\n[Open Source Initiative (OSI)](https://opensource.org)\nhas listed this License as \"approved\" in their list of OSI Approved Licenses,\nlocated at the time of this writing at https://opensource.org/licenses/.\n\nA value of \"true\" indicates that the license is in the list of licenses that\nOSI publishes as approved.\n\nA value of \"false\" indicates that the license is explicitly not in the\ncorresponding list of OSI licenses (e.g., OSI has stated publicly that a\nlicense is not approved).\n\nIf the isOsiApproved field is not specified, the SPDX data creator makes no\nassertions about whether the License is approved by the OSI.",
+          "description": "isOsiApproved specifies whether the\n[Open Source Initiative (OSI)](https://opensource.org)\nhas listed this License as \"approved\" in their list of OSI Approved Licenses,\nlocated at the time of this writing at <https://opensource.org/licenses/>.\n\nA value of \"true\" indicates that the license is in the list of licenses that\nOSI publishes as approved.\n\nA value of \"false\" indicates that the license is explicitly not in the\ncorresponding list of OSI licenses (e.g., OSI has stated publicly that a\nlicense is not approved).\n\nIf the isOsiApproved field is not specified, the SPDX data creator makes no\nassertions about whether the License is approved by the OSI.",
           "metadata": {
             "name": "isOsiApproved",
             "Nature": "DataProperty",
@@ -4310,7 +4310,7 @@
           "name": "isDeprecatedLicenseId",
           "fqname": "/ExpandedLicensing/isDeprecatedLicenseId",
           "summary": "Specifies whether a license or additional text identifier has been marked as\ndeprecated.",
-          "description": "The isDeprecatedLicenseId property specifies whether an identifier for a\nLicense or LicenseAddition has been marked as deprecated. If the property\nis not defined, then it is presumed to be false (i.e., not deprecated).\n\nIf the License or LicenseAddition is included on the SPDX License List, then\nthe `deprecatedVersion` property indicates on which version release of the\nLicense List it was first marked as deprecated.\n\n\"Deprecated\" in this context refers to deprecating the use of the\n_identifier_, not the underlying license. In other words, even if a License's\nauthor or steward has stated that a particular License generally should not be\nused, that would _not_ mean that the License's identifier is \"deprecated.\"\nRather, a License or LicenseAddition operator is typically marked as\n\"deprecated\" when it is determined that use of another identifier is\npreferable.",
+          "description": "The isDeprecatedLicenseId property specifies whether an identifier for a\nLicense or LicenseAddition has been marked as deprecated. If the property\nis not defined, then it is presumed to be false (i.e., not deprecated).\n\nIf the License or LicenseAddition is included on the\n[SPDX License List](https://spdx.org/licenses/), then\nthe `deprecatedVersion` property indicates on which version release of the\nLicense List it was first marked as deprecated.\n\n\"Deprecated\" in this context refers to deprecating the use of the\n_identifier_, not the underlying license. In other words, even if a License's\nauthor or steward has stated that a particular License generally should not be\nused, that would _not_ mean that the License's identifier is \"deprecated.\"\nRather, a License or LicenseAddition operator is typically marked as\n\"deprecated\" when it is determined that use of another identifier is\npreferable.",
           "metadata": {
             "name": "isDeprecatedLicenseId",
             "Nature": "DataProperty",
@@ -4390,7 +4390,7 @@
       "license": "Community-Spec-1.0",
       "name": "ExpandedLicensing",
       "summary": "Fully expanded license expressions.",
-      "description": "This profile supports representing a fully expanded license expression in\nobject form.",
+      "description": "This profile supports representing a fully expanded\n[license expression](../../annexes/SPDX-license-expressions.md)\nin object form.",
       "metadata": {
         "id": "https://spdx.org/rdf/3.0.0/terms/ExpandedLicensing",
         "name": "ExpandedLicensing"
@@ -8447,8 +8447,8 @@
             "reportedBy": "(Security) Designates a `from` Vulnerability was first reported to a project, vendor, or tracking database for formal identification by each `to` Agent",
             "republishedBy": "(Security) Designates a `from` Vulnerability's details were tracked, aggregated, and/or enriched to improve context (i.e. NVD) by a `to` Agent(s)",
             "serializedInArtifact": "The `from` SPDXDocument can be found in a serialized form in each `to` Artifact",
-            "testedOn": "(AI, Dataset) The `from` Element has been tested on the `to` Element",
-            "trainedOn": "(AI, Dataset) The `from` Element has been trained by the `to` Element(s)",
+            "testedOn": "(AI, Dataset) The `from` Element has been tested on the `to` Element(s)",
+            "trainedOn": "(AI, Dataset) The `from` Element has been trained on the `to` Element(s)",
             "underInvestigationFor": "(Security/VEX) The `from` Vulnerability impact is being investigated for each `to` Element. The use of the `underInvestigationFor` type is contrained to `VexUnderInvestigationVulnAssessmentRelationship` classed relationships.",
             "usesTool": "The `from` Element uses each `to` Element as a tool during a LifecycleScopeType period."
           },
@@ -8729,7 +8729,7 @@
           "name": "LicenseExpression",
           "fqname": "/SimpleLicensing/LicenseExpression",
           "summary": "An SPDX Element containing an SPDX license expression string.",
-          "description": "A LicenseExpression enables the representation, in a single string, of a\ncombination of one or more licenses, together with additions such as license\nexceptions.\n\nThe syntax for a LicenseExpression string is set forth in the Annex D\nof the SPDX Specification (\"SPDX license expressions\"). A LicenseExpression string is\nnot valid if it does not conform to the grammar set forth in that annex.\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expression as a combination of license objects.",
+          "description": "A LicenseExpression enables the representation, in a single string, of a\ncombination of one or more licenses, together with additions such as license\nexceptions.\n\nThe syntax for a LicenseExpression string is set forth in the Annex D\nof the SPDX Specification\n([\"SPDX license expressions\"](../../../annexes/SPDX-license-expressions.md)).\nA LicenseExpression string is not valid if it does not conform to the grammar\nset forth in that annex.\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expression as a combination of license objects.",
           "metadata": {
             "name": "LicenseExpression",
             "SubclassOf": "AnyLicenseInfo",
@@ -8877,8 +8877,8 @@
           "license": "Community-Spec-1.0",
           "name": "AnyLicenseInfo",
           "fqname": "/SimpleLicensing/AnyLicenseInfo",
-          "summary": "Abstract class representing a license combination consisting of one or more\nlicenses (optionally including additional text), which may be combined\naccording to the SPDX license expression syntax.",
-          "description": "An AnyLicenseInfo is used by licensing properties of software artifacts.\nIt can be a NoneLicense, a NoAssertionLicense,\nsingle license (either on the SPDX License List or a custom-defined license);\na single license with an \"or later\" operator applied; the foregoing with\nadditional text applied; or a set of licenses combined by applying \"AND\" and\n\"OR\" operators recursively.",
+          "summary": "Abstract class representing a license combination consisting of one or more\nlicenses (optionally including additional text), which may be combined\naccording to the\n[SPDX license expression syntax](../../../annexes/SPDX-license-expressions.md).",
+          "description": "An AnyLicenseInfo is used by licensing properties of software artifacts.\n\nIt can be:\n\n- a NoneLicense;\n- a NoAssertionLicense;\n- a single license (either on the [SPDX License List](https://spdx.org/licenses/) or [a custom-defined license](../../ExpandedLicensing/Classes/CustomLicense.md));\n- a single license with an \"or later\" operator applied;\n- the foregoing with additional text applied;\n- or a set of licenses combined by applying \"AND\" and \"OR\" operators recursively.",
           "metadata": {
             "name": "AnyLicenseInfo",
             "SubclassOf": "/Core/Element",
@@ -9105,7 +9105,7 @@
           "name": "licenseListVersion",
           "fqname": "/SimpleLicensing/licenseListVersion",
           "summary": "The version of the SPDX License List used in the license expression.",
-          "description": "Recognizing that licenses are added to the SPDX License List with each\nsubsequent version, the intent is to provide consumers with the version of the\nSPDX License List used.\n\nThis anticipates that in the future, license expression might have used a\nversion of the SPDX License List that is older than the then current one.\n\nThe specified version of the SPDX License List must include all listed licenses\nand exceptions referenced in the expression.",
+          "description": "Recognizing that licenses are added to the\n[SPDX License List](https://spdx.org/licenses/) with each\nsubsequent version, the intent is to provide consumers with the version of the\nSPDX License List used.\n\nThis anticipates that in the future, license expression might have used a\nversion of the SPDX License List that is older than the then current one.\n\nThe specified version of the SPDX License List must include all listed licenses\nand exceptions referenced in the expression.",
           "metadata": {
             "name": "licenseListVersion",
             "Nature": "DataProperty",
@@ -9146,7 +9146,7 @@
           "name": "customIdToUri",
           "fqname": "/SimpleLicensing/customIdToUri",
           "summary": "Maps a LicenseRef or AdditionRef string for a Custom License or a Custom\nLicense Addition to its URI ID.",
-          "description": "Within a License Expression, references can be made to a Custom License or a\nCustom License Addition.\n\nThe License Expression syntax dictates any reference starting with a\n\"LicenseRef-\" or \"AdditionRef-\" refers to license or addition text not found in\nthe official SPDX License List.\n\nThese custom licenses must be a CustomLicense, a CustomLicenseAddition, or a\nSimpleLicensingText which are identified with a unique URI identifier.\n\nThe key for the DictionaryEntry is the string used in the license expression\nand the value is the URI for the corresponding CustomLicense,\nCustomLicenseAddition, or SimpleLicensingText.",
+          "description": "Within a License Expression, references can be made to a Custom License or a\nCustom License Addition.\n\nThe [License Expression syntax](../../../annexes/SPDX-license-expressions.md)\ndictates any reference starting with a\n\"LicenseRef-\" or \"AdditionRef-\" refers to license or addition text not found in\n[the official SPDX License List](https://spdx.org/licenses/).\n\nThese custom licenses must be a CustomLicense, a CustomLicenseAddition, or a\nSimpleLicensingText which are identified with a unique URI identifier.\n\nThe key for the DictionaryEntry is the string used in the license expression\nand the value is the URI for the corresponding CustomLicense,\nCustomLicenseAddition, or SimpleLicensingText.",
           "metadata": {
             "name": "customIdToUri",
             "Nature": "ObjectProperty",
@@ -9166,7 +9166,7 @@
           "name": "licenseExpression",
           "fqname": "/SimpleLicensing/licenseExpression",
           "summary": "A string in the license expression format.",
-          "description": "A licenseExpression enables the representation, in a single string, of a\ncombination of one or more licenses, together with additions such as license\nexceptions.\n\nThe syntax for a LicenseExpression string is set forth in the Annex D\nof the SPDX Specification (\"SPDX license expressions\"). A LicenseExpression string is\nnot valid if it does not conform to the grammar set forth in that annex.\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expression as a combination of license objects.",
+          "description": "A licenseExpression enables the representation, in a single string, of a\ncombination of one or more licenses, together with additions such as license\nexceptions.\n\nThe syntax for a LicenseExpression string is set forth in the Annex D\nof the SPDX Specification\n([\"SPDX license expressions\"](../../../annexes/SPDX-license-expressions.md)).\nA LicenseExpression string is not valid if it does not conform to the grammar\nset forth in that annex.\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expression as a combination of license objects.",
           "metadata": {
             "name": "licenseExpression",
             "Nature": "DataProperty",
@@ -9184,7 +9184,7 @@
       "license": "Community-Spec-1.0",
       "name": "SimpleLicensing",
       "summary": "Additional metadata relating to software licensing.",
-      "description": "The SimpleLicensing profile provides classes and properties to express licenses\nas a license expression string.\n\nIt also provides the base abstract class, AnyLicenseInfo, used for references\nto license information.\n\nThe SimpleLicensingText class provides a place to record any license text found\nthat does not match a license on the SPDX license list.\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expressions.",
+      "description": "The SimpleLicensing profile provides classes and properties to express licenses\nas a [license expression](../../annexes/SPDX-license-expressions.md) string.\n\nIt also provides the base abstract class, AnyLicenseInfo, used for references\nto license information.\n\nThe SimpleLicensingText class provides a place to record any license text found\nthat does not match a license on the\n[SPDX License List](https://spdx.org/licenses/).\n\nThe ExpandedLicensing profile can be used to represent the complete parsed\nlicense expressions.",
       "metadata": {
         "id": "https://spdx.org/rdf/3.0.0/terms/SimpleLicensing",
         "name": "SimpleLicensing"
@@ -10474,7 +10474,7 @@
           "name": "EnergyConsumptionDescription",
           "fqname": "/AI/EnergyConsumptionDescription",
           "summary": "The class that helps note down the quantity of energy consumption and the unit\nused for measurement.",
-          "description": "This class is designed to store energy consumption data, including the quantity\nand the unit of measurement.\n\nThe energyQuantity property stores the amount of energy consumed,\nand the energyUnit property stores the unit used for measurement.",
+          "description": "This class is designed to store energy consumption data, including the quantity\nand the unit of measurement.\n\nThe `energyQuantity` property stores the amount of energy consumed,\nand the `energyUnit` property stores the unit used for measurement.\n\nFor example, 0.0042 kilowatt-hour of energy will have `0.042` as a value for\nproperty `energyQuantity`, and `\"kilowattHour\"` as a value for property\n`energyUnit`.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"ai_EnergyConsumptionDescription\",\n  \"ai_energyQuantity\": \"0.042\",\n  \"ai_energyUnit\": \"kilowattHour\"\n}\n```",
           "metadata": {
             "name": "EnergyConsumptionDescription",
             "Instantiability": "Concrete"
@@ -10524,8 +10524,8 @@
           "license": "Community-Spec-1.0",
           "name": "EnergyConsumption",
           "fqname": "/AI/EnergyConsumption",
-          "summary": "The class that contains properties to describe energy consumption incurred\nby an AI model in different stages of its lifecycle.",
-          "description": "The class used for denoting the training energy consumption, inference energy\nconsumption and fine tuning energy consumption of the AI model(s) used in an AI\nsystem.",
+          "summary": "A class for describing the energy consumption incurred by an AI model in\ndifferent stages of its lifecycle.",
+          "description": "A class to denote the known or estimated energy consumption of an AI model\nduring its training, fine-tuning, and inference stages.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"ai_EnergyConsumption\",\n  \"ai_trainingEnergyConsumption\": [\n    {\n      \"type\": \"ai_EnergyConsumptionDescription\",\n      \"ai_energyQuantity\": \"36.5\",\n      \"ai_energyUnit\": \"kilowattHour\"\n    }\n  ],\n  \"ai_inferenceEnergyConsumption\": [\n    {\n      \"type\": \"ai_EnergyConsumptionDescription\",\n      \"ai_energyQuantity\": \"0.042\",\n      \"ai_energyUnit\": \"kilowattHour\"\n    }\n  ]\n}\n```",
           "metadata": {
             "name": "EnergyConsumption",
             "Instantiability": "Concrete"
@@ -10751,8 +10751,8 @@
           "license": "Community-Spec-1.0",
           "name": "autonomyType",
           "fqname": "/AI/autonomyType",
-          "summary": "States if a human is involved in the decisions of the AI software.",
-          "description": "Indicates if a human is involved in any of the decisions of the AI system\nor if that system is fully automatic.",
+          "summary": "Indicates whether the system can perform a decision or action without human\ninvolvement or guidance.",
+          "description": "Indicates if the system is fully automated or a human is involved in any of the\ndecisions of the AI system.\n\n- yes: Indicates that the system is fully automated\n- no: Indicates that a human is involved in any of the decisions of the AI\n  system\n- noAssertion: Makes no assertion about the autonomy",
           "metadata": {
             "name": "autonomyType",
             "Nature": "ObjectProperty",
@@ -10811,8 +10811,8 @@
           "license": "Community-Spec-1.0",
           "name": "energyConsumption",
           "fqname": "/AI/energyConsumption",
-          "summary": "Indicates the amount of energy consumed to train the AI model.",
-          "description": "A free-form text captures known or estimated energy consumption for the\ntraining of the AI model.\n\nIn case not known, the estimation could be based on information about\ncomputational resources used (e.g. number of floating point operations --\nFLOPs), training time, type and quantity of processing units, and other\nrelevant details related to the training.",
+          "summary": "Indicates the amount of energy consumption incurred by an AI model.",
+          "description": "Captures the energy consumption of an AI model, either known or estimated.\n\nIn the absence of direct measurements, an SPDX data creator may choose to\nestimate the energy consumption based on information about computational\nresources (e.g., number of floating-point operations), training time, and other\nrelevant training details.",
           "metadata": {
             "name": "energyConsumption",
             "Nature": "ObjectProperty",
@@ -11052,7 +11052,7 @@
           "name": "CvssV2VulnAssessmentRelationship",
           "fqname": "/Security/CvssV2VulnAssessmentRelationship",
           "summary": "Provides a CVSS version 2.0 assessment for a vulnerability.",
-          "description": "A CvssV2VulnAssessmentRelationship relationship describes the determined score\nand vector of a vulnerability using version 2.0 of the Common Vulnerability\nScoring System (CVSS) as defined at\n[https://www.first.org/cvss/v2/guide](https://www.first.org/cvss/v2/guide).\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The relationship type must be set to `hasAssessmentFor`.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"CvssV2VulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:cvssv2-cve-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"score\": 4.3,\n  \"vectorString\": \"(AV:N/AC:M/Au:N/C:P/I:N/A:N)\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"externalRefs\": [\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityFix\",\n      \"locator\": \"https://github.com/indutny/elliptic/commit/441b742\"\n    }\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-05-06T10:06:13Z\"\n},\n{\n  \"@type\": \"Relationship\",\n  \"@id\": \"urn:spdx.dev:vulnAgentRel-1\",  \n  \"relationshipType\": \"publishedBy\",  \n  \"from\": \"urn:spdx.dev:cvssv2-cve-2020-28498\",\n  \"to\": [\"urn:spdx.dev:agent-snyk\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
+          "description": "A CvssV2VulnAssessmentRelationship relationship describes the determined score\nand vector of a vulnerability using version 2.0 of the Common Vulnerability\nScoring System (CVSS) as defined at <https://www.first.org/cvss/v2/guide>.\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The relationship type must be set to `hasAssessmentFor`.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"CvssV2VulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:cvssv2-cve-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_score\": \"4.3\",\n  \"security_vectorString\": \"(AV:N/AC:M/Au:N/C:P/I:N/A:N)\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"externalRef\": [\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityFix\",\n      \"locator\": \"https://github.com/indutny/elliptic/commit/441b742\"\n    }\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-05-06T10:06:13Z\"\n},\n{\n  \"type\": \"Relationship\",\n  \"spdxId\": \"urn:spdx.dev:vulnAgentRel-1\",  \n  \"relationshipType\": \"publishedBy\",  \n  \"from\": \"urn:spdx.dev:cvssv2-cve-2020-28498\",\n  \"to\": [\"urn:spdx.dev:agent-snyk\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
           "metadata": {
             "name": "CvssV2VulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -11276,7 +11276,7 @@
           "name": "VexAffectedVulnAssessmentRelationship",
           "fqname": "/Security/VexAffectedVulnAssessmentRelationship",
           "summary": "Connects a vulnerability and an element designating the element as a product\naffected by the vulnerability.",
-          "description": "VexAffectedVulnAssessmentRelationship connects a vulnerability and a number of\nelements. The relationship marks these elements as products affected by the\nvulnerability. This relationship corresponds to the VEX affected status.\n\n**Constraints**\n\nWhen linking elements using a VexAffectedVulnAssessmentRelationship, the\nfollowing requirements must be observed:\n\n- Elements linked with a VulnVexAffectedAssessmentRelationship are constrained\n  to the affects relationship type.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"VexAffectedVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:vex-affected-1\",\n  \"relationshipType\": \"affects\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"actionStatement\": \"Upgrade to version 1.4 of ACME application.\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "VexAffectedVulnAssessmentRelationship connects a vulnerability and a number of\nelements. The relationship marks these elements as products affected by the\nvulnerability. This relationship corresponds to the VEX affected status.\n\n**Constraints**\n\nWhen linking elements using a VexAffectedVulnAssessmentRelationship, the\nfollowing requirements must be observed:\n\n- Elements linked with a VulnVexAffectedAssessmentRelationship are constrained\n  to the affects relationship type.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"VexAffectedVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:vex-affected-1\",\n  \"relationshipType\": \"affects\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"security_actionStatement\": \"Upgrade to version 1.4 of ACME application.\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "VexAffectedVulnAssessmentRelationship",
             "SubclassOf": "VexVulnAssessmentRelationship",
@@ -11517,7 +11517,7 @@
           "name": "SsvcVulnAssessmentRelationship",
           "fqname": "/Security/SsvcVulnAssessmentRelationship",
           "summary": "Provides an SSVC assessment for a vulnerability.",
-          "description": "An SsvcVulnAssessmentRelationship describes the decision made using the\nStakeholder-Specific Vulnerability Categorization (SSVC) decision tree as\ndefined on [https://www.cisa.gov/stakeholder-specific-vulnerability-categorization-ssvc](https://www.cisa.gov/stakeholder-specific-vulnerability-categorization-ssvc).\nIt is intended to communicate the results of using the CISA SSVC Calculator.\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"SsvcVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:ssvc-1\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"decisionType\": \"act\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "An SsvcVulnAssessmentRelationship describes the decision made using the\nStakeholder-Specific Vulnerability Categorization (SSVC) decision tree as\ndefined on [https://www.cisa.gov/stakeholder-specific-vulnerability-categorization-ssvc](https://www.cisa.gov/stakeholder-specific-vulnerability-categorization-ssvc).\nIt is intended to communicate the results of using the CISA SSVC Calculator.\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"SsvcVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:ssvc-1\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_decisionType\": \"act\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "SsvcVulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -11727,7 +11727,7 @@
           "name": "Vulnerability",
           "fqname": "/Security/Vulnerability",
           "summary": "Specifies a vulnerability and its associated information.",
-          "description": "Specifies a vulnerability and its associated information.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"Vulnerability\",\n  \"@id\": \"urn:spdx.dev:vuln-1\",\n  \"summary\": \"Use of a Broken or Risky Cryptographic Algorithm\",\n  \"description\": \"The npm package `elliptic` before version 6.5.4 are vulnerable to Cryptographic Issues via the secp256k1 implementation in elliptic/ec/key.js. There is no check to confirm that the public key point passed into the derive function actually exists on the secp256k1 curve. This results in the potential for the private key used in this implementation to be revealed after a number of ECDH operations are performed.\",      \n  \"modifiedTime\": \"2021-03-08T16:06:43Z\",\n  \"publishedTime\": \"2021-03-08T16:02:50Z\",\n  \"externalIdentifiers\": [\n    {\n      \"@type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"cve\",\n      \"identifier\": \"CVE-2020-2849\",\n      \"identifierLocator\": [\n        \"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28498\",\n        \"https://www.cve.org/CVERecord?id=CVE-2020-28498\"\n      ],\n      \"issuingAuthority\": \"urn:spdx.dev:agent-cve.org\"\n    },\n    {\n      \"type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"securityAdvisory\",\n      \"identifier\": \"GHSA-r9p9-mrjm-926w\",\n      \"identifierLocator\": \"https://github.com/advisories/GHSA-r9p9-mrjm-926w\"\n    },\n    {\n      \"type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"securityOther\",\n      \"identifier\": \"SNYK-JS-ELLIPTIC-1064899\",\n      \"identifierLocator\": \"https://security.snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    }\n  ],\n  \"externalRefs\": [\n    {\n        \"@type\": \"ExternalRef\",\n        \"externalRefType\": \"securityAdvisory\",\n        \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://ubuntu.com/security/CVE-2020-28498\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"https://github.com/indutny/elliptic/pull/244/commits\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"https://github.com/christianlundkvist/blog/blob/master/2020_05_26_secp256k1_twist_attacks/secp256k1_twist_attacks.md\"\n    }\n  ]\n},\n{\n  \"@type\": \"Relationship\",\n  \"@id\": \"urn:spdx.dev:vulnRelationship-1\",\n  \"relationshipType\": \"hasAssociatedVulnerability\",\n  \"from\": \"urn:npm-elliptic-6.5.2\",\n  \"to\": [\"urn:spdx.dev:vuln-1\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n},\n{\n  \"@type\": \"Relationship\",\n  \"@id\": \"urn:spdx.dev:vulnAgentRel-1\",  \n  \"relationshipType\": \"publishedBy\",  \n  \"from\": \"urn:spdx.dev:vuln-1\",\n  \"to\": [\"urn:spdx.dev:agent-snyk\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
+          "description": "Specifies a vulnerability and its associated information.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"Vulnerability\",\n  \"spdxId\": \"urn:spdx.dev:vuln-1\",\n  \"summary\": \"Use of a Broken or Risky Cryptographic Algorithm\",\n  \"description\": \"The npm package `elliptic` before version 6.5.4 are vulnerable to Cryptographic Issues via the secp256k1 implementation in elliptic/ec/key.js. There is no check to confirm that the public key point passed into the derive function actually exists on the secp256k1 curve. This results in the potential for the private key used in this implementation to be revealed after a number of ECDH operations are performed.\",      \n  \"modifiedTime\": \"2021-03-08T16:06:43Z\",\n  \"publishedTime\": \"2021-03-08T16:02:50Z\",\n  \"externalIdentifier\": [\n    {\n      \"type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"cve\",\n      \"identifier\": \"CVE-2020-2849\",\n      \"identifierLocator\": [\n        \"https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-28498\",\n        \"https://www.cve.org/CVERecord?id=CVE-2020-28498\"\n      ],\n      \"issuingAuthority\": \"urn:spdx.dev:agent-cve.org\"\n    },\n    {\n      \"type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"securityOther\",\n      \"identifier\": \"GHSA-r9p9-mrjm-926w\",\n      \"identifierLocator\": \"https://github.com/advisories/GHSA-r9p9-mrjm-926w\"\n    },\n    {\n      \"type\": \"ExternalIdentifier\",\n      \"externalIdentifierType\": \"securityOther\",\n      \"identifier\": \"SNYK-JS-ELLIPTIC-1064899\",\n      \"identifierLocator\": \"https://security.snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    }\n  ],\n  \"externalRef\": [\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://ubuntu.com/security/CVE-2020-28498\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"https://github.com/indutny/elliptic/pull/244/commits\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"https://github.com/christianlundkvist/blog/blob/master/2020_05_26_secp256k1_twist_attacks/secp256k1_twist_attacks.md\"\n    }\n  ]\n},\n{\n  \"type\": \"Relationship\",\n  \"spdxId\": \"urn:spdx.dev:vulnRelationship-1\",\n  \"relationshipType\": \"hasAssociatedVulnerability\",\n  \"from\": \"urn:npm-elliptic-6.5.2\",\n  \"to\": [\"urn:spdx.dev:vuln-1\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n},\n{\n  \"type\": \"Relationship\",\n  \"spdxId\": \"urn:spdx.dev:vulnAgentRel-1\",  \n  \"relationshipType\": \"publishedBy\",  \n  \"from\": \"urn:spdx.dev:vuln-1\",\n  \"to\": [\"urn:spdx.dev:agent-snyk\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
           "metadata": {
             "name": "Vulnerability",
             "SubclassOf": "/Core/Artifact",
@@ -11932,7 +11932,7 @@
           "name": "EpssVulnAssessmentRelationship",
           "fqname": "/Security/EpssVulnAssessmentRelationship",
           "summary": "Provides an EPSS assessment for a vulnerability.",
-          "description": "An EpssVulnAssessmentRelationship relationship describes the likelihood or\nprobability that a vulnerability will be exploited in the wild, and the\npercentile ranking of probability relative to all other vulnerabilities' EPSS\nscores, using the Exploit Prediction Scoring System (EPSS) as defined at\n[https://www.first.org/epss/model](https://www.first.org/epss/model).\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n- The probability must be between 0 and 1.\n- The percentile must be between 0 and 1.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"EpssVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:epss-CVE-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"probability\": 0.00105,\n  \"percentile\": 0.42356,\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2023-10-05T00:00:30Z\"\n}\n```",
+          "description": "An EpssVulnAssessmentRelationship relationship describes the likelihood or\nprobability that a vulnerability will be exploited in the wild, and the\npercentile ranking of probability relative to all other vulnerabilities' EPSS\nscores, using the Exploit Prediction Scoring System (EPSS) as defined at\n<https://www.first.org/epss/model>.\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n- The probability must be between 0 and 1.\n- The percentile must be between 0 and 1.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"EpssVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:epss-CVE-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_probability\": \"0.00105\",\n  \"security_percentile\": \"0.42356\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2023-10-05T00:00:30Z\"\n}\n```",
           "metadata": {
             "name": "EpssVulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -11950,15 +11950,13 @@
               "minCount": "1",
               "maxCount": "1",
               "fqname": "/Security/percentile"
-            },
-            "publishedTime": {
-              "type": "/Core/DateTime",
-              "minCount": "1",
-              "maxCount": "1",
-              "fqname": "/Security/publishedTime"
             }
           },
-          "ext_prop_restrs": {},
+          "ext_prop_restrs": {
+            "/Security/VulnAssessmentRelationship/publishedTime": {
+              "minCount": "1"
+            }
+          },
           "iri": "https://spdx.org/rdf/3.0.0/terms/Security/EpssVulnAssessmentRelationship",
           "fqsupercname": "/Security/VulnAssessmentRelationship",
           "inheritance_stack": [
@@ -11983,14 +11981,6 @@
               "fullname": "/Security/percentile",
               "fulltype": "xsd:decimal"
             },
-            "publishedTime": {
-              "type": "/Core/DateTime",
-              "minCount": "0",
-              "maxCount": "1",
-              "fqname": "/Security/publishedTime",
-              "fullname": "/Security/publishedTime",
-              "fulltype": "/Core/DateTime"
-            },
             "assessedElement": {
               "type": "/Core/Element",
               "minCount": "0",
@@ -11998,6 +11988,14 @@
               "fqname": "/Security/assessedElement",
               "fullname": "/Security/assessedElement",
               "fulltype": "/Core/Element"
+            },
+            "publishedTime": {
+              "type": "/Core/DateTime",
+              "minCount": "1",
+              "maxCount": "1",
+              "fqname": "/Security/publishedTime",
+              "fullname": "/Security/publishedTime",
+              "fulltype": "/Core/DateTime"
             },
             "suppliedBy": {
               "type": "/Core/Agent",
@@ -12387,7 +12385,7 @@
           "name": "VexFixedVulnAssessmentRelationship",
           "fqname": "/Security/VexFixedVulnAssessmentRelationship",
           "summary": "Links a vulnerability and elements representing products (in the VEX sense) where\na fix has been applied and are no longer affected.",
-          "description": "VexFixedVulnAssessmentRelationship links a vulnerability to a number of elements\nrepresenting VEX products where a vulnerability has been fixed and are no longer\naffected. It represents the VEX fixed status.\n\n**Constraints**\n\nWhen linking elements using a VexFixedVulnAssessmentRelationship, the following\nrequirements must be observed:\n\n- Elements linked with a VulnVexFixedAssessmentRelationship are constrained to\n  using the fixedIn relationship type.\n- The from: end of the relationship must ve a /Security/Vulnerability classed\n  element.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"VexFixedVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:vex-fixed-in-1\",\n  \"relationshipType\": \"fixedIn\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.4\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "VexFixedVulnAssessmentRelationship links a vulnerability to a number of elements\nrepresenting VEX products where a vulnerability has been fixed and are no longer\naffected. It represents the VEX fixed status.\n\n**Constraints**\n\nWhen linking elements using a VexFixedVulnAssessmentRelationship, the following\nrequirements must be observed:\n\n- Elements linked with a VulnVexFixedAssessmentRelationship are constrained to\n  using the fixedIn relationship type.\n- The from: end of the relationship must ve a /Security/Vulnerability classed\n  element.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"VexFixedVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:vex-fixed-in-1\",\n  \"relationshipType\": \"fixedIn\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.4\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "VexFixedVulnAssessmentRelationship",
             "SubclassOf": "VexVulnAssessmentRelationship",
@@ -12599,7 +12597,7 @@
           "name": "ExploitCatalogVulnAssessmentRelationship",
           "fqname": "/Security/ExploitCatalogVulnAssessmentRelationship",
           "summary": "Provides an exploit assessment of a vulnerability.",
-          "description": "An ExploitCatalogVulnAssessmentRelationship describes if a vulnerability is\nlisted in any exploit catalog such as the CISA Known Exploited Vulnerabilities\nCatalog (KEV)\n[https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog).\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"ExploitCatalogVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:exploit-catalog-1\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"catalogType\": \"kev\",\n  \"locator\": \"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\",\n  \"exploited\": \"true\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2023-2136\",\n  \"to\": [\"urn:product-google-chrome-112.0.5615.136\"],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "An ExploitCatalogVulnAssessmentRelationship describes if a vulnerability is\nlisted in any exploit catalog such as the CISA Known Exploited Vulnerabilities\nCatalog (KEV)\n[https://www.cisa.gov/known-exploited-vulnerabilities-catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog).\n\n**Constraints**\n\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"ExploitCatalogVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:exploit-catalog-1\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_catalogType\": \"kev\",\n  \"locator\": \"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\",\n  \"security_exploited\": \"true\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2023-2136\",\n  \"to\": [\"urn:product-google-chrome-112.0.5615.136\"],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "ExploitCatalogVulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -12837,7 +12835,7 @@
           "name": "VexUnderInvestigationVulnAssessmentRelationship",
           "fqname": "/Security/VexUnderInvestigationVulnAssessmentRelationship",
           "summary": "Designates elements as products where the impact of a vulnerability is being\ninvestigated.",
-          "description": "VexUnderInvestigationVulnAssessmentRelationship links a vulnerability to a\nnumber of products stating the vulnerability's impact on them is being\ninvestigated. It represents the VEX under_investigation status.\n\n**Constraints**\n\nWhen linking elements using a VexUnderInvestigationVulnAssessmentRelationship\nthe following requirements must be observed:\n\n- Elements linked with a VexUnderInvestigationVulnAssessmentRelationship are\n  constrained to using the underInvestigationFor relationship type.\n- The from: end of the relationship must ve a /Security/Vulnerability classed\n  element.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"VexUnderInvestigationVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:vex-underInvestigation-1\",\n  \"relationshipType\": \"underInvestigationFor\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "VexUnderInvestigationVulnAssessmentRelationship links a vulnerability to a\nnumber of products stating the vulnerability's impact on them is being\ninvestigated. It represents the VEX under_investigation status.\n\n**Constraints**\n\nWhen linking elements using a VexUnderInvestigationVulnAssessmentRelationship\nthe following requirements must be observed:\n\n- Elements linked with a VexUnderInvestigationVulnAssessmentRelationship are\n  constrained to using the underInvestigationFor relationship type.\n- The from: end of the relationship must ve a /Security/Vulnerability classed\n  element.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"VexUnderInvestigationVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:vex-underInvestigation-1\",\n  \"relationshipType\": \"underInvestigationFor\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "VexUnderInvestigationVulnAssessmentRelationship",
             "SubclassOf": "VexVulnAssessmentRelationship",
@@ -13049,7 +13047,7 @@
           "name": "CvssV4VulnAssessmentRelationship",
           "fqname": "/Security/CvssV4VulnAssessmentRelationship",
           "summary": "Provides a CVSS version 4 assessment for a vulnerability.",
-          "description": "A CvssV4VulnAssessmentRelationship relationship describes the determined score,\nseverity, and vector of a vulnerability using version 4 of the Common\nVulnerability Scoring System (CVSS) as defined on\n[https://www.first.org/cvss/v4.0/specification-document](https://www.first.org/cvss/v4.0/specification-document).\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The value of severity must be one of 'NONE', 'LOW', 'MEDIUM', 'HIGH' or\n  'CRITICAL'.\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"CvssV4VulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:cvssv4-cve-2021-44228\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"severity\": \"MEDIUM\",\n  \"score\": 10.0,\n  \"vectorString\": \"CVSS:4.0/AV:N/AC:L/AT:N/AR:N/UI:N/VCH/VI:H/VA:H/SC:H/SI:H/SA:H/E:A\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2021-44228\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:apache-log4j-2.14.1\",\n  \"externalRefs\": [\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2021-44228\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://logging.apache.org/log4j/2.x/security.html\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"    https://www.first.org/cvss/v4.0/examples#Apache-log4j-JNDI-Command-Execution-log4shell-Vulnerability-CVE-2021-44228\"\n    },\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-10-05T23:09:13Z\"\n},\n{\n  \"@type\": \"Relationship\",\n  \"@id\": \"urn:spdx.dev:vulnAgentRel-1\",\n  \"relationshipType\": \"publishedBy\",\n  \"from\": \"urn:spdx.dev:cvssv4-cve-2021-44228\",\n  \"to\": \"urn:spdx.dev:agent-apache.org\",\n  \"startTime\": \"2021-12-11T18:39:00Z\"\n}\n```",
+          "description": "A CvssV4VulnAssessmentRelationship relationship describes the determined score,\nseverity, and vector of a vulnerability using version 4 of the Common\nVulnerability Scoring System (CVSS) as defined on\n<https://www.first.org/cvss/v4.0/specification-document>.\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The value of severity must be one of 'none', 'low', 'medium', 'high' or\n  'critical'.\n- The relationship type must be set to hasAssessmentFor.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"CvssV4VulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:cvssv4-cve-2021-44228\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_severity\": \"medium\",\n  \"security_score\": \"10.0\",\n  \"security_vectorString\": \"CVSS:4.0/AV:N/AC:L/AT:N/AR:N/UI:N/VCH/VI:H/VA:H/SC:H/SI:H/SA:H/E:A\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2021-44228\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:apache-log4j-2.14.1\",\n  \"externalRef\": [\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2021-44228\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://logging.apache.org/log4j/2.x/security.html\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityOther\",\n      \"locator\": \"    https://www.first.org/cvss/v4.0/examples#Apache-log4j-JNDI-Command-Execution-log4shell-Vulnerability-CVE-2021-44228\"\n    },\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-10-05T23:09:13Z\"\n},\n{\n  \"type\": \"Relationship\",\n  \"spdxId\": \"urn:spdx.dev:vulnAgentRel-1\",\n  \"relationshipType\": \"publishedBy\",\n  \"from\": \"urn:spdx.dev:cvssv4-cve-2021-44228\",\n  \"to\": [\"urn:spdx.dev:agent-apache.org\"],\n  \"startTime\": \"2021-12-11T18:39:00Z\"\n}\n```",
           "metadata": {
             "name": "CvssV4VulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -13287,7 +13285,7 @@
           "name": "VexNotAffectedVulnAssessmentRelationship",
           "fqname": "/Security/VexNotAffectedVulnAssessmentRelationship",
           "summary": "Links a vulnerability and one or more elements designating the latter as products\nnot affected by the vulnerability.",
-          "description": "VexNotAffectedVulnAssessmentRelationship connects a vulnerability and a number\nof elements designating them as products not affected by the vulnerability.\nThis relationship corresponds to the VEX not_affected status.\n\n**Constraints**\n\nWhen linking elements using a VexNotVulnAffectedAssessmentRelationship, the\nfollowing requirements must be observed:\n\n- Relating elements with a VexNotAffectedVulnAssessmentRelationship is\n  restricted to the doesNotAffect relationship type.\n- The from: end of the relationship must be a /Security/Vulnerability classed\n  element.\n- Both impactStatement and justificationType properties have a cardinality of\n  0..1 making them optional. Nevertheless, to produce a valid VEX not_affected\n  statement, one of them MUST be defined. This is specified in the Minimum\n  Elements for VEX.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"VexNotAffectedVulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:vex-not-affected-1\",\n  \"relationshipType\": \"doesNotAffect\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"justificationType\": \"componentNotPresent\",\n  \"impactStatement\": \"Not using this vulnerable part of this library.\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
+          "description": "VexNotAffectedVulnAssessmentRelationship connects a vulnerability and a number\nof elements designating them as products not affected by the vulnerability.\nThis relationship corresponds to the VEX not_affected status.\n\n**Constraints**\n\nWhen linking elements using a VexNotVulnAffectedAssessmentRelationship, the\nfollowing requirements must be observed:\n\n- Relating elements with a VexNotAffectedVulnAssessmentRelationship is\n  restricted to the doesNotAffect relationship type.\n- The from: end of the relationship must be a /Security/Vulnerability classed\n  element.\n- Both impactStatement and justificationType properties have a cardinality of\n  0..1 making them optional. Nevertheless, to produce a valid VEX not_affected\n  statement, one of them MUST be defined. This is specified in the Minimum\n  Elements for VEX.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"VexNotAffectedVulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:vex-not-affected-1\",\n  \"relationshipType\": \"doesNotAffect\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"security_justificationType\": \"componentNotPresent\",\n  \"security_impactStatement\": \"Not using this vulnerable part of this library.\",\n  \"suppliedBy\": [\"urn:spdx.dev:agent-jane-doe\"],\n  \"publishedTime\": \"2021-03-09T11:04:53Z\"\n}\n```",
           "metadata": {
             "name": "VexNotAffectedVulnAssessmentRelationship",
             "SubclassOf": "VexVulnAssessmentRelationship",
@@ -13766,7 +13764,7 @@
           "name": "CvssV3VulnAssessmentRelationship",
           "fqname": "/Security/CvssV3VulnAssessmentRelationship",
           "summary": "Provides a CVSS version 3 assessment for a vulnerability.",
-          "description": "A CvssV3VulnAssessmentRelationship relationship describes the determined score,\nseverity, and vector of a vulnerability using version\n[3.0](https://www.first.org/cvss/v3.0/specification-document) or\n[3.1](https://www.first.org/cvss/v3.1/specification-document) of the Common\nVulnerability Scoring System (CVSS).\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The value of severity must be one of 'NONE', 'LOW', 'MEDIUM', 'HIGH' or\n  'CRITICAL'.\n- The relationship type must be set to `hasAssessmentFor`.\n\n**Syntax**\n\n```json\n{\n  \"@type\": \"CvssV3VulnAssessmentRelationship\",\n  \"@id\": \"urn:spdx.dev:cvssv3-cve-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"score\": 6.8,\n  \"severity\": \"MEDIUM\",\n  \"vectorString\": \"CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"externalRefs\": [\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    },\n    {\n      \"@type\": \"ExternalRef\",\n      \"externalRefType\": \"securityFix\",\n      \"locator\": \"https://github.com/indutny/elliptic/commit/441b742\"\n    }\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-05-06T10:06:13Z\"\n},\n{\n  \"@type\": \"Relationship\",\n  \"@id\": \"urn:spdx.dev:vulnAgentRel-1\",\n  \"relationshipType\": \"publishedBy\",\n  \"from\": \"urn:spdx.dev:cvssv3-cve-2020-28498\",\n  \"to\": \"urn:spdx.dev:agent-snyk\",\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
+          "description": "A CvssV3VulnAssessmentRelationship relationship describes the determined score,\nseverity, and vector of a vulnerability using version\n[3.0](https://www.first.org/cvss/v3.0/specification-document) or\n[3.1](https://www.first.org/cvss/v3.1/specification-document) of the Common\nVulnerability Scoring System (CVSS).\nIt is intended to communicate the results of using a CVSS calculator.\n\n**Constraints**\n\n- The value of severity must be one of 'none', 'low', 'medium', 'high' or\n  'critical'.\n- The relationship type must be set to `hasAssessmentFor`.\n\n**Syntax**\n\n```json\n{\n  \"type\": \"CvssV3VulnAssessmentRelationship\",\n  \"spdxId\": \"urn:spdx.dev:cvssv3-cve-2020-28498\",\n  \"relationshipType\": \"hasAssessmentFor\",\n  \"security_score\": \"6.8\",\n  \"security_severity\": \"medium\",\n  \"security_vectorString\": \"CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N\",\n  \"from\": \"urn:spdx.dev:vuln-cve-2020-28498\",\n  \"to\": [\"urn:product-acme-application-1.3\"],\n  \"security_assessedElement\": \"urn:npm-elliptic-6.5.2\",\n  \"externalRef\": [\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://nvd.nist.gov/vuln/detail/CVE-2020-28498\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityAdvisory\",\n      \"locator\": \"https://snyk.io/vuln/SNYK-JS-ELLIPTIC-1064899\"\n    },\n    {\n      \"type\": \"ExternalRef\",\n      \"externalRefType\": \"securityFix\",\n      \"locator\": \"https://github.com/indutny/elliptic/commit/441b742\"\n    }\n  ],\n  \"suppliedBy\": [\"urn:spdx.dev:agent-my-security-vendor\"],\n  \"publishedTime\": \"2023-05-06T10:06:13Z\"\n},\n{\n  \"type\": \"Relationship\",\n  \"spdxId\": \"urn:spdx.dev:vulnAgentRel-1\",\n  \"relationshipType\": \"publishedBy\",\n  \"from\": \"urn:spdx.dev:cvssv3-cve-2020-28498\",\n  \"to\": [\"urn:spdx.dev:agent-snyk\"],\n  \"startTime\": \"2021-03-08T16:06:50Z\"\n}\n```",
           "metadata": {
             "name": "CvssV3VulnAssessmentRelationship",
             "SubclassOf": "VulnAssessmentRelationship",
@@ -14280,7 +14278,6 @@
           "iri": "https://spdx.org/rdf/3.0.0/terms/Security/publishedTime",
           "used_in": [
             "/Security/Vulnerability",
-            "/Security/EpssVulnAssessmentRelationship",
             "/Security/VulnAssessmentRelationship"
           ]
         },
@@ -14486,9 +14483,9 @@
           "entries": {
             "critical": "When a CVSS score is between 9.0 - 10.0",
             "high": "When a CVSS score is between 7.0 - 8.9",
-            "medium": "When a CVSS score is between 4 - 6.9",
-            "low": "When a CVSS score is between 0 - 3.9",
-            "none": "When a CVSS score is 0"
+            "medium": "When a CVSS score is between 4.0 - 6.9",
+            "low": "When a CVSS score is between 0.1 - 3.9",
+            "none": "When a CVSS score is 0.0"
           },
           "iri": "https://spdx.org/rdf/3.0.0/terms/Security/CvssSeverityType"
         }
