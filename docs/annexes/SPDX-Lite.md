@@ -1,6 +1,6 @@
-# Annex F SPDX Lite  
+# Annex H: SPDX Lite  
 
-## F.1 Definition of the Lite profile <a name="F.1"></a>  
+## H.1 Definition of the Lite profile <a name="H.1"></a>  
 
 The Lite profile is designed to make it quick and easy to start a Software Bill of Materials in situations where a company may have limited capacity for introducing new items into its process.  
 The Lite profile captures the minimum set of information required for license compliance in the software supply chain. It contains information about the creation of the SBOM, package lists with licensing and other related items, and their relationships.  
@@ -8,11 +8,11 @@ The Lite profile captures the minimum set of information required for license co
 All elements in Lite profile are essential for complying with licenses. It is easy to use a SPDX document with the Lite profile for anyone who does not have enough knowledge about licensing information and easy to import license information from former versions of SPDX Lite format files.  
 The Lite profile offers the flexibility to be used either alone or in combination with other SPDX profiles as a SPDX document in the software supply chain.  
 
-## F.2 Table of the Lite profile elements <a name="F.2"></a>  
+## H.2 Table of the Lite profile elements <a name="H.2"></a>  
 
-A SPDX document with the Lite profile must include properties for each class listed in **Table F.1**. And ```Cardinality 1..1``` means a **REQUIRED** element, and the others **SHOULD** be filled in as much as possible if necessary.  
+A SPDX document with the Lite profile must include properties for each class listed in **Table H.1**. And ```Cardinality 1..``` means a **REQUIRED** element, and the others **SHOULD** be filled in as much as possible if necessary.  
 
-**Table F.1 — the Lite profile elements**  
+**Table H.1 — the Lite profile elements**  
 
 1. For a /Core/SpdxDocument to be conformant with this profile, the following has to hold:  
 
@@ -22,9 +22,9 @@ A SPDX document with the Lite profile must include properties for each class lis
    | 2 | /Core/SpdxDocument/name            | 0..1	| |  
    | 3 | /Core/SpdxDocument/comment			| 0..1	| |  
    | 4 | /Core/SpdxDocument/creationInfo	| 1..1	| |  
-   | 5 | /Core/SpdxDocument/verifiedUsing	| 0..1	| This should be an object of /Core/Hash |  
-   | 6 | /Core/SpdxDocument/element			| 1..*	| MUST have at least one element |  
-   | 7 | /Core/SpdxDocument/rootElement		| 1..1	| This should be an object of /Core/Sbom |  
+   | 5 | /Core/SpdxDocument/verifiedUsing	| 0..*	| This should be objects of /Core/Hash |  
+   | 6 | /Core/SpdxDocument/element			| 1..*	| MUST have at least one /Core/Sbom object |  
+   | 7 | /Core/SpdxDocument/rootElement		| 1..*	| This should be objects of /Core/Sbom |  
    | 8 | /Core/SpdxDocument/namespaceMap	| 0..*	| |  
    | 9 | /Core/SpdxDocument/dataLicense		| 0..1	| |  
 
@@ -41,18 +41,18 @@ A SPDX document with the Lite profile must include properties for each class lis
    |:-:|:--|:--|:--|  
    | 1 | /Software/Sbom/spdxId			| 1..1	| |  
    | 2 | /Software/Sbom/creationInfo	| 1..1	| |  
-   | 3 | /Software/Sbom/element			| 1..*	| MUST have at least one element |  
-   | 4 | /Software/Sbom/rootElement    | 1..1	| This should be an object of /Software/Package |  
-   | 5 | /Software/Sbom/sbomType		   | 0..1	| |  
+   | 3 | /Software/Sbom/element			| 1..*	| MUST have at least one /Software/Package object |  
+   | 4 | /Software/Sbom/rootElement    | 1..*	| This should be objects of /Software/Package |  
+   | 5 | /Software/Sbom/sbomType		   | 0..*	| |  
 
 4. For a /Core/CreationInfo to be conformant with this profile, the following has to hold:  
 
    | # | Property Name | Cardinality | Comments |  
    |:-:|:--|:--|:--|  
-   | 1 | /Core/CreationInfo/specVersion | 1..1	| This should be a fixed string, “3.0”. |  
+   | 1 | /Core/CreationInfo/specVersion | 1..1	| This should be a fixed string, “3.0.0”. |  
    | 2 | /Core/CreationInfo/comment 	| 0..1	| |  
    | 3 | /Core/CreationInfo/created 	| 1..1	| |  
-   | 4 | /Core/CreationInfo/createdBy	| 1..1	| This should be an object of /Core/Agent |  
+   | 4 | /Core/CreationInfo/createdBy	| 1..*	| This should be objects of /Core/Agent |  
 
 5. For a /Core/Agent (createdBy, suppliedBy, originatedBy) to be conformant with this profile, the following has to hold:  
 
@@ -61,7 +61,7 @@ A SPDX document with the Lite profile must include properties for each class lis
    | 1 | /Core/Agent/spdxId				| 1..1	| |  
    | 2 | /Core/Agent/name			    | 1..1	| |  
    | 3 | /Core/Agent/creationInfo		| 1..1	| This should be “BlankNode” |  
-   | 4 | /Core/Agent/externalIdentifier	| 0..1	| |  
+   | 4 | /Core/Agent/externalIdentifier	| 0..*	| |  
 
 6. For a /Core/ExternalIdentifier to be conformant with this profile, the following has to hold:  
 
@@ -79,15 +79,15 @@ And all /Software/Package objects MUST have “downloadLocation” OR “package
    | 2 | /Software/Package/name			        | 1..1	| |  
    | 3 | /Software/Package/comment			    | 0..1	| |  
    | 4 | /Software/Package/creationInfo			| 1..1	| |  
-   | 5 | /Software/Package/verifiedUsing		| 0..1	| This should be an object of /Core/Hash |  
-   | 6 | /Software/Package/originatedBy		    | 0..*	| This should be an object of /Core/Agent |  
+   | 5 | /Software/Package/verifiedUsing		| 0..*	| This should be objects of /Core/Hash |  
+   | 6 | /Software/Package/originatedBy		    | 0..*	| This should be objects of /Core/Agent |  
    | 7 | /Software/Package/suppliedBy			| 1..1	| This should be an object of /Core/Agent |  
    | 8 | /Software/Package/builtTime			| 0..1	| |  
    | 9 | /Software/Package/releaseTime			| 0..1	| |  
    | 10 | /Software/Package/validUntilTime		| 0..1	| |  
-   | 11 | /Software/Package/supportLevel		| 0..1	| |  
+   | 11 | /Software/Package/supportLevel		| 0..*	| |  
    | 12 | /Software/Package/copyrightText		| 1..1	| |  
-   | 13 | /Software/Package/attributionText		| 0..1	| |  
+   | 13 | /Software/Package/attributionText		| 0..*	| |  
    | 14 | /Software/Package/packageVersion		| 1..1	| |  
    | 15 | /Software/Package/downloadLocation	| 0..1	| |  
    | 16 | /Software/Package/packageUrl			| 0..1	| |  

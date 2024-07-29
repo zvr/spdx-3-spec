@@ -1,5 +1,5 @@
 site_name: SPDX v3 Specification
-copyright: DRAFT version generated on 2024-07-16 by spec-parser 2.3.0
+copyright: DRAFT version generated on 2024-07-29 by spec-parser 2.3.0
 use_directory_urls: true
 theme: readthedocs
 plugins:
